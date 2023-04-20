@@ -1,17 +1,12 @@
 import { FavoriteBorder, PictureInPictureAlt } from "@mui/icons-material";
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
 
 export default function Widget() {
   return (
-    <Box sx={{
-      display: 'flex',
-      alignItems: 'center',
-      flexGrow: 1,
-      gap: '1rem'
-    }}>
+    <Stack direction='row' alignItems='center' width='33.33%' gap='1rem'>
       <Box sx={{
         height: '100%',
         aspectRatio: '1'
@@ -34,6 +29,6 @@ export default function Widget() {
       </div>
       <FavoriteBorder fontSize="small" />
       <PictureInPictureAlt fontSize="small" />
-    </Box>
+    </Stack>
   )
 }
