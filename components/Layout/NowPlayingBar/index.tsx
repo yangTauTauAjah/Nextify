@@ -1,4 +1,5 @@
 import PlayerControl from "./PlayerControl"
+import VolumeControl from "./VolumeControl"
 import Widget from "./Widget"
 
 
@@ -7,6 +8,7 @@ export default function NowPlayingBar() {
     <div style={{
       gridArea: 'now-playing-bar',
       display: 'flex',
+      gap: '3rem',
       justifyContent: 'center',
       alignItems: 'center',
       height: '90px',
@@ -16,6 +18,7 @@ export default function NowPlayingBar() {
     }}>
       <Widget />
       <PlayerControl />
+      <VolumeControl />
     </div>
   )
 }
