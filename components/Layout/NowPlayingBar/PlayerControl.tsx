@@ -1,31 +1,17 @@
 import React from 'react'
 import {
-  Home,
-  Search,
-  LibraryMusic,
-  DownloadForOfflineOutlined,
-  Favorite,
-  FavoriteBorder,
-  PictureInPictureAlt,
-  ChevronLeft,
-  ChevronRight,
   Shuffle,
   SkipPrevious,
   SkipNext,
   PlayCircle,
-  StopCircle,
   Repeat,
-  QueueMusic,
-  DevicesOther,
-  VolumeUp,
-  VolumeOff,
-  Launch
 } from '@mui/icons-material';
-import { Stack } from '@mui/material';
+import { Slider, Stack } from '@mui/material';
+import CustomSlider from '@/components/CustomSlider';
 
 function PlayerControl() {
   return (
-    <div style={{flexGrow: 1}}>
+    <Stack alignItems='center' justifyContent='space-between' width='33.33%'>
       <Stack direction='row' gap='1rem' alignItems='center'>
         <Shuffle />
         <SkipPrevious fontSize='large' />
@@ -33,15 +19,12 @@ function PlayerControl() {
         <SkipNext fontSize='large' />
         <Repeat />
       </Stack>
-      <div>
+      <Stack direction='row' gap='0.8rem' alignItems='center' width='100%'>
         <div>0:00</div>
-        <div>
-          <div></div>
-          <div></div>
-        </div>
+        <CustomSlider style={{flexGrow: 1, width: '3rem'}} />
         <div>59:59</div>
-      </div>
-    </div>
+      </Stack>
+    </Stack>
   )
 }
 
