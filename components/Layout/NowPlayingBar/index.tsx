@@ -14,7 +14,7 @@ export default function NowPlayingBar() {
       height: '90px',
       background: '#181818',
       borderTop: 'solid 1px #222222',
-      padding: '1rem'
+      paddingInline: '1rem'
     }}>
       <Widget />
       <PlayerControl />
