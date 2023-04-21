@@ -1,18 +1,21 @@
-import { Box } from '@mui/material'
+import { Box, Stack } from '@mui/material'
 import React from 'react'
-import Header from './Recent'
-import Image from 'next/image'
-import Greeting from './Recent/Greeting'
-import StickyElement from './Recent/Header'
 import Recent from './Recent'
+import Section from './Section'
+import Item from './Section/Collection/Item'
 
 
 
 function MainView() {
   return (
-    <Box sx={{ padding: '1rem' }}>
+    <Stack sx={{ gap: '1.5rem', padding: '1rem', marginBottom: '10rem' }}>
       <Recent />
-    </Box>
+      <Section title="Your top mixes">
+        <Item image='' title='test' href=''><p>Test, test, test</p></Item>
+        <Item image='' title='test' href=''><p>Test, test, test</p></Item>
+        <Item image='' title='test' href=''><p>Test, test, test</p></Item>
+      </Section>
+    </Stack>
   )
 }
 
