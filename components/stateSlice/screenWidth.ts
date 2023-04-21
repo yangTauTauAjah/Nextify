@@ -18,8 +18,8 @@ export const screenWidthSlice = createSlice({
     md: (state) => { state.value = 'md' },
     lg: (state) => { state.value = 'lg' },
     xl: (state) => { state.value = 'xl' },
-    forceResize: (state, action: PayloadAction<ScreenWidth>) => {
-      state.value += action.payload
+    forceResize: (state, action: PayloadAction<ScreenWidth['value']>) => {
+      state.value = action.payload
     }
   },
 })

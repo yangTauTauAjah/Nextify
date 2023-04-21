@@ -1,19 +1,26 @@
 import { FavoriteBorder, PictureInPictureAlt } from "@mui/icons-material";
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, useTheme } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
 
 export default function Widget() {
+
+  const Theme = useTheme()
+
   return (
-    <Stack direction='row' alignItems='center' width='33.33%' gap='1rem'>
+    <Stack sx={{
+      flexGrow: '1'
+    }} direction='row' alignItems='center' gap='1rem'>
       <Box sx={{
-        height: '100%',
+        height: '3rem',
         aspectRatio: '1'
       }}>
         <Image src="" alt="music"/>
       </Box>
-      <div>
+      <Box sx={{
+        marginRight: 'auto'
+      }}>
         <Link href='/' legacyBehavior>
           <a>Test</a>
         </Link>
@@ -26,9 +33,23 @@ export default function Widget() {
             <a>Test</a>
           </Link>
         </div>
-      </div>
-      <FavoriteBorder fontSize="small" />
-      <PictureInPictureAlt fontSize="small" />
+      </Box>
+      <FavoriteBorder
+        sx={{
+          fontSize: "2rem",
+          [Theme.breakpoints.up('sm')]: {
+            fontSize: "small"
+          }
+        }}
+      />
+      <PictureInPictureAlt
+        sx={{
+          fontSize: "2rem",
+          [Theme.breakpoints.up('sm')]: {
+            fontSize: "small"
+          }
+        }}
+      />
     </Stack>
   )
 }

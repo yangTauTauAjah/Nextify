@@ -6,25 +6,80 @@ import {
   PlayCircle,
   Repeat,
 } from '@mui/icons-material';
-import { Slider, Stack } from '@mui/material';
+import { Box, Slider, Stack, useTheme } from '@mui/material';
 import CustomSlider from '@/components/CustomSlider';
 
 function PlayerControl() {
+
+  const Theme = useTheme()
+
   return (
-    <Stack alignItems='center' justifyContent='space-between' width='33.33%'>
-      <Stack direction='row' gap='1rem' alignItems='center'>
-        <Shuffle />
-        <SkipPrevious fontSize='large' />
+    <Box
+      sx={{
+        display: 'flex',
+        alignItems: 'center',
+        [Theme.breakpoints.up('sm')]: {
+          justifyContent: 'space-between',
+          width: '33.33%'
+        }
+      }}
+    >
+      <Stack
+        direction='row'
+        gap='1rem'
+        alignItems='center'
+      >
+        <Shuffle
+          sx={{
+            display: 'none',
+            [Theme.breakpoints.up('sm')]: {
+              display: 'flex'
+            }
+          }}
+        />
+        <SkipPrevious
+          sx={{
+            display: 'none',
+            [Theme.breakpoints.up('sm')]: {
+              display: 'flex'
+            }
+          }} fontSize='large'
+        />
         <PlayCircle fontSize='large' />
-        <SkipNext fontSize='large' />
-        <Repeat />
+        <SkipNext
+          sx={{
+            display: 'none',
+            [Theme.breakpoints.up('sm')]: {
+              display: 'flex'
+            }
+          }} fontSize='large'
+        />
+        <Repeat
+          sx={{
+            display: 'none',
+            [Theme.breakpoints.up('sm')]: {
+              display: 'flex'
+            }
+          }}
+        />
       </Stack>
-      <Stack direction='row' gap='0.8rem' alignItems='center' width='100%'>
+      <Stack
+        sx={{
+          display: 'none',
+          [Theme.breakpoints.up('sm')]: {
+            display: 'flex'
+          }
+        }}
+        direction='row'
+        gap='0.8rem'
+        alignItems='center'
+        width='100%'
+      >
         <div>0:00</div>
-        <CustomSlider style={{flexGrow: 1, width: '3rem'}} />
+        <CustomSlider style={{ flexGrow: 1, width: '3rem' }} />
         <div>59:59</div>
       </Stack>
-    </Stack>
+    </Box>
   )
 }
 
