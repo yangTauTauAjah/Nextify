@@ -8,37 +8,39 @@ interface ItemInterface {
   href: string;
   image: string;
   title: string;
-  children: any | any[];
+  description: React.ReactNode | React.ReactNode[];
 }
 
-const Thumbnail = ({ image, style }: { image: string, style?: any }) => (
-  <div style={{
-    aspectRatio: '1',
-    width: '10rem',
-    ...style
-  }}>
-    <Image src={image} alt="image" />
-  </div>
-)
+const ThumbnailStyle = {
+  aspectRatio: '1',
+  width: '10rem',
+}
 
-function Item({ type = 'playlist', href, title, image, children }: ItemInterface) {
+const ItemStyle = {
+  padding: '1rem',
+  gap: '1rem',
+  borderRadius: '0.3rem',
+  transition: 'background 100ms ease-in-out',
+  background: 'rgba(255,255,255,0.05)',
+  '&:hover': {
+    background: 'rgba(255,255,255,0.1)',
+  }
+}
+
+function Item({ type = 'playlist', href, title, image, description }: ItemInterface) {
   return (
     <Link href={href}>
-      <Stack
-        sx={{
-          padding: '1rem',
-          gap: '1rem',
-          borderRadius: '0.3rem',
-          transition: 'background 100ms ease-in-out',
-          background: 'rgba(255,255,255,0.05)',
-          '&:hover': {
-            background: 'rgba(255,255,255,0.1)',
-          }
-        }}
-      >
-        <Thumbnail image={image} style={{ borderRadius: type === 'artist' ? '100%' : '5px' }} />
+      <Stack sx={{...ItemStyle, fontWeight: (theme) => theme.typography.fontWeightLight}}>
+        <div
+          style={{
+            ...ThumbnailStyle,
+            borderRadius: type === 'artist' ? '100%' : '5px'
+          }}
+        >
+          <Image src={image} alt="image" />
+        </div>
         <h3>{title}</h3>
-        {children}
+        {description}
       </Stack>
     </Link>
   )
