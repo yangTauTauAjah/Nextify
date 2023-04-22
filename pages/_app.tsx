@@ -1,5 +1,5 @@
 import '@/styles/globals.css'
-import { themeSettings } from '@/theme'
+import { themeSettings } from '@/components/theme'
 import { ThemeProvider, createTheme } from '@mui/material'
 import type { AppProps } from 'next/app'
 import { store } from '@/components/store'
