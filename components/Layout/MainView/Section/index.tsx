@@ -4,14 +4,13 @@ import { Box } from '@mui/material';
 
 interface SectionInterface {
   title: string;
+  style?: any;
   children: any | any[]
 }
 
-function Section({ title, children }: SectionInterface) {
+function Section({ title, style, children }: SectionInterface) {
   return (
-    <Box
-      component="section"
-    >
+    <Box sx={style} component="section">
       <h1>{title}</h1>
       <Collection>{children}</Collection>
     </Box>
