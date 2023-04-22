@@ -11,9 +11,32 @@ function MainView() {
     <Stack sx={{ gap: '1.5rem', padding: '1rem', marginBottom: '10rem' }}>
       <Recent />
       <Section title="Your top mixes">
-        <Item image='' title='test' href=''><p>Test, test, test</p></Item>
-        <Item image='' title='test' href=''><p>Test, test, test</p></Item>
-        <Item image='' title='test' href=''><p>Test, test, test</p></Item>
+        {
+          [0, 1, 2].map((e, i) => (
+            <Item key={i} image='' title='test' href='' description={<p>Test, test, test</p>} />
+          ))
+        }
+      </Section>
+      <Section title="Discover">
+        {
+          [0, 1, 2].map((e, i) => (
+            <Item key={i} image='' title='test' href='' description={<p>Test, test, test</p>} />
+          ))
+        }
+      </Section>
+      <Section title="Focus">
+        {
+          [0, 1, 2].map((e, i) => (
+            <Item key={i} image='' title='test' href='' description={<p>Test, test, test</p>} />
+          ))
+        }
+      </Section>
+      <Section title="Spotify Playlists">
+        {
+          [0, 1, 2].map((e, i) => (
+            <Item key={i} image='' title='test' href='' description={<p>Test, test, test</p>} />
+          ))
+        }
       </Section>
     </Stack>
   )
