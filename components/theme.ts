@@ -1,3 +1,5 @@
+import { ThemeOptions } from "@mui/material";
+
 export const tokens = {
   grey: {
     100: "#f0f0f3",
@@ -8,7 +10,7 @@ export const tokens = {
     600: "#8f929b",
     700: "#6b6d74",
     800: "#48494e",
-    900: "#242427",
+    900: "#242427"
   },
   blue: {
     100: "#d3ddff",
@@ -53,7 +55,7 @@ export const tokens = {
     600: "#c29044",
     700: "#916c33",
     800: "#614822",
-    900: "#302411",
+    900: "#302411"
   },
   cyan: {
     100: "#d1fffa",
@@ -68,49 +70,59 @@ export const tokens = {
   },
   tertiary: {
     // purple
-    500: "#8884d8",
+    500: "#8884d8"
   },
   background: {
     light: "#2d2d34",
-    main: "#7d4141",
-  },
+    main: "#7d4141"
+  }
 };
 
 // mui theme settings
-export const themeSettings = {
+export const themeSettings: ThemeOptions = {
   palette: {
     primary: {
       ...tokens.blue,
       main: tokens.blue[500],
-      light: tokens.blue[400],
+      light: tokens.blue[400]
     },
     secondary: {
       ...tokens.green,
       main: tokens.green[500],
-      light: tokens.green[400],
+      light: tokens.green[400]
     },
-    tertiary: {
+    /* tertiary: {
       ...tokens.yellow,
       main: tokens.yellow[500],
-      light: tokens.yellow[400],
-    },
-    red: {
+      light: tokens.yellow[400]
+    }, */
+    /* red: {
       ...tokens.red,
       main: tokens.red[500],
-      light: tokens.red[400],
+      light: tokens.red[400]
     },
     cyan: {
       ...tokens.cyan,
       main: tokens.cyan[500],
-      light: tokens.cyan[400],
-    },
+      light: tokens.cyan[400]
+    }, */
     grey: {
       ...tokens.grey,
-      main: tokens.grey[500],
-      light: tokens.grey[400],
+      /* main: tokens.grey[500],
+      light: tokens.grey[400] */
     },
     background: {
-      default: tokens.background.main,
-    },
+      default: tokens.background.main
+    }
+  },
+  typography: {
+    fontFamily: "'Ubuntu', sans-serif",
+    fontWeightLight: "300",
+    fontWeightRegular: "400",
+    fontWeightMedium: "500",
+    fontWeightBold: "700",
+    h3: {
+      fontFamily: "'Ubuntu', sans-serif"
+    }
   }
 };
