@@ -1,4 +1,4 @@
-import { Stack } from '@mui/material';
+import { Box, Stack } from '@mui/material';
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
@@ -11,14 +11,12 @@ interface ItemInterface {
   description: React.ReactNode | React.ReactNode[];
 }
 
-const ThumbnailStyle = {
-  aspectRatio: '1',
-  width: '10rem',
-}
-
 const ItemStyle = {
+  flexShrink: '0',
   padding: '1rem',
-  gap: '1rem',
+  gap: '0.7rem',
+  width: '15rem',
+  height: '100%',
   borderRadius: '0.3rem',
   transition: 'background 100ms ease-in-out',
   background: 'rgba(255,255,255,0.05)',
@@ -29,20 +27,22 @@ const ItemStyle = {
 
 function Item({ type = 'playlist', href, title, image, description }: ItemInterface) {
   return (
-    <Link href={href}>
-      <Stack sx={{...ItemStyle, fontWeight: (theme) => theme.typography.fontWeightLight}}>
-        <div
-          style={{
-            ...ThumbnailStyle,
-            borderRadius: type === 'artist' ? '100%' : '5px'
-          }}
-        >
-          <Image src={image} alt="image" />
-        </div>
-        <h3>{title}</h3>
-        {description}
-      </Stack>
-    </Link>
+    <Stack component={Link} href={href} sx={{...ItemStyle, fontWeight: (theme) => theme.typography.fontWeightLight}}>
+      <div
+        style={{
+          boxShadow: '2px 22px 126px -29px rgba(0,0,0,0.5)',
+          flexShrink: '0',
+          overflow: 'hidden',
+          aspectRatio: '1',
+          width: 'auto',
+          borderRadius: type === 'artist' ? '100%' : '0.5rem'
+        }}
+      >
+        <Image src={image} fill alt="image" />
+      </div>
+      <h3 style={{fontSize: '1rem', marginTop: '1rem'}}>{title}</h3>
+      {description}
+    </Stack>
   )
 }
 
