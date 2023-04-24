@@ -1,0 +1,732 @@
+{
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFQ00XGBls6ym/playlists?country=ID&offset=0&limit=20",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "The fresh & hottest K-Hip hop tracks. (Cover:\bAgust D))",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWW46Vfs1oltB"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWW46Vfs1oltB",
+        "id": "37i9dQZF1DWW46Vfs1oltB",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003ba415c495d58b7a31779d649",
+            "width": null
+          }
+        ],
+        "name": "KrOWN",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjE1NzkyNiwwMDAwMDAwMGRhZjc0NjZjYzMzNjhkZWZlNjM2MTQwYmMzNzVlMDdj",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWW46Vfs1oltB/tracks",
+          "total": 119
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWW46Vfs1oltB"
+      },
+      {
+        "collaborative": false,
+        "description": "Music from Lil Uzi Vert, Drake and Moneybagg Yo. ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0XUsuxWHRQd"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0XUsuxWHRQd",
+        "id": "37i9dQZF1DX0XUsuxWHRQd",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003f872077fdbbb64540b2a909c",
+            "width": null
+          }
+        ],
+        "name": "RapCaviar",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMGQwMzNjNjI1NTIyMGFlOGIyNDFkYTlmMWM1YTMwZDg1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0XUsuxWHRQd/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX0XUsuxWHRQd"
+      },
+      {
+        "collaborative": false,
+        "description": "Barisan rima dan ritme dari produser musik dan rapper dalam negeri. Cover: Yacko",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYJVaIADJesD"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYJVaIADJesD",
+        "id": "37i9dQZF1DWYJVaIADJesD",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000037881530118d7349507da4d11",
+            "width": null
+          }
+        ],
+        "name": "Hip Hop Indo",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAxMDAwMCwwMDAwMDAwMDBiZGMwNTQzOGQxZWI2ZWY0NGY3NWI5NzdlZWNmNGRk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYJVaIADJesD/tracks",
+          "total": 55
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYJVaIADJesD"
+      },
+      {
+        "collaborative": false,
+        "description": "Fourth quarter, two minutes left .. get locked in",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWTl4y3vgJOXW"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTl4y3vgJOXW",
+        "id": "37i9dQZF1DWTl4y3vgJOXW",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d892d8bec43747595966c7a5",
+            "width": null
+          }
+        ],
+        "name": "Locked In",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjI3ODI0NywwMDAwMDAwMGM5MTZkZWYxNDU1ODc1YWEyZGI0YjA0ZTU4YWU0YWY2",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTl4y3vgJOXW/tracks",
+          "total": 200
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWTl4y3vgJOXW"
+      },
+      {
+        "collaborative": false,
+        "description": "Real rap music from the golden era.\n",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX186v583rmzp"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX186v583rmzp",
+        "id": "37i9dQZF1DX186v583rmzp",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000317f5a91128f800d0223948cd",
+            "width": null
+          }
+        ],
+        "name": "I Love My '90s Hip-Hop",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDc3OTAxOSwwMDAwMDAwMGFlYmYyYzcwOTBlNzk4MTI5NTUxYjNlZmUyZTcwZTI0",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX186v583rmzp/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX186v583rmzp"
+      },
+      {
+        "collaborative": false,
+        "description": "Energy tracks to get your beast mode on.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX9oh43oAzkyx"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX9oh43oAzkyx",
+        "id": "37i9dQZF1DX9oh43oAzkyx",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d2d1cbd94520146a3fecc8fd",
+            "width": null
+          }
+        ],
+        "name": "Beast Mode Hip-Hop",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMDhlZDVjYTMxMDg4MTBiY2RlNDY4NmQyYzFhMTAzMTRl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX9oh43oAzkyx/tracks",
+          "total": 76
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX9oh43oAzkyx"
+      },
+      {
+        "collaborative": false,
+        "description": "The original chill instrumental beats playlist.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0SM0LYsmbMT"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0SM0LYsmbMT",
+        "id": "37i9dQZF1DX0SM0LYsmbMT",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000035ea54b91b073c2776b966e7b",
+            "width": null
+          }
+        ],
+        "name": "Jazz Vibes",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAyODAwMCwwMDAwMDAwMGJkMjlkZjdmOTBhYzgxNzRiMDk0OGU2ZDdlNzc1NWI2",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0SM0LYsmbMT/tracks",
+          "total": 300
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX0SM0LYsmbMT"
+      },
+      {
+        "collaborative": false,
+        "description": "Taking it way back! Cover: Snoop Dogg",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWVA1Gq4XHa6U"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWVA1Gq4XHa6U",
+        "id": "37i9dQZF1DWVA1Gq4XHa6U",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000030e7cec83b517a2b81d3ca571",
+            "width": null
+          }
+        ],
+        "name": "Gold School",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAzMzM1MywwMDAwMDAwMGE5OWQ4NTIzNGZhY2VkNjJmYTY5ODM1ZWUwMzJhOWE0",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWVA1Gq4XHa6U/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWVA1Gq4XHa6U"
+      },
+      {
+        "collaborative": false,
+        "description": "Need to get your energy level up?",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWZixSclZdoFE"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZixSclZdoFE",
+        "id": "37i9dQZF1DWZixSclZdoFE",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003b11f70a806159e482eac8bf7",
+            "width": null
+          }
+        ],
+        "name": "Energy Booster: Hip-Hop",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTk5NjU0MywwMDAwMDAwMDhjM2VhZjM0ZWQwMzNkN2FmYzkwYzUwZDQ4ODQ2ZDNk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZixSclZdoFE/tracks",
+          "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWZixSclZdoFE"
+      },
+      {
+        "collaborative": false,
+        "description": "This Is Travis Scott. The essential tracks, all in one playlist.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWUgX5cUT0GbU"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWUgX5cUT0GbU",
+        "id": "37i9dQZF1DWUgX5cUT0GbU",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000336f70792450e32a6af85dbf6",
+            "width": null
+          }
+        ],
+        "name": "This Is Travis Scott",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY2NDgyMTA5MywwMDAwMDAwMDk4ZGJjMzkwNDU0NTU2ZTk4MWM1OTRiZjE1ZDJjNWFj",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWUgX5cUT0GbU/tracks",
+          "total": 56
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWUgX5cUT0GbU"
+      },
+      {
+        "collaborative": false,
+        "description": "There is only one Tyler, The Creator. ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX8IzjtXj8ThV"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8IzjtXj8ThV",
+        "id": "37i9dQZF1DX8IzjtXj8ThV",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d446868f2ac4bf79885aec3f",
+            "width": null
+          }
+        ],
+        "name": "This Is Tyler, The Creator ",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3OTkyNzA4MSwwMDAwMDAwMDliYmRjOGUyMDZiMmRhZDcyZmMwZWY3NGJiNTIxYjIx",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8IzjtXj8ThV/tracks",
+          "total": 73
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX8IzjtXj8ThV"
+      },
+      {
+        "collaborative": false,
+        "description": "Heavy beats for midnight drifting in Tokyo.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYfVJ5emu90I"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYfVJ5emu90I",
+        "id": "37i9dQZF1DWYfVJ5emu90I",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000376968382930e185cafd42726",
+            "width": null
+          }
+        ],
+        "name": "Tokyo Drift: トーキョー・ドリフト",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3Nzc2OTIwMCwwMDAwMDAwMDVhYjU3MWM4ZGUxYjk4NDEzMTlkNTZjNGM4Y2YyYzY3",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYfVJ5emu90I/tracks",
+          "total": 76
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYfVJ5emu90I"
+      },
+      {
+        "collaborative": false,
+        "description": "Mode: Turnt",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWY4xHQp97fN6"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWY4xHQp97fN6",
+        "id": "37i9dQZF1DWY4xHQp97fN6",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003ed8e99e449ad672947a05ba7",
+            "width": null
+          }
+        ],
+        "name": "Get Turnt",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMDFiM2IyNjEyOGUyMmQ4ZWExMzdlZmZjYzUwOTFlMWVh",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWY4xHQp97fN6/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWY4xHQp97fN6"
+      },
+      {
+        "collaborative": false,
+        "description": "This is Nicki Minaj. The essential tracks, all in one playlist. ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6M8JqiGAfn5"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6M8JqiGAfn5",
+        "id": "37i9dQZF1DX6M8JqiGAfn5",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000038e9f5dff119e779060bb38ec",
+            "width": null
+          }
+        ],
+        "name": "This Is Nicki Minaj",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0MDIzMywwMDAwMDAwMDFkOTI2ZmU1MjU1YTY5YWJmNmYxNTkxMjk1NDc3MTFl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6M8JqiGAfn5/tracks",
+          "total": 55
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX6M8JqiGAfn5"
+      },
+      {
+        "collaborative": false,
+        "description": "The hip-hop playlist that's a whole mood. Art By Laci Jordan; Cover: Latto",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6GwdWRQMQpq"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6GwdWRQMQpq",
+        "id": "37i9dQZF1DX6GwdWRQMQpq",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003a95bd6f550d985669687f9a4",
+            "width": null
+          }
+        ],
+        "name": "Feelin' Myself",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMDRmMjViOTliZTBjZDY3N2JlYTc3NWI1NWJhMjY3NzI4",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6GwdWRQMQpq/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX6GwdWRQMQpq"
+      },
+      {
+        "collaborative": false,
+        "description": "Trendy x Chill K-Hip Hop.  (Cover: BLOO(블루)) (트렌디 x 칠! 세련되고 듣기 편한 힙합음악들을 즐겨보세요.) ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWvmOXYvR5a6"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWvmOXYvR5a6",
+        "id": "37i9dQZF1DWWvmOXYvR5a6",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000031e7b33b1a79a0a7dc19d2746",
+            "width": null
+          }
+        ],
+        "name": "TrenChill K-Hip Hop",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA1NjYzMywwMDAwMDAwMDVmNmM0MmU4ZGFiMjQ2OGJmYzkxNTBkZjM5ZWJiNjRh",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWvmOXYvR5a6/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWWvmOXYvR5a6"
+      },
+      {
+        "collaborative": false,
+        "description": "This is 21 Savage. The essential tracks, all in one playlist.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYojpWKpDMGi"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYojpWKpDMGi",
+        "id": "37i9dQZF1DWYojpWKpDMGi",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000329b95eb354eeaee9b6bb3cfe",
+            "width": null
+          }
+        ],
+        "name": "This Is 21 Savage",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3NTExNDk1NCwwMDAwMDAwMGQ4ZjQ5NDg5OGJiNjU5ZThjYjkzNTYzMmQ3NmZiMmQ2",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYojpWKpDMGi/tracks",
+          "total": 51
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYojpWKpDMGi"
+      },
+      {
+        "collaborative": false,
+        "description": "Emo feels for the misunderstood. Cover: Lil Peep",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6xZZEgC9Ubl"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6xZZEgC9Ubl",
+        "id": "37i9dQZF1DX6xZZEgC9Ubl",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003a4ecdafcb012d6d880e3e646",
+            "width": null
+          }
+        ],
+        "name": "tear drop",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMGEwYTI3MGY3ZDkwZDRmMzZhYmM2NzQ4MTdkYjE3ZTk5",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6xZZEgC9Ubl/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX6xZZEgC9Ubl"
+      },
+      {
+        "collaborative": false,
+        "description": "The soundtrack to the internet. Cover: BLP KOSHER",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6OgmB2fwLGd"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6OgmB2fwLGd",
+        "id": "37i9dQZF1DX6OgmB2fwLGd",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003cec2325447df02c0e04b12ca",
+            "width": null
+          }
+        ],
+        "name": "Internet People",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMDkwZTljNDJjYjcwZTk0YWMxMDlmYzg5OGM5YzYxZDRi",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6OgmB2fwLGd/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX6OgmB2fwLGd"
+      },
+      {
+        "collaborative": false,
+        "description": "Crossing over like Allen I. Cover: Pink Pantheress & Ice Spice",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX2A29LI7xHn1"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX2A29LI7xHn1",
+        "id": "37i9dQZF1DX2A29LI7xHn1",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003ee82f23f8222d3a32388a896",
+            "width": null
+          }
+        ],
+        "name": "Signed XOXO",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMDQ0Y2E0OThiYzg4Y2M2ODZkOTMyOTBiOGNkNjFhOWM1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX2A29LI7xHn1/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX2A29LI7xHn1"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFQ00XGBls6ym/playlists?country=ID&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 57
+  }
+}

@@ -1,0 +1,732 @@
+{
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFKLfwjuJMoNC/playlists?country=ID&offset=0&limit=20",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "Today's top country hits of the week, worldwide! Cover: Morgan Evans",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX1lVhptIYRda"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX1lVhptIYRda",
+        "id": "37i9dQZF1DX1lVhptIYRda",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000035b3277af9629b6b493ce4d4d",
+            "width": null
+          }
+        ],
+        "name": "Hot Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMDBhMjk2NTViM2NiYzcyZjJjZDg1YjBmODFmYzQ3OGJi",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX1lVhptIYRda/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX1lVhptIYRda"
+      },
+      {
+        "collaborative": false,
+        "description": "Country music's 50 most played songs in the world. Updated weekly. Cover: Morgan Wallen",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX7aUUBCKwo4Y"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7aUUBCKwo4Y",
+        "id": "37i9dQZF1DX7aUUBCKwo4Y",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d0cf46e396551b8366c3a6fb",
+            "width": null
+          }
+        ],
+        "name": "Country Top 50",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAzOTk4NywwMDAwMDAwMDhiNzI0NmIwNTA2ZGM4YzczYmVhODYwNWVhZTQzNDNl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7aUUBCKwo4Y/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX7aUUBCKwo4Y"
+      },
+      {
+        "collaborative": false,
+        "description": "A compilation of the all-time biggest hits in Country Music. Cover: Dolly Parton",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWZBCPUIUs2iR"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZBCPUIUs2iR",
+        "id": "37i9dQZF1DWZBCPUIUs2iR",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000336fd496437cc04bf726f7030",
+            "width": null
+          }
+        ],
+        "name": "Country's Greatest Hits",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3NjQwMjgxMiwwMDAwMDAwMDc0YjAzNTQ4NDM3Mjg2ZDdiMTMxMzc4YzgzODFiMjE2",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZBCPUIUs2iR/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWZBCPUIUs2iR"
+      },
+      {
+        "collaborative": false,
+        "description": "Country music to get you back to the basics.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWTkxQvqMy4WW"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTkxQvqMy4WW",
+        "id": "37i9dQZF1DWTkxQvqMy4WW",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003ac122bacaf283ff31b362030",
+            "width": null
+          }
+        ],
+        "name": "Chillin' on a Dirt Road",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMDJkMjk4NjAzMDdhZGE5N2I2NzVjOWRmYzNkMDliOWJl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTkxQvqMy4WW/tracks",
+          "total": 80
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWTkxQvqMy4WW"
+      },
+      {
+        "collaborative": false,
+        "description": "The decade of the Outlaws of Country Music - where traditional and crossover country collided. Cover: Charley Pride",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYP5PUsVbso9"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYP5PUsVbso9",
+        "id": "37i9dQZF1DWYP5PUsVbso9",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003a4b5b54c641cbe53c493cb05",
+            "width": null
+          }
+        ],
+        "name": "70s Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3NzIxNDgwMCwwMDAwMDAwMDNiOGY4NjBjYWZmMWNkOWIxMTUyY2UxNWQ4Zjk3Mzk4",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYP5PUsVbso9/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYP5PUsVbso9"
+      },
+      {
+        "collaborative": false,
+        "description": "We're celebrating 30 years of Brooks & Dunn's iconic album \"Hard Workin' Man\" on 90s Country! ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWVpjAJGB70vU"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWVpjAJGB70vU",
+        "id": "37i9dQZF1DWVpjAJGB70vU",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000345ee6690ff750671321fbf57",
+            "width": null
+          }
+        ],
+        "name": "90s Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3NzEyODQwMCwwMDAwMDAwMGY4NGJmYmQzNTA1ZThmYWM3MDQ2MGI4YjAxNGJiMjcz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWVpjAJGB70vU/tracks",
+          "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWVpjAJGB70vU"
+      },
+      {
+        "collaborative": false,
+        "description": "Spotify country fan favorites. Artist: Lady A",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYnwbYQ5HnZU"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYnwbYQ5HnZU",
+        "id": "37i9dQZF1DWYnwbYQ5HnZU",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000310ef3319d5e1c0f412479cbb",
+            "width": null
+          }
+        ],
+        "name": "Country Gold",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDIzNTI2MCwwMDAwMDAwMGI4ZTZjMGU0NTZlN2UxNGEwZjZjNzhkZDQ1YTliNWM5",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYnwbYQ5HnZU/tracks",
+          "total": 95
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYnwbYQ5HnZU"
+      },
+      {
+        "collaborative": false,
+        "description": "The decade when New Traditional artists like George Strait, Reba McEntire, and Randy Travis dominated the Country scene. Cover: The Judds",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6RCydf9ytsj"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6RCydf9ytsj",
+        "id": "37i9dQZF1DX6RCydf9ytsj",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000031bad380923e970b5867768e9",
+            "width": null
+          }
+        ],
+        "name": "80s Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3NTk5ODM4MiwwMDAwMDAwMDliNDk1Zjc4OTYwNjZhZTllZWE4ZTdhNzJlMmM0YTI1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6RCydf9ytsj/tracks",
+          "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX6RCydf9ytsj"
+      },
+      {
+        "collaborative": false,
+        "description": "We're celebrating the 10th anniversary of Kacey Musgraves' debut record Same Trailer Different Park on 2010s Country! ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWXdiK4WAVRUW"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWXdiK4WAVRUW",
+        "id": "37i9dQZF1DWXdiK4WAVRUW",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003f202555e1144759faba35228",
+            "width": null
+          }
+        ],
+        "name": "2010s Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3OTAwODY2OCwwMDAwMDAwMDA0YzUyNDY0MjI5MjJmYTQzMzAyYjIzODQxZjE0ZmFl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWXdiK4WAVRUW/tracks",
+          "total": 200
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWXdiK4WAVRUW"
+      },
+      {
+        "collaborative": false,
+        "description": "Nothing but beautiful country love songs. ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX8WMG8VPSOJC"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8WMG8VPSOJC",
+        "id": "37i9dQZF1DX8WMG8VPSOJC",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000356960d3b5cf01a153d349267",
+            "width": null
+          }
+        ],
+        "name": "Country Kind of Love",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDg0MDAwMCwwMDAwMDAwMDczODBlM2JhY2MyOTZlY2RmYmU1YTc0Y2FlMWI5MzY3",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8WMG8VPSOJC/tracks",
+          "total": 85
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX8WMG8VPSOJC"
+      },
+      {
+        "collaborative": false,
+        "description": "A decade full of 00s country hits! Cover: Kenny Chesney",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdxUH6sNtcDe"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXdxUH6sNtcDe",
+        "id": "37i9dQZF1DXdxUH6sNtcDe",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000039e2f80e0f51c3b26f2423eb3",
+            "width": null
+          }
+        ],
+        "name": "2000s Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3ODgwNjM5MCwwMDAwMDAwMDdjYmRiNThkNjAwMWM1ZjZlZjExZjk2MTM0MzdjMmM5",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXdxUH6sNtcDe/tracks",
+          "total": 125
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXdxUH6sNtcDe"
+      },
+      {
+        "collaborative": false,
+        "description": "New Music Discovery is what we're about. Try it on for size. Cover: Chayce Beckham",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX8S0uQvJ4gaa"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8S0uQvJ4gaa",
+        "id": "37i9dQZF1DX8S0uQvJ4gaa",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000345aa31f5a6293414ff3e935f",
+            "width": null
+          }
+        ],
+        "name": "New Boots",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMGRmMmQ5OWFiOGViOGFjNzY0NzgzYjMyODUxYTg2YTYz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8S0uQvJ4gaa/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX8S0uQvJ4gaa"
+      },
+      {
+        "collaborative": false,
+        "description": "Traditional country sounds from artists of yesterday and today.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXaiEFNvQPZrM"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXaiEFNvQPZrM",
+        "id": "37i9dQZF1DXaiEFNvQPZrM",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003dba80b1fba8f99128859e13f",
+            "width": null
+          }
+        ],
+        "name": "Traditional Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMGE2ZmI4NzU4MzZkZTYzNzZlMmY0ODgxNWZmYjRlZGJj",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXaiEFNvQPZrM/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXaiEFNvQPZrM"
+      },
+      {
+        "collaborative": false,
+        "description": "Many would say that this decade is a \"Golden Era\" for country music. Cover: Patsy Cline",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX7CGYgLhqwu5"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7CGYgLhqwu5",
+        "id": "37i9dQZF1DX7CGYgLhqwu5",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003f9c951ecf06a57c480169428",
+            "width": null
+          }
+        ],
+        "name": "60s Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY1OTA2NzMyMCwwMDAwMDAwMDJhNmZkYjE5MDZmMmMzM2Y3ZWQ4MTQyNTFhNzgyNjI0",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7CGYgLhqwu5/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX7CGYgLhqwu5"
+      },
+      {
+        "collaborative": false,
+        "description": "The decade when country and rockabilly came together. Cover: Johnny Cash",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWnpcjfCqaW0"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWnpcjfCqaW0",
+        "id": "37i9dQZF1DWWnpcjfCqaW0",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000366686968b244a61bb3ff7f15",
+            "width": null
+          }
+        ],
+        "name": "50s Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3MjY5NTEyNywwMDAwMDAwMDY1ODNhZTMyNGQ2ZTgzOWFmZDUxZjQ2ODgyNDNmNWY4",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWnpcjfCqaW0/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWWnpcjfCqaW0"
+      },
+      {
+        "collaborative": false,
+        "description": "The Country Coffeehouse is open! Grab a cup and lean back to some low-key country.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYiR2Uqcon0X"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYiR2Uqcon0X",
+        "id": "37i9dQZF1DWYiR2Uqcon0X",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003a71a8f25bac49b82f4ff9735",
+            "width": null
+          }
+        ],
+        "name": "Country Coffeehouse",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3NjYxMDAwMCwwMDAwMDAwMDYxNGMzNjIzY2NkMGI0N2QyNjc3NGFiZjg3NThjMzZk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYiR2Uqcon0X/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYiR2Uqcon0X"
+      },
+      {
+        "collaborative": false,
+        "description": "Classic Country from the Legends of the 1940's.  Where Hillbilly, Texas Swing and Bluegrass came together. Cover: Ernest Tubb",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0vVAWnG6fKT"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0vVAWnG6fKT",
+        "id": "37i9dQZF1DX0vVAWnG6fKT",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003526d7f25c8f271269b72b152",
+            "width": null
+          }
+        ],
+        "name": "40s Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3MjY5NjIzMiwwMDAwMDAwMGU1N2ZmOTJjZWQwMTgzZjNkMWUzNTg4Y2VlODJlMzI5",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0vVAWnG6fKT/tracks",
+          "total": 70
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX0vVAWnG6fKT"
+      },
+      {
+        "collaborative": false,
+        "description": "Lainey Wilson is taking over with her favorite workout tracks to keep up with her New Year's resolution. 🍑",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX5OrO2Jxuvdn"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX5OrO2Jxuvdn",
+        "id": "37i9dQZF1DX5OrO2Jxuvdn",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003e9b2ff1276e269418074f6e1",
+            "width": null
+          }
+        ],
+        "name": "Country Workout",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3MzMwNDQyOCwwMDAwMDAwMDE0ZGJjMzExZjY5Zjc2NjA1ZDMyNDVmYjBmYTZlY2Nh",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX5OrO2Jxuvdn/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX5OrO2Jxuvdn"
+      },
+      {
+        "collaborative": false,
+        "description": "Top trending country tracks from the last few months. Cover: Jelly Roll",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWW7RgkOJG32Y"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWW7RgkOJG32Y",
+        "id": "37i9dQZF1DWW7RgkOJG32Y",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003e6c410359e93715324783971",
+            "width": null
+          }
+        ],
+        "name": "Breakout Country",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTQ0NDgwMCwwMDAwMDAwMDlkNDk3MTY4ODBlMzAxODNkZjIwNWU4YTk2NzQ3NTAy",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWW7RgkOJG32Y/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWW7RgkOJG32Y"
+      },
+      {
+        "collaborative": false,
+        "description": "A deep and concise look at the music that made Country Music what is is today. Covers eras \n1930's - 1990.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXcYKwAtV4NDh"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXcYKwAtV4NDh",
+        "id": "37i9dQZF1DXcYKwAtV4NDh",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000301cfe0d3a3c191279fc02475",
+            "width": null
+          }
+        ],
+        "name": "History of Country Music",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3MzY0MjE3NCwwMDAwMDAwMDczYjUxM2Q4ZTYzM2I1YWQ2YTY0YjVjYzllYjNlNjlk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXcYKwAtV4NDh/tracks",
+          "total": 107
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXcYKwAtV4NDh"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFKLfwjuJMoNC/playlists?country=ID&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 35
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/categories/toplists/playlists?country=ID&offset=0&limit=20",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "The Weeknd is on top of the Hottest 50!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXcBWIGoYBM5M",
+        "id": "37i9dQZF1DXcBWIGoYBM5M",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003dcc50246430b8c5a6a4b8670",
+            "width": null
+          }
+        ],
+        "name": "Today's Top Hits",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjMwNDg3NywwMDAwMDAwMDdjMzZjZThmOGFjMDdiNDA2NDlmMDNmZjZhODAzMTAz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXcBWIGoYBM5M/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXcBWIGoYBM5M"
+      },
+      {
+        "collaborative": false,
+        "description": "Hits terpanas dari Anggi Marito, Miley Cyrus serta artis terfavorit Anda dari dalam negeri dan mancanegara.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXa2EiKmMLhFD"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXa2EiKmMLhFD",
+        "id": "37i9dQZF1DXa2EiKmMLhFD",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d6123b7a4d718031005462f8",
+            "width": null
+          }
+        ],
+        "name": "Hot Hits Indonesia",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAxMTAxMSwwMDAwMDAwMDFmNDU0NGJlZWM3NDhmNTk2NTEzZjkxZWIyMWI1NjFh",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXa2EiKmMLhFD/tracks",
+          "total": 53
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXa2EiKmMLhFD"
+      },
+      {
+        "collaborative": false,
+        "description": "Deretan musik Indonesia terpopuler saat ini. \nCover: Mahalini",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWZxM58TRkuqg"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZxM58TRkuqg",
+        "id": "37i9dQZF1DWZxM58TRkuqg",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003f62f3284401a9252ad4d9ad7",
+            "width": null
+          }
+        ],
+        "name": "Puncak Klasemen",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAxMDAwMCwwMDAwMDAwMDU3MGFlNzFlNTc2NTM2MzdkNTk4NDc5ZjJkMmFlNTBk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZxM58TRkuqg/tracks",
+          "total": 54
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWZxM58TRkuqg"
+      },
+      {
+        "collaborative": false,
+        "description": "Rilisan baru pekan ini dari dalam negeri dan mancanegara yang diperbarui setiap Jumat. Cover: Agust D",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX8vAahjzdXGC"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8vAahjzdXGC",
+        "id": "37i9dQZF1DX8vAahjzdXGC",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000333188971c9249c860eeec420",
+            "width": null
+          }
+        ],
+        "name": "New Music Friday Indonesia",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMGE1M2E3MjhkOWVlOTUxYmNkYThiMWM4OWI2NGY4OTFm",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8vAahjzdXGC/tracks",
+          "total": 94
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX8vAahjzdXGC"
+      },
+      {
+        "collaborative": false,
+        "description": "Terbuai dengan musik Jazz dari negeri sendiri. Cover: Azimah Fada",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWZrhFFq3bnGV"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZrhFFq3bnGV",
+        "id": "37i9dQZF1DWZrhFFq3bnGV",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000354ba559224e4e72dc3fa602b",
+            "width": null
+          }
+        ],
+        "name": "Jazz Anak Negeri",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3OTYzNzQ5MCwwMDAwMDAwMGEwMWExNDIyMTM0OTExMjRmODViMWEwMzVhZWYxNGY3",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZrhFFq3bnGV/tracks",
+          "total": 105
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWZrhFFq3bnGV"
+      },
+      {
+        "collaborative": false,
+        "description": "Jejeran lagu terfavorit dari kancah musik independen Indonesia. Cover: Elephant Kind\n",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXd82NU5rAcTZ"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXd82NU5rAcTZ",
+        "id": "37i9dQZF1DXd82NU5rAcTZ",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000339ee75019a5f718ee903a1fa",
+            "width": null
+          }
+        ],
+        "name": "IndieNesia",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTgzNzIwMCwwMDAwMDAwMGRlNTM5OTRiMDZiNjc3N2I5NWRlMTNhYjVjNjZiOWEx",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXd82NU5rAcTZ/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXd82NU5rAcTZ"
+      },
+      {
+        "collaborative": false,
+        "description": "The pulse of R&B music today. Cover: FLO",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX4SBhb3fqCJd"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX4SBhb3fqCJd",
+        "id": "37i9dQZF1DX4SBhb3fqCJd",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000030d8627b0ae39274bf2ac780e",
+            "width": null
+          }
+        ],
+        "name": "Are & Be",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMGFkNTk1YTBkZDUyNzMzMzEzYmUxZDRiNDJhOGMyOGYz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX4SBhb3fqCJd/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX4SBhb3fqCJd"
+      },
+      {
+        "collaborative": false,
+        "description": "Music from Lil Uzi Vert, Drake and Moneybagg Yo. ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0XUsuxWHRQd"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0XUsuxWHRQd",
+        "id": "37i9dQZF1DX0XUsuxWHRQd",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003f872077fdbbb64540b2a909c",
+            "width": null
+          }
+        ],
+        "name": "RapCaviar",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMGQwMzNjNjI1NTIyMGFlOGIyNDFkYTlmMWM1YTMwZDg1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0XUsuxWHRQd/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX0XUsuxWHRQd"
+      },
+      {
+        "collaborative": false,
+        "description": "Let's turn ON the movement! Cover: NCT DOJAEJUNG",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX9tPFwDMOaN1"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX9tPFwDMOaN1",
+        "id": "37i9dQZF1DX9tPFwDMOaN1",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003a87d2a49a70442900785cd74",
+            "width": null
+          }
+        ],
+        "name": "K-Pop ON! (온)",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjMwODg4OCwwMDAwMDAwMGFjNmMxMzQ4NzcyZTljYzk5YWU0NzFlNGFkODM5Mjgz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX9tPFwDMOaN1/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX9tPFwDMOaN1"
+      },
+      {
+        "collaborative": false,
+        "description": "Your daily update of the most played tracks right now - Global.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF",
+        "id": "37i9dQZEVXbMDoHDwVN2tF",
+        "images": [
+          {
+            "height": null,
+            "url": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_large.jpg",
+            "width": null
+          }
+        ],
+        "name": "Top 50 - Global",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "NzM1NjMzMDAwLDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDY1NmU=",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZEVXbMDoHDwVN2tF/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZEVXbMDoHDwVN2tF"
+      },
+      {
+        "collaborative": false,
+        "description": "Your daily update of the most viral tracks right now - Global.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZEVXbLiRSasKsNU9"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZEVXbLiRSasKsNU9",
+        "id": "37i9dQZEVXbLiRSasKsNU9",
+        "images": [
+          {
+            "height": null,
+            "url": "https://charts-images.scdn.co/assets/locale_en/viral/daily/region_global_large.jpg",
+            "width": null
+          }
+        ],
+        "name": "Viral 50 - Global",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "NzM1NjMzMDAwLDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDY1NmU=",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZEVXbLiRSasKsNU9/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZEVXbLiRSasKsNU9"
+      },
+      {
+        "collaborative": false,
+        "description": "New music from The Weeknd & Future, Kim Petras & Nicki Minaj, MUNA, The Chainsmokers and more!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX4JAvHpjipBk"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX4JAvHpjipBk",
+        "id": "37i9dQZF1DX4JAvHpjipBk",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003c6ee1c1b77f6cc2b571cb69c",
+            "width": null
+          }
+        ],
+        "name": "New Music Friday",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA1MDQzMiwwMDAwMDAwMDBhODg1Y2NjODMxNWFlMWY2ODZmZmZlZWQxMjU2ODUz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX4JAvHpjipBk/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX4JAvHpjipBk"
+      },
+      {
+        "collaborative": false,
+        "description": "Your daily update of the most played tracks right now - Indonesia.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZEVXbObFQZ3JLcXt"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZEVXbObFQZ3JLcXt",
+        "id": "37i9dQZEVXbObFQZ3JLcXt",
+        "images": [
+          {
+            "height": null,
+            "url": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_id_large.jpg",
+            "width": null
+          }
+        ],
+        "name": "Top 50 - Indonesia",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "NzM1NjMzMDAwLDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDY1NmU=",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZEVXbObFQZ3JLcXt/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZEVXbObFQZ3JLcXt"
+      },
+      {
+        "collaborative": false,
+        "description": "Your daily update of the most viral tracks right now - Indonesia.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZEVXbKpV6RVDTWcZ"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZEVXbKpV6RVDTWcZ",
+        "id": "37i9dQZEVXbKpV6RVDTWcZ",
+        "images": [
+          {
+            "height": null,
+            "url": "https://charts-images.scdn.co/assets/locale_en/viral/daily/region_id_large.jpg",
+            "width": null
+          }
+        ],
+        "name": "Viral 50 - Indonesia",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "NzM1NjMzMDAwLDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDY1NmU=",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZEVXbKpV6RVDTWcZ/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZEVXbKpV6RVDTWcZ"
+      }
+    ],
+    "limit": 20,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 14
+  }
+}

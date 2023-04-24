@@ -1,0 +1,229 @@
+{
+  "message": "Selamat beristirahat",
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/featured-playlists?country=ID&timestamp=2023-04-24T00%3A17%3A27&offset=0&limit=6",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "Soothing, minimalist ambient for deep sleep.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYcDQ1hSjOpY"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYcDQ1hSjOpY",
+        "id": "37i9dQZF1DWYcDQ1hSjOpY",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000037da11e4e02c0da2f543ea20f",
+            "width": null
+          }
+        ],
+        "name": "Deep Sleep",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA4Mzc3NSwwMDAwMDAwMDE5MTBkYTBkOTczY2I1ZDg2YTk3OTMzYWUzOTg5ZjMz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYcDQ1hSjOpY/tracks",
+          "total": 366
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYcDQ1hSjOpY"
+      },
+      {
+        "collaborative": false,
+        "description": "Bersantai dan nikmati irama gamelan Bali.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXbKpCeB6bby3"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXbKpCeB6bby3",
+        "id": "37i9dQZF1DXbKpCeB6bby3",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003a0cb154cd5d101bfa1004412",
+            "width": null
+          }
+        ],
+        "name": "Bali Lounge",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTUzODYwMjQxMiwwMDAwMDAwMDViMmIxOTZhYmViZjM5NDNmMDdlMzRkNzUwOWZjYWM2",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXbKpCeB6bby3/tracks",
+          "total": 64
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXbKpCeB6bby3"
+      },
+      {
+        "collaborative": false,
+        "description": "Unwind to these calm classical guitar pieces.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0jgyAiPl8Af"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0jgyAiPl8Af",
+        "id": "37i9dQZF1DX0jgyAiPl8Af",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003c1811d50fbd4df02ea3b06a3",
+            "width": null
+          }
+        ],
+        "name": "Peaceful Guitar",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAzODgwMCwwMDAwMDAwMGY5OWFkNWZhYTQ3MDk2ODMyNDdmN2U4OTMxNzczZmMy",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0jgyAiPl8Af/tracks",
+          "total": 303
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX0jgyAiPl8Af"
+      },
+      {
+        "collaborative": false,
+        "description": "Tekan play dan buat tubuhmu senyaman mungkin.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXbit6MX2F6h3"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXbit6MX2F6h3",
+        "id": "37i9dQZF1DXbit6MX2F6h3",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003857be3170c47d5e08e3c0a63",
+            "width": null
+          }
+        ],
+        "name": "Rebahan",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDI0ODYwMywwMDAwMDAwMDVjY2NmOWExYWU0Yjc0MmZiNmNkMDA5YTZiMzRhNWUw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXbit6MX2F6h3/tracks",
+          "total": 87
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXbit6MX2F6h3"
+      },
+      {
+        "collaborative": false,
+        "description": "Relax and unwind with chill, ambient music.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX3Ogo9pFvBkY"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3Ogo9pFvBkY",
+        "id": "37i9dQZF1DX3Ogo9pFvBkY",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000319ab577207bd9e19375deb6b",
+            "width": null
+          }
+        ],
+        "name": "Ambient Relaxation",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTQwMjY2MywwMDAwMDAwMDkyOWMzM2JlYjBiNjY2NzBlOTc2MWE1ZTkwY2ZhZjgw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3Ogo9pFvBkY/tracks",
+          "total": 282
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX3Ogo9pFvBkY"
+      },
+      {
+        "collaborative": false,
+        "description": "Gentle ambient piano to help you fall asleep.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWZd79rJ6a7lp"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZd79rJ6a7lp",
+        "id": "37i9dQZF1DWZd79rJ6a7lp",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003bc9438e3a6ff78076f8b1405",
+            "width": null
+          }
+        ],
+        "name": "Sleep",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA4MzY1MywwMDAwMDAwMGFlODMzNDc0ZDgyYmU5ZmY4MzgyZDY3NmVhY2Q0MzFm",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZd79rJ6a7lp/tracks",
+          "total": 275
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWZd79rJ6a7lp"
+      }
+    ],
+    "limit": 6,
+    "next": "https://api.spotify.com/v1/browse/featured-playlists?country=ID&timestamp=2023-04-24T00%3A17%3A27&offset=6&limit=6",
+    "offset": 0,
+    "previous": null,
+    "total": 13
+  }
+}

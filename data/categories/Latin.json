@@ -1,0 +1,732 @@
+{
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFxXaXKP7zcDp/playlists?country=ID&offset=0&limit=20",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "Today's top Latin hits, elevando nuestra música. Cover: Grupo Frontera & Bad Bunny",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX10zKzsJ2jva"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX10zKzsJ2jva",
+        "id": "37i9dQZF1DX10zKzsJ2jva",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000037ff56ae1d186669482eb0931",
+            "width": null
+          }
+        ],
+        "name": "Viva Latino",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMGJlYjRhZTU2ZDg0Yzg5ZGU3OWRlNDg0NjRlNzVlZmNi",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX10zKzsJ2jva/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX10zKzsJ2jva"
+      },
+      {
+        "collaborative": false,
+        "description": "These hits were made to stay! Revive los éxitos de los últimos meses aquí.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXbLMw3ry7d7k"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXbLMw3ry7d7k",
+        "id": "37i9dQZF1DXbLMw3ry7d7k",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003b7fe19419fad777dbc738ffd",
+            "width": null
+          }
+        ],
+        "name": "Latin Hit Mix",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDcyNzExMiwwMDAwMDAwMDUyZDhmNWE0MmU3MGE5NDVkODMwNjAwYjNhNGM1NmNm",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXbLMw3ry7d7k/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXbLMw3ry7d7k"
+      },
+      {
+        "collaborative": false,
+        "description": "Reggaeton hits from Yng Lvcas, Peso Pluma, Feid, KAROL G, and more.🔥🥵",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWY7IeIP1cdjF"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWY7IeIP1cdjF",
+        "id": "37i9dQZF1DWY7IeIP1cdjF",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003351c08401e76ec34553bc663",
+            "width": null
+          }
+        ],
+        "name": "Baila Reggaeton",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA1MzUxOSwwMDAwMDAwMDZmNTZkZmVhNTViN2NhNDY0ZjAwMGE4ZmQ4YzQ0MTA5",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWY7IeIP1cdjF/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWY7IeIP1cdjF"
+      },
+      {
+        "collaborative": false,
+        "description": "Break a sweat with this Zumba-inspired playlist! Find a class at Zumba.Dance",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX7cmFV9rWM0u"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7cmFV9rWM0u",
+        "id": "37i9dQZF1DX7cmFV9rWM0u",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003e2a2682fc2cc7325f173a482",
+            "width": null
+          }
+        ],
+        "name": "Zumba® Beats",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDYyOTA3OSwwMDAwMDAwMDBjYzNlN2E0NDU0YjEyMDEwMzkzZGU4NDU4ZmRlZTBj",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7cmFV9rWM0u/tracks",
+          "total": 65
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX7cmFV9rWM0u"
+      },
+      {
+        "collaborative": false,
+        "description": "Timeless Latin hits, solo tus favoritos!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX3omIq8ziEt6"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3omIq8ziEt6",
+        "id": "37i9dQZF1DX3omIq8ziEt6",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003983ed3df508b457e1c5d33ca",
+            "width": null
+          }
+        ],
+        "name": "Esenciales",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDcyNzE1NiwwMDAwMDAwMDdjZmRkZWMxODQ1Yzg0ODA4ZGI1Nzc0YzI3MTVhMzhk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3omIq8ziEt6/tracks",
+          "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX3omIq8ziEt6"
+      },
+      {
+        "collaborative": false,
+        "description": "Timeless Latin pop hits through the decades! Cover: Chayanne",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6ThddIjWuGT"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6ThddIjWuGT",
+        "id": "37i9dQZF1DX6ThddIjWuGT",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000339a1c2499c7ba107b8b81e3f",
+            "width": null
+          }
+        ],
+        "name": "Latin Pop Classics",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3OTYxNDU2MiwwMDAwMDAwMGUzN2JiZDFjM2E4MDk0OGNmNzE4MjI4NTdjYmM5MTBm",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6ThddIjWuGT/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX6ThddIjWuGT"
+      },
+      {
+        "collaborative": false,
+        "description": "Upbeat Latin songs to keep your heart rate up.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWXmQEAjlxGhi"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWXmQEAjlxGhi",
+        "id": "37i9dQZF1DWXmQEAjlxGhi",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000030f0a51f36992fd6790d13685",
+            "width": null
+          }
+        ],
+        "name": "Latin Cardio",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDI0NTQzMiwwMDAwMDAwMGEwOGIwZjUyMWFiNjM4ZWVhMjIxMGUxMDU0MmY2NWEx",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWXmQEAjlxGhi/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWXmQEAjlxGhi"
+      },
+      {
+        "collaborative": false,
+        "description": "Ritmo latino!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYK2yx0OW9Kj"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYK2yx0OW9Kj",
+        "id": "37i9dQZF1DWYK2yx0OW9Kj",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000031cf94d672b1d05b385f2fffe",
+            "width": null
+          }
+        ],
+        "name": "Workout Latino",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA4MjQ0NSwwMDAwMDAwMGIwMjM2NzJhM2MyZDFkYmRhMTAzYTg5MGU4ZmFkZGUz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYK2yx0OW9Kj/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYK2yx0OW9Kj"
+      },
+      {
+        "collaborative": false,
+        "description": "Latin songs that changed the game. Cover: Celia Cruz",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWZJIhAWlsiOv"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZJIhAWlsiOv",
+        "id": "37i9dQZF1DWZJIhAWlsiOv",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000037406a71293512b8292fa96a7",
+            "width": null
+          }
+        ],
+        "name": "100 Latin Classics",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTI0MDQ4MywwMDAwMDAwMDY4NTViYzJlMjEzMzk4Zjk3NzM2M2Y1ODg3ZWE2MDYz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZJIhAWlsiOv/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWZJIhAWlsiOv"
+      },
+      {
+        "collaborative": false,
+        "description": "¡Perreo del bueno!\nCover: Wisin & Anuel AA",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWX5ZOsG2Ogi1"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWX5ZOsG2Ogi1",
+        "id": "37i9dQZF1DWX5ZOsG2Ogi1",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003c7af41b19b7520f84c6af8ac",
+            "width": null
+          }
+        ],
+        "name": "Puro Perreo",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA2MTczMiwwMDAwMDAwMDc5YjU2OTZjODdkZTdjZmUwNmRjMTMxOGU1MGQ3NzM2",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWX5ZOsG2Ogi1/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWX5ZOsG2Ogi1"
+      },
+      {
+        "collaborative": false,
+        "description": "The irresistible rhythms of Latin jazz. Cover: Tito Puente",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX661EjJOj3Tu"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX661EjJOj3Tu",
+        "id": "37i9dQZF1DX661EjJOj3Tu",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000361db6cce1ab4d0cc7b4cd32c",
+            "width": null
+          }
+        ],
+        "name": "Latin Jazz",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3ODg5NDMxMiwwMDAwMDAwMDY2NmNmOTc4YjA4YjliZDIxZTA0MDllNDg5OTUyZWNl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX661EjJOj3Tu/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX661EjJOj3Tu"
+      },
+      {
+        "collaborative": false,
+        "description": "All-new releases by Latin artists! Cover: Nicki Nicole & Rels B",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX1hVRardJ30X"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX1hVRardJ30X",
+        "id": "37i9dQZF1DX1hVRardJ30X",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000386b34bd2caa17f1201a8eb78",
+            "width": null
+          }
+        ],
+        "name": "New Music Friday Latin",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjEwNTU5OSwwMDAwMDAwMDJhYjk4ZmU4OTFiZGM0OTFhYWE3Yjc4MmQ3YTkzNTM0",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX1hVRardJ30X/tracks",
+          "total": 59
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX1hVRardJ30X"
+      },
+      {
+        "collaborative": false,
+        "description": "Hits con sabor. Cover: Becky G & Omega",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYey22ryYM8U"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYey22ryYM8U",
+        "id": "37i9dQZF1DWYey22ryYM8U",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003b73ea7541bc972396d47b7c5",
+            "width": null
+          }
+        ],
+        "name": "Tropical Hits",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTQyNjIzNywwMDAwMDAwMDAzYzc5MGNkNGYxNjE4NTgwZTA4M2U3MzUxODhkMGMw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYey22ryYM8U/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYey22ryYM8U"
+      },
+      {
+        "collaborative": false,
+        "description": "Classics are forever! Los clásicos no pasan de moda! ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX8SfyqmSFDwe"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8SfyqmSFDwe",
+        "id": "37i9dQZF1DX8SfyqmSFDwe",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000348821712696a21fa6782ceb1",
+            "width": null
+          }
+        ],
+        "name": "Old School Reggaeton",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3NDc5MzM5NywwMDAwMDAwMDhjNGNlYzQ3N2QzYTAxNDdhMGMyMmM0ODg2OTM5NDJl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8SfyqmSFDwe/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX8SfyqmSFDwe"
+      },
+      {
+        "collaborative": false,
+        "description": "Take yourself to Havana with some Cuban Salsa and Café favourites.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWZLN2cXno63R"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZLN2cXno63R",
+        "id": "37i9dQZF1DWZLN2cXno63R",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d142d7feb73b11db237b11e8",
+            "width": null
+          }
+        ],
+        "name": "Café Cubano",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY1OTY5OTY4NSwwMDAwMDAwMGM4MmEwMzlkYzNlOTIzMDY2MzhkOWFiYWJmYjNiMzhm",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZLN2cXno63R/tracks",
+          "total": 62
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWZLN2cXno63R"
+      },
+      {
+        "collaborative": false,
+        "description": "Our editors' picks for the best Latin songs of the year! #SpotifyWrapped Cover: Bad Bunny",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX8L1VmOcEBjS"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8L1VmOcEBjS",
+        "id": "37i9dQZF1DX8L1VmOcEBjS",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000034b29a5496eede0b0f2afb1ee",
+            "width": null
+          }
+        ],
+        "name": "Viva Latino Presents: Best Latin Songs of 2022",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY2OTgxNzU5NiwwMDAwMDAwMGE2NDg1NDRhMGZjYjI0NjczNmQ0ZGZkZWU1NWU0MjVl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8L1VmOcEBjS/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX8L1VmOcEBjS"
+      },
+      {
+        "collaborative": false,
+        "description": "21st Century nomadic expressions interwoven into a very unexpected patchwork.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX62XscWX9t6h"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX62XscWX9t6h",
+        "id": "37i9dQZF1DX62XscWX9t6h",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000034ac6a2f3e9a49c74b831f321",
+            "width": null
+          }
+        ],
+        "name": "Folk Fabrique",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTQzMjA0NSwwMDAwMDAwMDdhOTcyMWFjY2FlMjU1MmMyZTZjNmYzNmJiNWIzMDVi",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX62XscWX9t6h/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX62XscWX9t6h"
+      },
+      {
+        "collaborative": false,
+        "description": "Descubre lo más nuevo del movimiento. Cover: vf7",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWZdsS73T1ogG"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZdsS73T1ogG",
+        "id": "37i9dQZF1DWZdsS73T1ogG",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003b46e8a3ad56bde7055cb7817",
+            "width": null
+          }
+        ],
+        "name": "el nuevo urbano",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA2MTM1NCwwMDAwMDAwMGU2NjFlZDRhYjFjN2Q0MWUzYTc5NWIyNTA4M2EyNGEw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWZdsS73T1ogG/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWZdsS73T1ogG"
+      },
+      {
+        "collaborative": false,
+        "description": "Keep calm and enjoy this musical cafecito.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXa3NnZWk6Z3T"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXa3NnZWk6Z3T",
+        "id": "37i9dQZF1DXa3NnZWk6Z3T",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003b24eff729cc6fd8f207b3178",
+            "width": null
+          }
+        ],
+        "name": "Café con Leche",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDU0MzIzOSwwMDAwMDAwMDYyY2U4OWZjZGNjMzUwOGIwMWMyY2ViNjI3MzRlMTVk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXa3NnZWk6Z3T/tracks",
+          "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXa3NnZWk6Z3T"
+      },
+      {
+        "collaborative": false,
+        "description": "Latin music bangers for your gaming session! Cover: Eladio Carrion ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX43v1NFXUzji"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX43v1NFXUzji",
+        "id": "37i9dQZF1DX43v1NFXUzji",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003f285d73d33e71f97c770ad06",
+            "width": null
+          }
+        ],
+        "name": "Latin Gaming",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDU0Nzg5OCwwMDAwMDAwMGViYzAzOTU4YWI4MDNlNDI1ZmJiMTFlYTIzMzBlOTcy",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX43v1NFXUzji/tracks",
+          "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX43v1NFXUzji"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFxXaXKP7zcDp/playlists?country=ID&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 107
+  }
+}

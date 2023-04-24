@@ -1,0 +1,373 @@
+{
+  "message": "Start Monday strong",
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/featured-playlists?country=US&timestamp=2023-04-24T07%3A30%3A28&offset=0&limit=20",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "Ease into the day",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWzVPEmatsUB"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWzVPEmatsUB",
+        "id": "37i9dQZF1DWWzVPEmatsUB",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000395feddb9cdd42db625ea14d1",
+            "width": null
+          }
+        ],
+        "name": "Mellow Morning",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMDhjYTEyZTZhNjMzMWViMzc0NDQxMDM5YWQ3MGUzY2Y5",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWzVPEmatsUB/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWWzVPEmatsUB"
+      },
+      {
+        "collaborative": false,
+        "description": "The perfect soundtrack to your morning yoga session.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdVyc8LtLi96"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXdVyc8LtLi96",
+        "id": "37i9dQZF1DXdVyc8LtLi96",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000309c51056e92882e97f2c3740",
+            "width": null
+          }
+        ],
+        "name": "Sunrise Yoga",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3MzYxMzM1NSwwMDAwMDAwMGI3NGZhODhlMDJiNWZmMTA3Y2M2YmJlYzRjYmRlYWRk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXdVyc8LtLi96/tracks",
+          "total": 235
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXdVyc8LtLi96"
+      },
+      {
+        "collaborative": false,
+        "description": "Make your shower more uplifting by singing along to these hits.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWSqmBTGDYngZ"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSqmBTGDYngZ",
+        "id": "37i9dQZF1DWSqmBTGDYngZ",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003329e2c5d3104f8c6a1d16a34",
+            "width": null
+          }
+        ],
+        "name": "Songs to Sing in the Shower",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA1NTY1MCwwMDAwMDAwMDRlMDZjZmZiYTMzNzMyNzc3MTQzMDU1Y2YzM2Q0YWU1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSqmBTGDYngZ/tracks",
+          "total": 200
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWSqmBTGDYngZ"
+      },
+      {
+        "collaborative": false,
+        "description": "Wake up in your own pace with piano music.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX7cZxYLqLUJl"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7cZxYLqLUJl",
+        "id": "37i9dQZF1DX7cZxYLqLUJl",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000386de24710c7230fcb6e08c13",
+            "width": null
+          }
+        ],
+        "name": "Wake Up Gently",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDY4ODgwMCwwMDAwMDAwMDJmNTNmY2NlNjgzYmQ5Yzk0OWE3NjdjZDIyZDY4MmZh",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7cZxYLqLUJl/tracks",
+          "total": 107
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX7cZxYLqLUJl"
+      },
+      {
+        "collaborative": false,
+        "description": "Get your day off to a cracking start!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXc5e2bJhV6pu"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXc5e2bJhV6pu",
+        "id": "37i9dQZF1DXc5e2bJhV6pu",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003037da32de996d7c859b3b563",
+            "width": null
+          }
+        ],
+        "name": "Morning Motivation",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDE4MTIwMCwwMDAwMDAwMDgyZWY3YmJkOTA2YTNiM2ZhMDYxZWEwODU2MTY2MGZl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXc5e2bJhV6pu/tracks",
+          "total": 80
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXc5e2bJhV6pu"
+      },
+      {
+        "collaborative": false,
+        "description": "Relax to the sound of gentle instrumental Jazz.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWVqfgj8NZEp1"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWVqfgj8NZEp1",
+        "id": "37i9dQZF1DWVqfgj8NZEp1",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000033794fb85cbf0ee5d8c77e3d5",
+            "width": null
+          }
+        ],
+        "name": "Coffee Table Jazz",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAyODAwMCwwMDAwMDAwMGJkNjdhNzA1NWM5MDcxMDE5ZmI1ODRmZDhjMjkxZDdi",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWVqfgj8NZEp1/tracks",
+          "total": 140
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWVqfgj8NZEp1"
+      },
+      {
+        "collaborative": false,
+        "description": "Let these Latin hits guide you through your daily commute!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX8DSRR3tGze6"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8DSRR3tGze6",
+        "id": "37i9dQZF1DX8DSRR3tGze6",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003abf99d54d39ed20d706dd2cb",
+            "width": null
+          }
+        ],
+        "name": "Latin Drive",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3NzI3MDM3MywwMDAwMDAwMDZjMzljZDE1ZjM0MmJiMTMwOGMwMzFkZWFjODBlY2Qy",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8DSRR3tGze6/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX8DSRR3tGze6"
+      },
+      {
+        "collaborative": false,
+        "description": "Uplifting classical melodies to help you rise and shine.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX9OZisIoJQhG"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX9OZisIoJQhG",
+        "id": "37i9dQZF1DX9OZisIoJQhG",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003a0764b6e0fd20a551ce3bd37",
+            "width": null
+          }
+        ],
+        "name": "Morning Classical",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTQ2MjUyMCwwMDAwMDAwMDIzMTEwM2U4ZTk5OTU1NDVmYTllMzc5NWQ1MDMzNTA0",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX9OZisIoJQhG/tracks",
+          "total": 45
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX9OZisIoJQhG"
+      },
+      {
+        "collaborative": false,
+        "description": "The soulful tunes to ease you into your day.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXaXDsfv6nvZ5"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXaXDsfv6nvZ5",
+        "id": "37i9dQZF1DXaXDsfv6nvZ5",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003f2de418f550899021c7cabd0",
+            "width": null
+          }
+        ],
+        "name": "Soul Coffee",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMDU4YjFkZjljZTU3NjQ0M2ZmMjUyMmVhNjUyODM3ODIz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXaXDsfv6nvZ5/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXaXDsfv6nvZ5"
+      },
+      {
+        "collaborative": false,
+        "description": "Positive and uplifting ambient instrumental tracks.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWUOhRIDwDB7M"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWUOhRIDwDB7M",
+        "id": "37i9dQZF1DWUOhRIDwDB7M",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000031e8e1adb3db7cbb52311346d",
+            "width": null
+          }
+        ],
+        "name": "Rise",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3OTA2NjAxOCwwMDAwMDAwMGYwOTI2ZWE5YzJhYTA3OTE4NTc2MDE0MDcwNWEwMWQw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWUOhRIDwDB7M/tracks",
+          "total": 230
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWUOhRIDwDB7M"
+      }
+    ],
+    "limit": 20,
+    "next": null,
+    "offset": 0,
+    "previous": null,
+    "total": 10
+  }
+}

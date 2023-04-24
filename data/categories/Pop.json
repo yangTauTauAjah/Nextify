@@ -1,0 +1,732 @@
+{
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFEC4WFtoNRpw/playlists?country=ID&offset=0&limit=20",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "Hits terpanas dari Anggi Marito, Miley Cyrus serta artis terfavorit Anda dari dalam negeri dan mancanegara.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXa2EiKmMLhFD"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXa2EiKmMLhFD",
+        "id": "37i9dQZF1DXa2EiKmMLhFD",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d6123b7a4d718031005462f8",
+            "width": null
+          }
+        ],
+        "name": "Hot Hits Indonesia",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAxMTAxMSwwMDAwMDAwMDFmNDU0NGJlZWM3NDhmNTk2NTEzZjkxZWIyMWI1NjFh",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXa2EiKmMLhFD/tracks",
+          "total": 53
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXa2EiKmMLhFD"
+      },
+      {
+        "collaborative": false,
+        "description": "Kumpulan lagu yang sedang menyebar luas. Cover: Elsya, Aan Story",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWhB4HOWKFQc"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWhB4HOWKFQc",
+        "id": "37i9dQZF1DWWhB4HOWKFQc",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003561464b3614460d5de1df261",
+            "width": null
+          }
+        ],
+        "name": "Lagi Viral",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAxMDAwMCwwMDAwMDAwMDA2MGFlMTZkNTYyZTcyNTk2ZDAwMTk3NDM0NWFlNGE3",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWhB4HOWKFQc/tracks",
+          "total": 85
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWWhB4HOWKFQc"
+      },
+      {
+        "collaborative": false,
+        "description": "The Weeknd is on top of the Hottest 50!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXcBWIGoYBM5M"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXcBWIGoYBM5M",
+        "id": "37i9dQZF1DXcBWIGoYBM5M",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003dcc50246430b8c5a6a4b8670",
+            "width": null
+          }
+        ],
+        "name": "Today's Top Hits",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjMwNDg3NywwMDAwMDAwMDdjMzZjZThmOGFjMDdiNDA2NDlmMDNmZjZhODAzMTAz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXcBWIGoYBM5M/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXcBWIGoYBM5M"
+      },
+      {
+        "collaborative": false,
+        "description": "Viral, trending and taking off.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX2L0iB23Enbq"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX2L0iB23Enbq",
+        "id": "37i9dQZF1DX2L0iB23Enbq",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d971c6c23114fc7636dc23eb",
+            "width": null
+          }
+        ],
+        "name": "Viral Hits",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTY2MCwwMDAwMDAwMDFmOWY4NmM4ZDg1MzMwN2E0YzVhNzg1NjFmMjY3OGE2",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX2L0iB23Enbq/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX2L0iB23Enbq"
+      },
+      {
+        "collaborative": false,
+        "description": "Throwback hits. Cover: Maher Zain",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX7i7SKKuAK4o"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7i7SKKuAK4o",
+        "id": "37i9dQZF1DX7i7SKKuAK4o",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003e046376e90a6a65965940fc5",
+            "width": null
+          }
+        ],
+        "name": "Mega Hits",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAxMDg3OSwwMDAwMDAwMDczZDQwMWYzZDJiYzVlNTk2YjJhZTM3NGFlNWM4NDA1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7i7SKKuAK4o/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX7i7SKKuAK4o"
+      },
+      {
+        "collaborative": false,
+        "description": "Lagu-lagu terpopuler dari dekade 2010an. Cover: Vierra",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWY8wQ1UHaykc"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWY8wQ1UHaykc",
+        "id": "37i9dQZF1DWY8wQ1UHaykc",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000039a1b68eab9d6a6f3d54b8ec0",
+            "width": null
+          }
+        ],
+        "name": "Ngetren di 2010an",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY2MDUxOTM0NywwMDAwMDAwMGJlMmRiODFhNGVkYTEzNjE2YTJiM2UzNGIyZTNkYTk4",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWY8wQ1UHaykc/tracks",
+          "total": 90
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWY8wQ1UHaykc"
+      },
+      {
+        "collaborative": false,
+        "description": "Warm familiar pop you know and love. Cover: Sam Smith",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWTwnEm1IYyoj"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTwnEm1IYyoj",
+        "id": "37i9dQZF1DWTwnEm1IYyoj",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000387902d641aa9fd5454112f57",
+            "width": null
+          }
+        ],
+        "name": "Soft Pop Hits",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3ODgyMTE1MiwwMDAwMDAwMDUzNTFiMzI4NzZlMGIwYTE4Yzc0ODdhMzRkYWEzODhl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTwnEm1IYyoj/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWTwnEm1IYyoj"
+      },
+      {
+        "collaborative": false,
+        "description": "A mega mix of 75 favorites from the last few years! ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXbYM3nMM0oPk"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXbYM3nMM0oPk",
+        "id": "37i9dQZF1DXbYM3nMM0oPk",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000033a0ce8df9f957525f62c9443",
+            "width": null
+          }
+        ],
+        "name": "Mega Hit Mix",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3Nzg3MTk1NSwwMDAwMDAwMGFjNGY3NDFhMTUxNjRiNWU4MTQyMjc0ZTIwYWM1ZDQz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXbYM3nMM0oPk/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXbYM3nMM0oPk"
+      },
+      {
+        "collaborative": false,
+        "description": "Get happy with today's dose of feel-good songs!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3rxVfibe1L0",
+        "id": "37i9dQZF1DX3rxVfibe1L0",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003bd0e19e810bb4b55ab164a95",
+            "width": null
+          }
+        ],
+        "name": "Mood Booster",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDg0MDAwMCwwMDAwMDAwMDBjNDQ1OTZmYzZjOGI1YjExZGRiNzJkNzZhMDQ0YmIw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3rxVfibe1L0/tracks",
+          "total": 78
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX3rxVfibe1L0"
+      },
+      {
+        "collaborative": false,
+        "description": "The hottest songs you need to listen to right now. Cover: The Weeknd",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWT1y71ZcMPe5"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWT1y71ZcMPe5",
+        "id": "37i9dQZF1DWT1y71ZcMPe5",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003048c1dd0a3776fd3ade299cb",
+            "width": null
+          }
+        ],
+        "name": "It's a Hit!",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjMxMDYwOCwwMDAwMDAwMDBhMmE3MTc3OTBiYzljMzZmNDFhYjI5Y2U1OTQ5ODIz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWT1y71ZcMPe5/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWT1y71ZcMPe5"
+      },
+      {
+        "collaborative": false,
+        "description": "~ basking in that Love on Tour glow ~ cover: Harry Styles",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6wk8dYln4y0"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6wk8dYln4y0",
+        "id": "37i9dQZF1DX6wk8dYln4y0",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d61be60bff9cb6009d7518b4",
+            "width": null
+          }
+        ],
+        "name": "*hits different*",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjI5Nzc1OSwwMDAwMDAwMDQ2MGFmN2NjZTQ4YmQ0Mzk1OTFmMDA3N2E4NmI2N2I3",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6wk8dYln4y0/tracks",
+          "total": 90
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX6wk8dYln4y0"
+      },
+      {
+        "collaborative": false,
+        "description": "Rilisan baru pekan ini dari dalam negeri dan mancanegara yang diperbarui setiap Jumat. Cover: Agust D",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX8vAahjzdXGC"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8vAahjzdXGC",
+        "id": "37i9dQZF1DX8vAahjzdXGC",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000333188971c9249c860eeec420",
+            "width": null
+          }
+        ],
+        "name": "New Music Friday Indonesia",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTYwMCwwMDAwMDAwMGE1M2E3MjhkOWVlOTUxYmNkYThiMWM4OWI2NGY4OTFm",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX8vAahjzdXGC/tracks",
+          "total": 94
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX8vAahjzdXGC"
+      },
+      {
+        "collaborative": false,
+        "description": "Lagu-lagu terkini yang sedang beranjak menjadi hit. Cover: Meiska",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX7sD2LU79ZzQ"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7sD2LU79ZzQ",
+        "id": "37i9dQZF1DX7sD2LU79ZzQ",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003ce45680943e5403d2558d4bf",
+            "width": null
+          }
+        ],
+        "name": "Naik Daun",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAxMDAwMCwwMDAwMDAwMGJjZWQ3MjMyNmM4YmI5ZmEyZDU2ZWQzMzFkYTgzNGVi",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7sD2LU79ZzQ/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX7sD2LU79ZzQ"
+      },
+      {
+        "collaborative": false,
+        "description": "Sing along and enjoy the drive...",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWMOmoXKqHTD"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWMOmoXKqHTD",
+        "id": "37i9dQZF1DWWMOmoXKqHTD",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003ffa215be1a4c64e3cbf59d1e",
+            "width": null
+          }
+        ],
+        "name": "Songs to Sing in the Car",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3ODc0NDI1NSwwMDAwMDAwMGZhZjUyOTkxZDNmNGM2ODE5NWNiNTViNmJjOTM5NzBh",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWMOmoXKqHTD/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWWMOmoXKqHTD"
+      },
+      {
+        "collaborative": false,
+        "description": "Somehow heartbreak feels good in a place like this. Cover: Lizzy McAlpine",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWSqBruwoIXkA"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSqBruwoIXkA",
+        "id": "37i9dQZF1DWSqBruwoIXkA",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000310a0724165906fa48bf80939",
+            "width": null
+          }
+        ],
+        "name": "sad hour",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTQ0NDgwMCwwMDAwMDAwMDFmM2NlNDZhYjA0YTg1OWE2MmZhOGQxZDAyMDlhYTE4",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSqBruwoIXkA/tracks",
+          "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWSqBruwoIXkA"
+      },
+      {
+        "collaborative": false,
+        "description": "iykyk",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX5Vy6DFOcx00"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX5Vy6DFOcx00",
+        "id": "37i9dQZF1DX5Vy6DFOcx00",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000031c9bfca9b2fd2f546a30f751",
+            "width": null
+          }
+        ],
+        "name": "big on the internet",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjE3MjA4MiwwMDAwMDAwMDQxZDQ3ZWRmNzU4ZDZlMWNhMjJjMTVmNmI4ZWY2NjE2",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX5Vy6DFOcx00/tracks",
+          "total": 127
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX5Vy6DFOcx00"
+      },
+      {
+        "collaborative": false,
+        "description": "Tight Roll your jeans, break out the CK1, and set the mood...",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWXqpDKK4ed9O"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWXqpDKK4ed9O",
+        "id": "37i9dQZF1DWXqpDKK4ed9O",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003a3ac30ee6d10c1e503e251e7",
+            "width": null
+          }
+        ],
+        "name": "90s Love Songs",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDk3MjQwMCwwMDAwMDAwMDg5M2E0YjZkNGUzODVjYTdkYTkwOWUxN2JkOGUxNzEy",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWXqpDKK4ed9O/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWXqpDKK4ed9O"
+      },
+      {
+        "collaborative": false,
+        "description": "Playlist to accompany your work",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWV7y9rCVKvZ8"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWV7y9rCVKvZ8",
+        "id": "37i9dQZF1DWV7y9rCVKvZ8",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000388603ff765257b76234bec3f",
+            "width": null
+          }
+        ],
+        "name": "Be More Productive",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAxMDkzNCwwMDAwMDAwMDcyYTk4YTk1NTBhZjVkOWU3YmI3MWRkNDVhYWRkZDg4",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWV7y9rCVKvZ8/tracks",
+          "total": 81
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWV7y9rCVKvZ8"
+      },
+      {
+        "collaborative": false,
+        "description": "Who's now and next in pop. Cover: David Kushner",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWUa8ZRTfalHk"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWUa8ZRTfalHk",
+        "id": "37i9dQZF1DWUa8ZRTfalHk",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003b3bd98c0dece3bfe3854bc5d",
+            "width": null
+          }
+        ],
+        "name": "Pop Rising",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjE3MjM0NSwwMDAwMDAwMDUyNDhjN2U4YjIyMmRkODZiYmU5MGYxNDAxMWM4NmI2",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWUa8ZRTfalHk/tracks",
+          "total": 85
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWUa8ZRTfalHk"
+      },
+      {
+        "collaborative": false,
+        "description": "Because we all deserve great pop love songs in one playlist.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX50QitC6Oqtn"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX50QitC6Oqtn",
+        "id": "37i9dQZF1DX50QitC6Oqtn",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003776748bfb4f0bae1bc93ce18",
+            "width": null
+          }
+        ],
+        "name": "Love Pop",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3ODI5NzcwMSwwMDAwMDAwMGQ2NzM0MzJhZDVlMmIwMTQxMmJkZWEzNzEyNzFhNDAy",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX50QitC6Oqtn/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX50QitC6Oqtn"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFEC4WFtoNRpw/playlists?country=ID&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 38
+  }
+}
