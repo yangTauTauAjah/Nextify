@@ -123,6 +123,10 @@ export const themeSettings: ThemeOptions = {
     fontWeightBold: "700",
     h3: {
       fontFamily: "'Ubuntu', sans-serif"
-    }
+    },
+    subtitle1: {
+      fontSize: '0.8rem',
+      color: 'rgba(255,255,255,.5)'
+    },
   }
 };
