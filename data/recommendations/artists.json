@@ -1,0 +1,473 @@
+{
+  "artists": [
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3XlIhgydjvC4EniPFZT20j"
+      },
+      "followers": {
+        "href": null,
+        "total": 1126059
+      },
+      "genres": [
+        "contemporary country",
+        "country",
+        "country dawn",
+        "country road"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3XlIhgydjvC4EniPFZT20j",
+      "id": "3XlIhgydjvC4EniPFZT20j",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebc888ac36d074b81be163978b",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174c888ac36d074b81be163978b",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178c888ac36d074b81be163978b",
+          "width": 160
+        }
+      ],
+      "name": "Trisha Yearwood",
+      "popularity": 59,
+      "type": "artist",
+      "uri": "spotify:artist:3XlIhgydjvC4EniPFZT20j"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/30e8DmahrEamvLbFRPdWmk"
+      },
+      "followers": {
+        "href": null,
+        "total": 1736728
+      },
+      "genres": [
+        "arkansas country",
+        "contemporary country",
+        "country",
+        "country road"
+      ],
+      "href": "https://api.spotify.com/v1/artists/30e8DmahrEamvLbFRPdWmk",
+      "id": "30e8DmahrEamvLbFRPdWmk",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb01858b7bb7a0d31b53c967ea",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab6761610000517401858b7bb7a0d31b53c967ea",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f17801858b7bb7a0d31b53c967ea",
+          "width": 160
+        }
+      ],
+      "name": "Justin Moore",
+      "popularity": 66,
+      "type": "artist",
+      "uri": "spotify:artist:30e8DmahrEamvLbFRPdWmk"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of"
+      },
+      "followers": {
+        "href": null,
+        "total": 1901564
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of",
+      "id": "0LyfQWJT6nXafLPZqxe9Of",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb7462d94efa2db53abba8c003",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051747462d94efa2db53abba8c003",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1787462d94efa2db53abba8c003",
+          "width": 160
+        }
+      ],
+      "name": "Various Artists",
+      "popularity": 0,
+      "type": "artist",
+      "uri": "spotify:artist:0LyfQWJT6nXafLPZqxe9Of"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/79MO0KcrOdScKyzuDTtI3k"
+      },
+      "followers": {
+        "href": null,
+        "total": 53655
+      },
+      "genres": [
+        "bow pop",
+        "compositional ambient",
+        "icelandic indie"
+      ],
+      "href": "https://api.spotify.com/v1/artists/79MO0KcrOdScKyzuDTtI3k",
+      "id": "79MO0KcrOdScKyzuDTtI3k",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb8bf2ebe5ac8d81d012b265b5",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051748bf2ebe5ac8d81d012b265b5",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1788bf2ebe5ac8d81d012b265b5",
+          "width": 160
+        }
+      ],
+      "name": "amiina",
+      "popularity": 38,
+      "type": "artist",
+      "uri": "spotify:artist:79MO0KcrOdScKyzuDTtI3k"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/2cN9SgfyZo6l6TijoewUaZ"
+      },
+      "followers": {
+        "href": null,
+        "total": 7730
+      },
+      "genres": [
+        "czech classical",
+        "early modern classical",
+        "neoclassicism"
+      ],
+      "href": "https://api.spotify.com/v1/artists/2cN9SgfyZo6l6TijoewUaZ",
+      "id": "2cN9SgfyZo6l6TijoewUaZ",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/51e450a6abf846756af0a24ecfb02bb520e10e73",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/944d008da9e523b1e392af5553394cb1e41fb5f2",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/50ae4b3b5489d6ff2006e3677c09d7efd7e1d7e3",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/b6edd2fbf438c898e2be023a2811bc3ba9821c6f",
+          "width": 64
+        }
+      ],
+      "name": "Bohuslav Martinů",
+      "popularity": 29,
+      "type": "artist",
+      "uri": "spotify:artist:2cN9SgfyZo6l6TijoewUaZ"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/5iAhVgz6P8Nylxijb0C65v"
+      },
+      "followers": {
+        "href": null,
+        "total": 131251
+      },
+      "genres": [
+        "baroque",
+        "classical",
+        "early music",
+        "italian baroque",
+        "italian renaissance",
+        "madrigal",
+        "renaissance"
+      ],
+      "href": "https://api.spotify.com/v1/artists/5iAhVgz6P8Nylxijb0C65v",
+      "id": "5iAhVgz6P8Nylxijb0C65v",
+      "images": [
+        {
+          "height": 1208,
+          "url": "https://i.scdn.co/image/b5a024503cd761654064d3df0ac7b4a6204a1276",
+          "width": 1000
+        },
+        {
+          "height": 773,
+          "url": "https://i.scdn.co/image/3ec99474b524815454cea10641e6527027d06755",
+          "width": 640
+        },
+        {
+          "height": 242,
+          "url": "https://i.scdn.co/image/27dbb24b92a1145572d11eff5475ab237e8e0faf",
+          "width": 200
+        },
+        {
+          "height": 77,
+          "url": "https://i.scdn.co/image/22c12d0616e7e32468a0c78bf55e681be9d06127",
+          "width": 64
+        }
+      ],
+      "name": "Claudio Monteverdi",
+      "popularity": 47,
+      "type": "artist",
+      "uri": "spotify:artist:5iAhVgz6P8Nylxijb0C65v"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/718COspgdWOnwOFpJHRZHS"
+      },
+      "followers": {
+        "href": null,
+        "total": 8380831
+      },
+      "genres": [
+        "contemporary country",
+        "country"
+      ],
+      "href": "https://api.spotify.com/v1/artists/718COspgdWOnwOFpJHRZHS",
+      "id": "718COspgdWOnwOFpJHRZHS",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb5db6179b28f7e3654898b279",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051745db6179b28f7e3654898b279",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1785db6179b28f7e3654898b279",
+          "width": 160
+        }
+      ],
+      "name": "Luke Combs",
+      "popularity": 86,
+      "type": "artist",
+      "uri": "spotify:artist:718COspgdWOnwOFpJHRZHS"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/436sYg6CZhNefQJogaXeK0"
+      },
+      "followers": {
+        "href": null,
+        "total": 334867
+      },
+      "genres": [
+        "classical",
+        "french romanticism",
+        "late romantic era"
+      ],
+      "href": "https://api.spotify.com/v1/artists/436sYg6CZhNefQJogaXeK0",
+      "id": "436sYg6CZhNefQJogaXeK0",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/f565d81f8dcfdec438207f6d8b34689f3489232a",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/8be8940092279bc9d3bd3aef715b830ff4324585",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/8f678a5306adb0c8d446a20b1bf524ea21220e8a",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/be213cf31a1adbdacc67df8b455cbe46e5513bdb",
+          "width": 64
+        }
+      ],
+      "name": "Camille Saint-Saëns",
+      "popularity": 66,
+      "type": "artist",
+      "uri": "spotify:artist:436sYg6CZhNefQJogaXeK0"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3Nd3IdPZ8CDPAkwjGuz1MS"
+      },
+      "followers": {
+        "href": null,
+        "total": 296
+      },
+      "genres": [],
+      "href": "https://api.spotify.com/v1/artists/3Nd3IdPZ8CDPAkwjGuz1MS",
+      "id": "3Nd3IdPZ8CDPAkwjGuz1MS",
+      "images": [
+        {
+          "height": 1000,
+          "url": "https://i.scdn.co/image/9e4c16ed8529bc7391b0e4e61a2f5781c84f42b7",
+          "width": 1000
+        },
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/a9465b47c90994c4854bb231ef4d6c36b36bf69d",
+          "width": 640
+        },
+        {
+          "height": 200,
+          "url": "https://i.scdn.co/image/c11f9ec570720502c4cf247cfb29bfa3b02407dc",
+          "width": 200
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/fb264d8aa27609c9fba8c81452ed7c6e5cced8f8",
+          "width": 64
+        }
+      ],
+      "name": "Joseph Silverstein",
+      "popularity": 24,
+      "type": "artist",
+      "uri": "spotify:artist:3Nd3IdPZ8CDPAkwjGuz1MS"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/6x2LnllRG5uGarZMsD4iO8"
+      },
+      "followers": {
+        "href": null,
+        "total": 4468829
+      },
+      "genres": [
+        "contemporary country",
+        "country",
+        "country road",
+        "modern country rock"
+      ],
+      "href": "https://api.spotify.com/v1/artists/6x2LnllRG5uGarZMsD4iO8",
+      "id": "6x2LnllRG5uGarZMsD4iO8",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5ebfabe24b83a375fa379244b89",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab67616100005174fabe24b83a375fa379244b89",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f178fabe24b83a375fa379244b89",
+          "width": 160
+        }
+      ],
+      "name": "Thomas Rhett",
+      "popularity": 74,
+      "type": "artist",
+      "uri": "spotify:artist:6x2LnllRG5uGarZMsD4iO8"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/13CMfEeq8AC6ryGOPODqE1"
+      },
+      "followers": {
+        "href": null,
+        "total": 66812
+      },
+      "genres": [
+        "ambient",
+        "compositional ambient",
+        "drone",
+        "pastoral"
+      ],
+      "href": "https://api.spotify.com/v1/artists/13CMfEeq8AC6ryGOPODqE1",
+      "id": "13CMfEeq8AC6ryGOPODqE1",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/ab6761610000e5eb9e9aff994abcddebf7a30899",
+          "width": 640
+        },
+        {
+          "height": 320,
+          "url": "https://i.scdn.co/image/ab676161000051749e9aff994abcddebf7a30899",
+          "width": 320
+        },
+        {
+          "height": 160,
+          "url": "https://i.scdn.co/image/ab6761610000f1789e9aff994abcddebf7a30899",
+          "width": 160
+        }
+      ],
+      "name": "A Winged Victory for the Sullen",
+      "popularity": 48,
+      "type": "artist",
+      "uri": "spotify:artist:13CMfEeq8AC6ryGOPODqE1"
+    },
+    {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/artist/3THMgU4KdL7LlO5TEREs2g"
+      },
+      "followers": {
+        "href": null,
+        "total": 735539
+      },
+      "genres": [
+        "classic oklahoma country",
+        "contemporary country",
+        "country",
+        "country road"
+      ],
+      "href": "https://api.spotify.com/v1/artists/3THMgU4KdL7LlO5TEREs2g",
+      "id": "3THMgU4KdL7LlO5TEREs2g",
+      "images": [
+        {
+          "height": 1500,
+          "url": "https://i.scdn.co/image/101984ea394fac868a71daeb06c851400992308a",
+          "width": 1000
+        },
+        {
+          "height": 960,
+          "url": "https://i.scdn.co/image/b8158b749c6fc327563ad1f902bb33dad5163f51",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/c8c481ab2763676f9f9ec996d3211feef3b3f2c1",
+          "width": 200
+        },
+        {
+          "height": 96,
+          "url": "https://i.scdn.co/image/51ba0f12d0d87877369a749b377e2b45723b63a5",
+          "width": 64
+        }
+      ],
+      "name": "Joe Diffie",
+      "popularity": 58,
+      "type": "artist",
+      "uri": "spotify:artist:3THMgU4KdL7LlO5TEREs2g"
+    }
+  ]
+}

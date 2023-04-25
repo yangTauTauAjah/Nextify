@@ -1,0 +1,732 @@
+{
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFCWjUTdzaG0e/playlists?country=ID&offset=0&limit=20",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "the best of the best from oldies to new classics. Cover: Steve Lacy",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX26DKvjp0s9M"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX26DKvjp0s9M",
+        "id": "37i9dQZF1DX26DKvjp0s9M",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003aa1098345895dfd44c37d4aa",
+            "width": null
+          }
+        ],
+        "name": "Essential Indie",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0MDg2NSwwMDAwMDAwMDM2YzQ2MTM5ZWNjNGRlYjY2ZDI2MDk2OTNiOWEzZWMz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX26DKvjp0s9M/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX26DKvjp0s9M"
+      },
+      {
+        "collaborative": false,
+        "description": "These early pioneers brought the underground to the foreground. Cover: Lou Reed. ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdTCdwCKzXwo"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXdTCdwCKzXwo",
+        "id": "37i9dQZF1DXdTCdwCKzXwo",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000357512b32852e92f3cc2d5c54",
+            "width": null
+          }
+        ],
+        "name": "Early Alternative",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3ODgzMDY5OSwwMDAwMDAwMDNkYjA1YmNlMjg0MzdiOWFmMDI1ODE3YzlkY2NiNWNk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXdTCdwCKzXwo/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXdTCdwCKzXwo"
+      },
+      {
+        "collaborative": false,
+        "description": "Glimmering, warm, and bright memories: Broadcast on the cover.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXcNf6sH1qnKU"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXcNf6sH1qnKU",
+        "id": "37i9dQZF1DXcNf6sH1qnKU",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000034f1883bcac8e10d210f69d7f",
+            "width": null
+          }
+        ],
+        "name": "Dreampop Classics",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY2MDAwNDkyMiwwMDAwMDAwMDVkNmM1ZjYyMTQwMDM0NzEyMWEwZDk3ODUzNTFmZGVl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXcNf6sH1qnKU/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXcNf6sH1qnKU"
+      },
+      {
+        "collaborative": false,
+        "description": "Music that created modern indie as we know it. Cover: MGMT ",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX9LbdoYID5v7"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX9LbdoYID5v7",
+        "id": "37i9dQZF1DX9LbdoYID5v7",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003732a8b20f00534714a0b5f22",
+            "width": null
+          }
+        ],
+        "name": "The 2000s Indie Scene",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3NzkwODEwOSwwMDAwMDAwMGZiNDc3NWUwOTIzYmY1MzAwMWViNzdlMTNiNGIzMzY2",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX9LbdoYID5v7/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX9LbdoYID5v7"
+      },
+      {
+        "collaborative": false,
+        "description": "Seminal indie pop tracks from the 2010s. Cover: Blood Orange.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXaLaoaQqrfyO"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXaLaoaQqrfyO",
+        "id": "37i9dQZF1DXaLaoaQqrfyO",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003ece98f573dece1838e518379",
+            "width": null
+          }
+        ],
+        "name": " Indie Pop 2010s",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3NDU4NjE3NiwwMDAwMDAwMDdmZDU3NzUyMDVmODYxNTM1ZTViNmE3MjkwOGFmNjlk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXaLaoaQqrfyO/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXaLaoaQqrfyO"
+      },
+      {
+        "collaborative": false,
+        "description": "The best alternative songs of the decade. Cover: The 1975",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX873GaRGUmPl"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX873GaRGUmPl",
+        "id": "37i9dQZF1DX873GaRGUmPl",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000389445b70e84766fc927775a3",
+            "width": null
+          }
+        ],
+        "name": "Alternative 10s",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3MzM1ODQ2MywwMDAwMDAwMDAyNTljMGRhZTMwMjc1YWQzZGJiZmU3N2NjN2JlZjk1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX873GaRGUmPl/tracks",
+          "total": 80
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX873GaRGUmPl"
+      },
+      {
+        "collaborative": false,
+        "description": "The essential beautiful noise: sweet and sour fuzz to warm your heart. my bloody valentine on cover",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6ujZpAN0v9r"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6ujZpAN0v9r",
+        "id": "37i9dQZF1DX6ujZpAN0v9r",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003184d7e028d103b6b6177571b",
+            "width": null
+          }
+        ],
+        "name": "Shoegaze Classics",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTI2MjA1NiwwMDAwMDAwMDU2NTQ2YjQ4MzUwYTc5YzkwNGRhMGY1YjM0YTk1MzVj",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6ujZpAN0v9r/tracks",
+          "total": 175
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX6ujZpAN0v9r"
+      },
+      {
+        "collaborative": false,
+        "description": "All the indelible tunes from the other side of the 00s. Cover: Santigold",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0YKekzl0blG"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0YKekzl0blG",
+        "id": "37i9dQZF1DX0YKekzl0blG",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000039c2963ddd26ee6c4b3275749",
+            "width": null
+          }
+        ],
+        "name": "Alternative 00s",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3MzM1ODYwOCwwMDAwMDAwMDFkOGQ5ZGQwNTE2MDRiZGZkMzk0N2Q3ZjJkNmI0OTFl",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0YKekzl0blG/tracks",
+          "total": 80
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX0YKekzl0blG"
+      },
+      {
+        "collaborative": false,
+        "description": "Britpop, trip-hop, grunge and more from the other side of the 90s. Cover: The Cure",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXaLI8a395lse"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXaLI8a395lse",
+        "id": "37i9dQZF1DXaLI8a395lse",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000031222b70822f0e61230f751da",
+            "width": null
+          }
+        ],
+        "name": "Alternative 90s",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3MzM1ODI1MywwMDAwMDAwMGUyNTM2NzJlN2ZkYWI2MWY0YzllYjBiYmQyNWIwYTM0",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXaLI8a395lse/tracks",
+          "total": 80
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXaLI8a395lse"
+      },
+      {
+        "collaborative": false,
+        "description": "a hardcore home for slowcore fans.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX30gKInBBe5k"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX30gKInBBe5k",
+        "id": "37i9dQZF1DX30gKInBBe5k",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003460b15d9a0c94a29397d122d",
+            "width": null
+          }
+        ],
+        "name": "slowcore",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY3MzQ1MzM0MiwwMDAwMDAwMGEwMjg1MzE3M2U0MGQ0MTNhNDhiOTM0YWMxMmY3ODQ0",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX30gKInBBe5k/tracks",
+          "total": 84
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX30gKInBBe5k"
+      },
+      {
+        "collaborative": false,
+        "description": "Editors' picks of the best indie tracks this year. Cover: Japanese Breakfast",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWW06b4n9Ho9J"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWW06b4n9Ho9J",
+        "id": "37i9dQZF1DWW06b4n9Ho9J",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000033ab369c3d6240e08f7529c1a",
+            "width": null
+          }
+        ],
+        "name": "Best Indie Songs of 2021",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTYzOTQyMzA4NSwwMDAwMDAwMDRhNGU4YWFhM2IyN2JkMTgwYzEzYjM0MjA4NzNmZWEz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWW06b4n9Ho9J/tracks",
+          "total": 104
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWW06b4n9Ho9J"
+      },
+      {
+        "collaborative": false,
+        "description": "Weird year overall, but great for indie. Editors' picks of the best tracks of the year. Cover: Phoebe Bridgers",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWkGXMGv9j4M"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWkGXMGv9j4M",
+        "id": "37i9dQZF1DWWkGXMGv9j4M",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003136bf43c0db37b325562a657",
+            "width": null
+          }
+        ],
+        "name": "Best Indie Songs of 2020",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTYwNjkyMTY0MywwMDAwMDAwMDhjYjU0NjZiNjc4OGExMmYwMTAzM2M0YmE3Mzg3OGFk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWkGXMGv9j4M/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWWkGXMGv9j4M"
+      },
+      {
+        "collaborative": false,
+        "description": "The best indie rock/pop/punk/dance/hip hop/r&b of 2019. Cover: Clairo",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWTc5QDlvD7t0"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTc5QDlvD7t0",
+        "id": "37i9dQZF1DWTc5QDlvD7t0",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000337cde70efa74a489d7bb3fff",
+            "width": null
+          }
+        ],
+        "name": "Ultimate Indie Presents... Best Tracks of 2019",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTU3NTk5NDk2MiwwMDAwMDAwMGVlN2RmMTM3YTdlN2JlZDgzYTQxYWQ2ZGU5NTdhMTZm",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTc5QDlvD7t0/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWTc5QDlvD7t0"
+      },
+      {
+        "collaborative": false,
+        "description": "2010 highlights from the home of indie music. Cover: Gorillaz.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWULq23fLWDsl"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWULq23fLWDsl",
+        "id": "37i9dQZF1DWULq23fLWDsl",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003462d3227d1d191d59b06125e",
+            "width": null
+          }
+        ],
+        "name": "Best of Indie 2010",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY2MjM3NzQ4NSwwMDAwMDAwMDc2MDQxMTAyMzZiODE2ZThlZDdiNzdiOTJiMmZlNmU0",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWULq23fLWDsl/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWULq23fLWDsl"
+      },
+      {
+        "collaborative": false,
+        "description": "2011 highlights from the home of indie music.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX2Vedp1NjGn9"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX2Vedp1NjGn9",
+        "id": "37i9dQZF1DX2Vedp1NjGn9",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000036280d1ece4a2aceff7cd1726",
+            "width": null
+          }
+        ],
+        "name": "Best of Indie 2011",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY1MDkxNjQ0NCwwMDAwMDAwMGRjNzhlYzg0MjQ3MDNlNDgwMmU5ZDVjN2ZkYTdiYTI5",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX2Vedp1NjGn9/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX2Vedp1NjGn9"
+      },
+      {
+        "collaborative": false,
+        "description": "2012 highlights from the home of indie music.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX3n9iLlurL09"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3n9iLlurL09",
+        "id": "37i9dQZF1DX3n9iLlurL09",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003502de9ae8a69bea4afc5ba43",
+            "width": null
+          }
+        ],
+        "name": "Best of Indie 2012",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY2NTAzMjcwMCwwMDAwMDAwMDllMTczOTk2NjUyZDQxNGY2ZDdlMjg4ZWRkNjM5NmUw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3n9iLlurL09/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX3n9iLlurL09"
+      },
+      {
+        "collaborative": false,
+        "description": "2013 highlights from the home of indie music.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWW2mn5wEfG6q"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWW2mn5wEfG6q",
+        "id": "37i9dQZF1DWW2mn5wEfG6q",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000034be176b90373599a8165b488",
+            "width": null
+          }
+        ],
+        "name": "Best of Indie 2013",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA1MjI1OCwwMDAwMDAwMDJmZDM2NWU4ZmIwYmU5NGQzMGE1NGFkYzYyYzA0OTI3",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWW2mn5wEfG6q/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWW2mn5wEfG6q"
+      },
+      {
+        "collaborative": false,
+        "description": "2014 highlights from the home of indie music.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX3asLxmR3A9e"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3asLxmR3A9e",
+        "id": "37i9dQZF1DX3asLxmR3A9e",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000033089da7f739832e8d789008a",
+            "width": null
+          }
+        ],
+        "name": "Best of Indie 2014",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY0MDE4MDc1MCwwMDAwMDAwMDgwYjQ3ODQ1ODM0YWRiZDQ2ZmVkZTBlNTIwOTczYjJh",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3asLxmR3A9e/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX3asLxmR3A9e"
+      },
+      {
+        "collaborative": false,
+        "description": "2015 highlights from the home of indie music.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6B9HH2fw0SO"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6B9HH2fw0SO",
+        "id": "37i9dQZF1DX6B9HH2fw0SO",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000317870acebe652695778f75a4",
+            "width": null
+          }
+        ],
+        "name": "Best of Indie 2015",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY0MTIxOTg5NiwwMDAwMDAwMGZmZjhmNGVhYTU3Njc2MDhlZWI3ZjgwZTc2YjNkZGVk",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6B9HH2fw0SO/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX6B9HH2fw0SO"
+      },
+      {
+        "collaborative": false,
+        "description": "2016 highlights from the home of indie music.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX0XnW5YpwS0o"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0XnW5YpwS0o",
+        "id": "37i9dQZF1DX0XnW5YpwS0o",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000030915317775e9e123dabf5fc8",
+            "width": null
+          }
+        ],
+        "name": "Best of Indie 2016",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY0MTIxNzE0NiwwMDAwMDAwMGUyOGVhNmY2ZWJlMzk1MzQyY2EzNDllNjI3NWY0ZGJj",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX0XnW5YpwS0o/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX0XnW5YpwS0o"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFCWjUTdzaG0e/playlists?country=ID&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 71
+  }
+}

@@ -1,0 +1,732 @@
+{
+  "playlists": {
+    "href": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFzHmL4tf05da/playlists?country=ID&offset=0&limit=20",
+    "items": [
+      {
+        "collaborative": false,
+        "description": "Lagu-lagu mengsedih yang menyayat hati 😭",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX9U5XaCM7ssr"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX9U5XaCM7ssr",
+        "id": "37i9dQZF1DX9U5XaCM7ssr",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000030ca797ca1dda2dca989f9c65",
+            "width": null
+          }
+        ],
+        "name": "Generasi Galau",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTk4ODg5MSwwMDAwMDAwMDQ1NWZiMDJiMTgzODI4ZDcwMjVkZDRkZGQxODNjNDli",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX9U5XaCM7ssr/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX9U5XaCM7ssr"
+      },
+      {
+        "collaborative": false,
+        "description": "Songs to unwind",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWTRkBYeInhLG"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTRkBYeInhLG",
+        "id": "37i9dQZF1DWTRkBYeInhLG",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003ba1b9b9acbd52a845172ee52",
+            "width": null
+          }
+        ],
+        "name": "Chill for awhile",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTY5OTcxNSwwMDAwMDAwMGJhOTA2YTQyZWNhOTYzNTVkOGM3MmI4NmJjODNiODM5",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTRkBYeInhLG/tracks",
+          "total": 80
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWTRkBYeInhLG"
+      },
+      {
+        "collaborative": false,
+        "description": "Wes kadung sayang lalu ditinggal rabi 😢",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX4V6WLWzdIgr"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX4V6WLWzdIgr",
+        "id": "37i9dQZF1DX4V6WLWzdIgr",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d4d75b71511569727caf6cbd",
+            "width": null
+          }
+        ],
+        "name": "Ambyar",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTQwNTIwMCwwMDAwMDAwMDUxNGUxMDFlMDM1NzljZjVhYjk1ZWIxMTc5YTAxOGNm",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX4V6WLWzdIgr/tracks",
+          "total": 39
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX4V6WLWzdIgr"
+      },
+      {
+        "collaborative": false,
+        "description": "Acoustic playlist to accompany your coffee.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWTDjtvOmdzrF"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTDjtvOmdzrF",
+        "id": "37i9dQZF1DWTDjtvOmdzrF",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d9a8c5d33bf86883a2477f88",
+            "width": null
+          }
+        ],
+        "name": "Coffee and Accoustic",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTQ1ODI3NywwMDAwMDAwMDllMWEwOTFlZDc0MTFhNDhlZGQ2MWIwN2YwYjQ4ZDIy",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWTDjtvOmdzrF/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWTDjtvOmdzrF"
+      },
+      {
+        "collaborative": false,
+        "description": "Feel good songs yang bikin kamu happy",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWY8Ogms1X39p"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWY8Ogms1X39p",
+        "id": "37i9dQZF1DWY8Ogms1X39p",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000035b1275677105d26770114c63",
+            "width": null
+          }
+        ],
+        "name": "Yang Penting Happy",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDIxMDcyNCwwMDAwMDAwMDUxZTg4ZGE2N2M4N2ZkYjcyNGIzMDkzYzdhMDMxMDQx",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWY8Ogms1X39p/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWY8Ogms1X39p"
+      },
+      {
+        "collaborative": false,
+        "description": "Kembali fitrah di hari kemenangan.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX7qk348WUgWJ"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7qk348WUgWJ",
+        "id": "37i9dQZF1DX7qk348WUgWJ",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003b2dd586c6a406e04fe32ff95",
+            "width": null
+          }
+        ],
+        "name": "Ketupat Lebaran",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAxMDAwMCwwMDAwMDAwMDkxN2Q0ZTY4ZTEwZGU1ZGYzMzBhNTYwYjliMjJiMDUz",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX7qk348WUgWJ/tracks",
+          "total": 44
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX7qk348WUgWJ"
+      },
+      {
+        "collaborative": false,
+        "description": "Get happy with today's dose of feel-good songs!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX3rxVfibe1L0"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3rxVfibe1L0",
+        "id": "37i9dQZF1DX3rxVfibe1L0",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003bd0e19e810bb4b55ab164a95",
+            "width": null
+          }
+        ],
+        "name": "Mood Booster",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDg0MDAwMCwwMDAwMDAwMDBjNDQ1OTZmYzZjOGI1YjExZGRiNzJkNzZhMDQ0YmIw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3rxVfibe1L0/tracks",
+          "total": 78
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX3rxVfibe1L0"
+      },
+      {
+        "collaborative": false,
+        "description": "Make your shower more uplifting by singing along to these hits.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWSqmBTGDYngZ"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSqmBTGDYngZ",
+        "id": "37i9dQZF1DWSqmBTGDYngZ",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003329e2c5d3104f8c6a1d16a34",
+            "width": null
+          }
+        ],
+        "name": "Songs to Sing in the Shower",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA1NTY1MCwwMDAwMDAwMDRlMDZjZmZiYTMzNzMyNzc3MTQzMDU1Y2YzM2Q0YWU1",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSqmBTGDYngZ/tracks",
+          "total": 200
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWSqmBTGDYngZ"
+      },
+      {
+        "collaborative": false,
+        "description": "Collection of popular and fresh Eid Al-Mubarak songs.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX1kqLSAZSw7o"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX1kqLSAZSw7o",
+        "id": "37i9dQZF1DX1kqLSAZSw7o",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000324ac869f17b90ffea0037c4d",
+            "width": null
+          }
+        ],
+        "name": "Eid Al-Mubarak Songs",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTk5ODY0NywwMDAwMDAwMDhlZTllZGU1ZmM4YTZmNzY3NWVmNmYxM2FlNjA5MTVm",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX1kqLSAZSw7o/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX1kqLSAZSw7o"
+      },
+      {
+        "collaborative": false,
+        "description": "Waktu Indonesia bagian mager dan dengar lagu-lagu enak.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdHrK6XFPCM1"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXdHrK6XFPCM1",
+        "id": "37i9dQZF1DXdHrK6XFPCM1",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003263996062d3942ff53419537",
+            "width": null
+          }
+        ],
+        "name": "Mager Parah",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTcwMDA4OCwwMDAwMDAwMGU3YzIwODYzNWYzZDg0NTcxNDZjYjA1MTRiZTk2YmEw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXdHrK6XFPCM1/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXdHrK6XFPCM1"
+      },
+      {
+        "collaborative": false,
+        "description": "Somehow heartbreak feels good in a place like this. Cover: Lizzy McAlpine",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWSqBruwoIXkA"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSqBruwoIXkA",
+        "id": "37i9dQZF1DWSqBruwoIXkA",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000310a0724165906fa48bf80939",
+            "width": null
+          }
+        ],
+        "name": "sad hour",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTQ0NDgwMCwwMDAwMDAwMDQzYTFmMmE0Yzg5YjY3NmYyYWFkYjg0MDZkOGI0NmMy",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSqBruwoIXkA/tracks",
+          "total": 150
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWSqBruwoIXkA"
+      },
+      {
+        "collaborative": false,
+        "description": "The happiest hits to boost your day.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWT9NTMXOEmdE"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWT9NTMXOEmdE",
+        "id": "37i9dQZF1DWT9NTMXOEmdE",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003e126204e60890db835d406a6",
+            "width": null
+          }
+        ],
+        "name": "Good Times",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY2ODE0NDQ5OCwwMDAwMDAwMGRkYjhhODRmZmJmNjVhMmRjNDMxYjBhMDRlZGFlOWZj",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWT9NTMXOEmdE/tracks",
+          "total": 50
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWT9NTMXOEmdE"
+      },
+      {
+        "collaborative": false,
+        "description": "Playlist to accompany your work",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWV7y9rCVKvZ8"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWV7y9rCVKvZ8",
+        "id": "37i9dQZF1DWV7y9rCVKvZ8",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000388603ff765257b76234bec3f",
+            "width": null
+          }
+        ],
+        "name": "Be More Productive",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAxMDkzNCwwMDAwMDAwMDcyYTk4YTk1NTBhZjVkOWU3YmI3MWRkNDVhYWRkZDg4",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWV7y9rCVKvZ8/tracks",
+          "total": 81
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWV7y9rCVKvZ8"
+      },
+      {
+        "collaborative": false,
+        "description": "Need to get your energy level up? This will help!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWSnRSDTCsoPk"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSnRSDTCsoPk",
+        "id": "37i9dQZF1DWSnRSDTCsoPk",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003b50b2ffb67a9e0a1f9eef555",
+            "width": null
+          }
+        ],
+        "name": "Energy Booster: K-Pop",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTk3ODk0MiwwMDAwMDAwMGM4Zjg4MzA3OWM5YzU0OTJjZGVjOGYzMThiNGQ2Y2Ni",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWSnRSDTCsoPk/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWSnRSDTCsoPk"
+      },
+      {
+        "collaborative": false,
+        "description": "Tembang Jowo lawas pancen saget nrenyuhake ati",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWWGlTStsnvnj"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWGlTStsnvnj",
+        "id": "37i9dQZF1DWWGlTStsnvnj",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000031ebd39ed553421b2b59ed406",
+            "width": null
+          }
+        ],
+        "name": "Langgam Jawa",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTYzMTE3MDc3OCwwMDAwMDAwMDgwNTc2OTk5Mzk1N2EyODkzMjMzMzdkZDg3MWVlNDkw",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWWGlTStsnvnj/tracks",
+          "total": 47
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWWGlTStsnvnj"
+      },
+      {
+        "collaborative": false,
+        "description": "Hits to boost your mood and fill you with happiness!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DXdPec7aLTmlC"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXdPec7aLTmlC",
+        "id": "37i9dQZF1DXdPec7aLTmlC",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f00000003d6a54ce74ec80758c4ebc24f",
+            "width": null
+          }
+        ],
+        "name": "Happy Hits!",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjAzMTYwMCwwMDAwMDAwMGZhOTEyNmExNjM3M2RlZTU1ZDQ5N2Q1NjNmOWYxMWE5",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DXdPec7aLTmlC/tracks",
+          "total": 100
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DXdPec7aLTmlC"
+      },
+      {
+        "collaborative": false,
+        "description": "Having a bad day? We know how it feels!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX3YSRoSdA634"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3YSRoSdA634",
+        "id": "37i9dQZF1DX3YSRoSdA634",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000337499ba650da0f36e8285bd9",
+            "width": null
+          }
+        ],
+        "name": "Life Sucks",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA3ODc0NCwwMDAwMDAwMDE0NjlhNzVhNmFhMDYzOGEzNGFlODA1ZWYwZmE3YzI4",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX3YSRoSdA634/tracks",
+          "total": 200
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX3YSRoSdA634"
+      },
+      {
+        "collaborative": false,
+        "description": "The premier alternative melancholia playlist, featuring Billie Eillish",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWVV27DiNWxkR"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWVV27DiNWxkR",
+        "id": "37i9dQZF1DWVV27DiNWxkR",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000333e0700fb8db65070571f1a1",
+            "width": null
+          }
+        ],
+        "name": "Sad Indie",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MDcyNjU4NSwwMDAwMDAwMGVlNWNlYTllNDU1MmEzMjAyZDE0NmU0ZjlkOTZlN2Qx",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWVV27DiNWxkR/tracks",
+          "total": 95
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWVV27DiNWxkR"
+      },
+      {
+        "collaborative": false,
+        "description": "Feel good songs for morning activities.",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DX6wbVzPMSvwH"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6wbVzPMSvwH",
+        "id": "37i9dQZF1DX6wbVzPMSvwH",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f0000000313bddcabfc76bea272d5ad17",
+            "width": null
+          }
+        ],
+        "name": "Morning Spirit",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MTY5OTgyOSwwMDAwMDAwMDkxN2FlMGE0MTQzZDJlOGViZWJjMzM1NGNhNTVlMzFj",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DX6wbVzPMSvwH/tracks",
+          "total": 76
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DX6wbVzPMSvwH"
+      },
+      {
+        "collaborative": false,
+        "description": "Set it off with these epic anthems. Only good vibes here!",
+        "external_urls": {
+          "spotify": "https://open.spotify.com/playlist/37i9dQZF1DWYBO1MoTDhZI"
+        },
+        "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYBO1MoTDhZI",
+        "id": "37i9dQZF1DWYBO1MoTDhZI",
+        "images": [
+          {
+            "height": null,
+            "url": "https://i.scdn.co/image/ab67706f000000037dc2a0fb4bfe0d07294f685e",
+            "width": null
+          }
+        ],
+        "name": "Good Vibes",
+        "owner": {
+          "display_name": "Spotify",
+          "external_urls": {
+            "spotify": "https://open.spotify.com/user/spotify"
+          },
+          "href": "https://api.spotify.com/v1/users/spotify",
+          "id": "spotify",
+          "type": "user",
+          "uri": "spotify:user:spotify"
+        },
+        "primary_color": null,
+        "public": null,
+        "snapshot_id": "MTY4MjA0OTY2MCwwMDAwMDAwMDUzOTMwYmY0ZWIwYWQwZWMzNTE3MmU2YWYyYTEwYzJh",
+        "tracks": {
+          "href": "https://api.spotify.com/v1/playlists/37i9dQZF1DWYBO1MoTDhZI/tracks",
+          "total": 75
+        },
+        "type": "playlist",
+        "uri": "spotify:playlist:37i9dQZF1DWYBO1MoTDhZI"
+      }
+    ],
+    "limit": 20,
+    "next": "https://api.spotify.com/v1/browse/categories/0JQ5DAqbMKFzHmL4tf05da/playlists?country=ID&offset=20&limit=20",
+    "offset": 0,
+    "previous": null,
+    "total": 101
+  }
+}
