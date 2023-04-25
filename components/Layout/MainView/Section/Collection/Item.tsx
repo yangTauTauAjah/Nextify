@@ -16,7 +16,6 @@ const ItemStyle = {
   padding: '1rem',
   gap: '0.7rem',
   width: '15rem',
-  height: '100%',
   borderRadius: '0.3rem',
   transition: 'background 100ms ease-in-out',
   background: 'rgba(255,255,255,0.05)',
