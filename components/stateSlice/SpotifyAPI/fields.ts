@@ -1,0 +1,30 @@
+export const GET_PLAYLIST = `
+name,
+description,
+images,
+owner(
+  id,
+  display_name,
+  images
+),
+tracks(
+  items(
+    added_at,
+    track(
+      id,
+      name,
+      artists(
+        id,
+        name
+      ),
+      album(
+        id,
+        name,
+        images
+      ),
+      explicit,
+      duration
+    )
+  )
+)
+`.replace(/[\s\t\n\t\r]/g, '')
