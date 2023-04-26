@@ -1,6 +1,6 @@
 
 
-interface ImageObject {
+export interface ImageObject {
   url: string;
   width: number;
   height: number;
@@ -9,23 +9,25 @@ interface ImageObject {
 interface AlbumObject {
   id: string;
   name: string;
-  images: ImageObject;
+  images: ImageObject[];
 }
 
-interface PlaylistOwner {
+export interface UserObject {
+  id: string;
+  display_name: string;
+  images: ImageObject[] | [];
+  followers: unknown;
+}
+
+export interface ArtistObject {
   id: string;
   name: string;
 }
 
-interface ArtistObject {
+export interface TrackObject {
   id: string;
   name: string;
-}
-
-interface TrackObject {
-  id: string;
-  name: string;
-  artist: ArtistObject[];
+  artists: ArtistObject[];
   album: AlbumObject;
   explicit: boolean;
   duration: number;
@@ -39,8 +41,8 @@ interface PlaylistItems {
 export interface PlaylistObject {
   name: string;
   description: string;
-  image: string;
-  owner: PlaylistOwner;
+  images: ImageObject[];
+  owner: UserObject;
   tracks: PlaylistItems[];
 }
 
