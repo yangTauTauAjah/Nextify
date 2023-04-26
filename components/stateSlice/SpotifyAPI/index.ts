@@ -1,9 +1,7 @@
-import { BearerToken, PlaylistObject } from "./interfaces";
+import { GET_PLAYLIST } from "./fields";
+import { BearerToken, PlaylistObject, UserObject } from "./interfaces";
 
 const BASE_PATH = "https://api.spotify.com/v1";
-
-const client_id = "b6f05292d14148a08f5e70d8fe2ba898";
-const client_secret = "db8e39458543405e8d2d790559677d66";
 
 async function getAccessToken(): Promise<BearerToken> {
   const data: BearerToken = await fetch(
@@ -13,15 +11,34 @@ async function getAccessToken(): Promise<BearerToken> {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      body: `grant_type=client_credentials&client_id=${client_id}&client_secret=${client_secret}`
+      body: `grant_type=client_credentials&client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`
     }
   ).then((data) => data.json());
   return data;
 }
 
-export async function getPlaylist(id: string): Promise<PlaylistObject> {
+export async function getPlaylist(
+  id: string,
+  fields?: string
+): Promise<PlaylistObject> {
   const { access_token } = await getAccessToken();
-  const data: PlaylistObject = await fetch(`${BASE_PATH}/playlists/${id}`, {
+  let path = `${BASE_PATH}/playlists/${id}`;
+  if (fields && fields !== "") path += `?fields=${fields}`;
+  const data = await fetch(path, {
+    headers: { Authorization: `Bearer ${access_token}` }
+  }).then((data) => data.json());
+  const owner = await getUser(data.owner.id);
+  return { ...data, owner, tracks: data.tracks.items };
+}
+
+export async function getUser(
+  id: string,
+  fields?: string
+): Promise<UserObject> {
+  const { access_token } = await getAccessToken();
+  let path = `${BASE_PATH}/users/${id}`;
+  if (fields && fields !== "") path += `?fields=${fields}`;
+  const data = await fetch(path, {
     headers: { Authorization: `Bearer ${access_token}` }
   }).then((data) => data.json());
   return data;
