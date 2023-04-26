@@ -109,3 +109,35 @@ a {
     color-scheme: dark;
   }
 }
+
+.flex {
+  display: flex
+}
+
+.block {
+  display: block
+}
+
+.inline {
+  display: inline
+}
+
+.inline-block {
+  display: inline-block
+}
+
+.flex-row {
+  flex-direction: row
+}
+
+.flex-col {
+  flex-direction: column
+}
+
+.absolute {
+  position: absolute
+}
+
+.relative {
+  position: relative
+}
