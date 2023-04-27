@@ -1,4 +1,4 @@
-import MainView from "@/components/Layout/MainView";
+import MainView from "@/components/Layout/MainView/HomePage";
 import MobileWidget from "@/components/Layout/MobileWidget";
 import NowPlayingBar from "@/components/Layout/NowPlayingBar";
 import Sidebar from "@/components/Layout/Sidebar";
