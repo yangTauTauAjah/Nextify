@@ -24,7 +24,6 @@ export const screenWidthSlice = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { xs, sm, md, lg, xl, forceResize } = screenWidthSlice.actions
 
 export default screenWidthSlice.reducer
