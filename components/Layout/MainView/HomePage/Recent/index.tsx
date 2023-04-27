@@ -2,16 +2,17 @@ import React from 'react'
 import Greeting from './Greeting'
 import Header from './Header'
 import SongList from './SongList'
+import { Stack } from '@mui/material'
 
 
 
 function Recent() {
   return (
-    <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+    <Stack gap={2}>
       <Greeting />
       <Header />
       <SongList />
-    </div>
+    </Stack>
   )
 }
 
