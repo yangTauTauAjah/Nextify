@@ -66,7 +66,7 @@ const FilterComponent = () => (
       <SearchIconWrapper>
         <Search />
       </SearchIconWrapper>
-      <StyledInputBase placeholder="Search…" inputProps={{ "aria-label": "search" }} />
+      <StyledInputBase placeholder="Find in playlist" inputProps={{ "aria-label": "search" }} />
     </SearchComponent>
     <Button><p>Sort</p></Button>
   </Container>
