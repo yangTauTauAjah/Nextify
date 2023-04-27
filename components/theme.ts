@@ -127,6 +127,6 @@ export const themeSettings: ThemeOptions = {
     subtitle1: {
       fontSize: '0.8rem',
       color: 'rgba(255,255,255,.5)'
-    },
+    }
   }
 };
