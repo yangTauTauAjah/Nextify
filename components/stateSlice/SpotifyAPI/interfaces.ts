@@ -1,4 +1,4 @@
-
+export type CollectionType = 'album' | 'playlist' | 'track'
 
 export interface ImageObject {
   url: string;
@@ -6,10 +6,18 @@ export interface ImageObject {
   height: number;
 }
 
-interface AlbumObject {
+export interface AlbumObject {
   id: string;
   name: string;
+  album_type: "album" | "single" | "compilation";
+  type: 'album';
   images: ImageObject[];
+  total_tracks: number;
+  release_date: string;
+  artists: ArtistObject[];
+  tracks: {
+    items: TrackObject[]
+  }
 }
 
 export interface UserObject {
@@ -20,8 +28,10 @@ export interface UserObject {
 }
 
 export interface ArtistObject {
+  type: 'artist';
   id: string;
   name: string;
+  images: ImageObject[];
 }
 
 export interface TrackObject {
@@ -33,17 +43,20 @@ export interface TrackObject {
   duration: number;
 }
 
-interface PlaylistItems {
+export interface PlaylistItems {
   added_at: Date;
   track: TrackObject;
 }
 
 export interface PlaylistObject {
+  type: 'playlist',
   name: string;
   description: string;
   images: ImageObject[];
   owner: UserObject;
-  tracks: PlaylistItems[];
+  tracks: {
+    items: PlaylistItems[]
+  };
 }
 
 export interface BearerToken {
