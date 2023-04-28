@@ -68,10 +68,20 @@ export async function getAlbum(id: string): Promise<AlbumObject> {
   return { ...data, artists };
 }
 
-export async function getTrack(id: string, market: string): Promise<TrackObject> {
+export async function getTrack(id: string): Promise<TrackObject> {
   const { access_token } = await getAccessToken();
-  let path = `${BASE_PATH}/tracks/${id}?market=${market}`;
+  let path = `${BASE_PATH}/tracks/${id}`;
   const data: TrackObject = await fetch(path, {
+    headers: { Authorization: `Bearer ${access_token}` }
+  }).then((data) => data.json());
+
+  return data;
+}
+
+export async function getArtistTopTrack(id: string, market: string): Promise<{tracks: TrackObject[]}> {
+  const { access_token } = await getAccessToken();
+  let path = `${BASE_PATH}/artists/${id}/top-tracks?market=${market}`;
+  const data: {tracks: TrackObject[]} = await fetch(path, {
     headers: { Authorization: `Bearer ${access_token}` }
   }).then((data) => data.json());
 
