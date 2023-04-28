@@ -4,6 +4,7 @@ import {
   ArtistObject,
   BearerToken,
   PlaylistObject,
+  TrackObject,
   UserObject
 } from "./interfaces";
 
@@ -34,7 +35,7 @@ export async function getUser(id: string): Promise<UserObject> {
 
 export async function getArtist(ids: string[]): Promise<ArtistObject[]> {
   const { access_token } = await getAccessToken();
-  let path = `${BASE_PATH}/artists?ids=${ids.join(',')}`;
+  let path = `${BASE_PATH}/artists?ids=${ids.join(",")}`;
   const data = await fetch(path, {
     headers: { Authorization: `Bearer ${access_token}` }
   }).then((data) => data.json());
@@ -62,14 +63,19 @@ export async function getAlbum(id: string): Promise<AlbumObject> {
     headers: { Authorization: `Bearer ${access_token}` }
   }).then((data) => data.json());
 
-  /* const artists: ArtistObject[] = []
+  const artists = await getArtist(data.artists.map((e) => e.id));
 
-  for (let i = 0; i < data.artists.length; i++) {
-    artists.push(await getArtist(data.artists[i].id))
-  } */
-  const artists = await getArtist(data.artists.map(e => e.id))
-  
   return { ...data, artists };
+}
+
+export async function getTrack(id: string, market: string): Promise<TrackObject> {
+  const { access_token } = await getAccessToken();
+  let path = `${BASE_PATH}/tracks/${id}?market=${market}`;
+  const data: TrackObject = await fetch(path, {
+    headers: { Authorization: `Bearer ${access_token}` }
+  }).then((data) => data.json());
+
+  return data;
 }
 
 /* async function refreshToken(refresh_token: string): Promise<string> {
