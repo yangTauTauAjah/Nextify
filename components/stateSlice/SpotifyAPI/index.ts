@@ -75,7 +75,9 @@ export async function getTrack(id: string): Promise<TrackObject> {
     headers: { Authorization: `Bearer ${access_token}` }
   }).then((data) => data.json());
 
-  return data;
+  const artists = await getArtist(data.artists.map((e) => e.id));
+
+  return { ...data, artists };
 }
 
 export async function getArtistTopTrack(id: string, market: string): Promise<{tracks: TrackObject[]}> {

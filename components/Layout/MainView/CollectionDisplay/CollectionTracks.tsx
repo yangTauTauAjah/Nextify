@@ -1,10 +1,10 @@
 import { RootState } from "@/components/store";
 import { Stack } from "@mui/material";
 import { useSelector } from "react-redux";
-import Song from "./Track";
+import Song, { SongComponentInterface } from "./Track";
 import {
   AlbumObject,
-  CollectionType,
+  ArtistObject,
   ComponentTypeInterface,
   PlaylistItems,
   PlaylistObject,
@@ -13,21 +13,39 @@ import {
 
 const Tracks = ({ type = "playlist" }: ComponentTypeInterface) => {
   let collection = useSelector((state: RootState) => state.data[type]) as
-    | AlbumObject
     | PlaylistObject
+    | AlbumObject
+    | TrackObject
     | undefined;
+
+  let data: SongComponentInterface[] = [];
+
+  if (type === "album") {
+    (collection as AlbumObject | undefined)?.tracks.items.map((e) => {
+      const { id, name, artists } = e;
+      data.push({ id, name, artists });
+    });
+  } else {
+    (collection as PlaylistObject | undefined)?.tracks.items.forEach((e) => {
+      const {
+        track: { id, name, album, artists, explicit }
+      } = e;
+      data.push({ id, name, album, artists, explicit });
+    });
+  }
+
   return (
     <Stack gap={2}>
-      {collection?.tracks.items.map((track) => {
-        return type === "playlist" ? (
-          <Song
-            key={(track as PlaylistItems).track.id}
-            track={(track as PlaylistItems).track}
-          />
-        ) : (
-          <Song key={(track as TrackObject).id} track={track as TrackObject} />
-        );
-      })}
+      {data.map(({ id, name, album, artists, explicit }) => (
+        <Song
+          key={id}
+          id={id}
+          name={name}
+          artists={artists}
+          album={album}
+          explicit={explicit}
+        />
+      ))}
     </Stack>
   );
 };

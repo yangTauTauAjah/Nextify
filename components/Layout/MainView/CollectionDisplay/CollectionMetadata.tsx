@@ -23,12 +23,16 @@ import {
 import { useEffect } from "react";
 
 interface CollectionOwnerComponentInterface {
-  owners: {
-    type: "artist" | "user";
-    id: string;
-    name: string;
-    image_url: string;
-  }[];
+  type: "artist" | "user";
+  id: string;
+  name: string;
+  image_url: string;
+}
+
+interface CollectionMetadaComponentInterface {
+  name: string;
+  description: string;
+  owners: CollectionOwnerComponentInterface[];
 }
 
 const Wrapper = styled(Stack)(({ theme }) => ({
@@ -81,7 +85,12 @@ const ActionButtonsComponent = () => (
 
 const CollectionOwnerComponent = ({
   owners
-}: CollectionOwnerComponentInterface) => {
+}: {
+  owners: CollectionOwnerComponentInterface[];
+}) => {
+
+  console.log(owners)
+  
   return (
     <div
       style={{
@@ -97,7 +106,7 @@ const CollectionOwnerComponent = ({
           borderRadius: "100px",
           overflow: "hidden"
         }}>
-        {owners.length > 0 ? (
+        {owners[0].image_url && owners[0].image_url !== '' ? (
           <Image
             sizes="10vw"
             src={owners[0].image_url}
@@ -130,42 +139,41 @@ const CollectionMetadata = ({ type = "playlist" }: ComponentTypeInterface) => {
   let collection = useSelector((state: RootState) => state.data[type]) as
     | AlbumObject
     | PlaylistObject
-    | TrackObject
     | undefined;
+
+  let data: CollectionMetadaComponentInterface = {
+    name: collection?.name || '',
+    description: "",
+    owners: []
+  };
+
+  if (type === "album") {
+    (collection as AlbumObject | undefined)?.artists.forEach(
+      ({ type, id, name, images }) => data.owners.push({
+        type,
+        id,
+        name,
+        image_url: images[0].url
+      })
+    );
+  } else {
+    data.owners.push({
+      type: type === 'playlist' ? 'user' : 'artist',
+      id: (collection as PlaylistObject | undefined)?.owner.id || '',
+      name: (collection as PlaylistObject | undefined)?.owner.display_name || '',
+      image_url: (collection as PlaylistObject | undefined)?.owner.images[0].url || ''
+    });
+    data.description = (collection as PlaylistObject | undefined)?.description || '';
+  }
 
   return (
     <Wrapper gap={1}>
-      <h2>{collection?.name}</h2>
+      <h2>{data?.name}</h2>
       <Description
         className="cursor-default"
-        dangerouslySetInnerHTML={{
-          __html:
-            type === "playlist"
-              ? (collection as PlaylistObject)?.description
-              : ""
-        }}
+        dangerouslySetInnerHTML={{ __html: data.description }}
       />
-      <CollectionOwnerComponent
-        owners={
-          type === "playlist"
-            ? [
-                {
-                  type: "user",
-                  id: (collection as PlaylistObject)?.owner.id,
-                  name: (collection as PlaylistObject)?.owner.display_name,
-                  image_url: (collection as PlaylistObject)?.owner.images[0].url
-                }
-              ]
-            : (collection as AlbumObject | TrackObject)?.artists.map(
-                ({ type, id, name, images }) => ({
-                  type,
-                  id,
-                  name,
-                  image_url: images[0].url
-                })
-              ) || []
-        }
-      />
+      {data.owners.length > 0 && <CollectionOwnerComponent owners={data.owners} />}
       <Duration>24h 60min</Duration>
       <ActionButtonsComponent />
     </Wrapper>

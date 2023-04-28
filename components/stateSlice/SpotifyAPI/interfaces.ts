@@ -42,14 +42,13 @@ export interface TrackObject {
   id: string;
   name: string;
   artists: ArtistObject[];
-  images: ImageObject[];
   album: AlbumObject;
   explicit: boolean;
-  duration: number;
+  duration_ms: number;
 }
 
 export interface PlaylistItems {
-  added_at: Date;
+  added_at?: Date;
   track: TrackObject;
 }
 
