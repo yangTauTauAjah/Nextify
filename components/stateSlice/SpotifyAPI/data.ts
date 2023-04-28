@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { PlaylistObject } from "./interfaces";
+import { AlbumObject, PlaylistObject } from "./interfaces";
 
 export type DisplaySlice = {
-  album?: PlaylistObject,
+  album?: AlbumObject,
   playlist?: PlaylistObject,
   track?: PlaylistObject
 }
@@ -14,13 +14,13 @@ export const display = createSlice({
   name: "playlist",
   initialState,
   reducers: {
-    setPlaylist(state, action) {
+    setPlaylist(state, action: PayloadAction<PlaylistObject>) {
       state.playlist = action.payload;
     },
-    setAlbum(state, action) {
+    setAlbum(state, action: PayloadAction<AlbumObject>) {
       state.album = action.payload;
     },
-    setTrack(state, action) {
+    setTrack(state, action: PayloadAction<PlaylistObject>) {
       state.track = action.payload;
     }
   }

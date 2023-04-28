@@ -6,6 +6,10 @@ export interface ImageObject {
   height: number;
 }
 
+export interface ComponentTypeInterface {
+  type?: CollectionType
+}
+
 export interface AlbumObject {
   id: string;
   name: string;
@@ -21,10 +25,10 @@ export interface AlbumObject {
 }
 
 export interface UserObject {
+  type: 'user'
   id: string;
   display_name: string;
   images: ImageObject[] | [];
-  followers: unknown;
 }
 
 export interface ArtistObject {
@@ -38,6 +42,7 @@ export interface TrackObject {
   id: string;
   name: string;
   artists: ArtistObject[];
+  images: ImageObject[];
   album: AlbumObject;
   explicit: boolean;
   duration: number;

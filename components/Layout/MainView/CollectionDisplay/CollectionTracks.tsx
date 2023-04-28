@@ -5,12 +5,13 @@ import Song from "./Track";
 import {
   AlbumObject,
   CollectionType,
+  ComponentTypeInterface,
   PlaylistItems,
   PlaylistObject,
   TrackObject
 } from "@/components/stateSlice/SpotifyAPI/interfaces";
 
-const Tracks = ({ type = "playlist" }: { type?: CollectionType }) => {
+const Tracks = ({ type = "playlist" }: ComponentTypeInterface) => {
   let collection = useSelector((state: RootState) => state.data[type]) as
     | AlbumObject
     | PlaylistObject
@@ -18,19 +19,13 @@ const Tracks = ({ type = "playlist" }: { type?: CollectionType }) => {
   return (
     <Stack gap={2}>
       {collection?.tracks.items.map((track) => {
-        return (
+        return type === "playlist" ? (
           <Song
-            key={
-              type === "playlist"
-                ? (track as PlaylistItems).track.id
-                : (track as TrackObject).id
-            }
-            track={
-              type === "playlist"
-                ? (track as PlaylistItems).track
-                : (track as TrackObject)
-            }
+            key={(track as PlaylistItems).track.id}
+            track={(track as PlaylistItems).track}
           />
+        ) : (
+          <Song key={(track as TrackObject).id} track={track as TrackObject} />
         );
       })}
     </Stack>
