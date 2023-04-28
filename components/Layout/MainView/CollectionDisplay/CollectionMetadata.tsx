@@ -15,16 +15,20 @@ import {
   AlbumObject,
   ArtistObject,
   CollectionType,
+  ComponentTypeInterface,
   PlaylistObject,
+  TrackObject,
   UserObject
 } from "@/components/stateSlice/SpotifyAPI/interfaces";
 import { useEffect } from "react";
 
-interface OwnerInterface {
-  type: "artist" | "user";
-  id: string;
-  name: string;
-  image_url: string;
+interface CollectionOwnerComponentInterface {
+  owners: {
+    type: "artist" | "user";
+    id: string;
+    name: string;
+    image_url: string;
+  }[];
 }
 
 const Wrapper = styled(Stack)(({ theme }) => ({
@@ -75,7 +79,9 @@ const ActionButtonsComponent = () => (
   </div>
 );
 
-const CollectionOwnerComponent = ({ owners }: { owners: OwnerInterface[] }) => {
+const CollectionOwnerComponent = ({
+  owners
+}: CollectionOwnerComponentInterface) => {
   return (
     <div
       style={{
@@ -120,14 +126,11 @@ const CollectionOwnerComponent = ({ owners }: { owners: OwnerInterface[] }) => {
   );
 };
 
-const CollectionMetadata = ({
-  type = "playlist"
-}: {
-  type?: CollectionType;
-}) => {
+const CollectionMetadata = ({ type = "playlist" }: ComponentTypeInterface) => {
   let collection = useSelector((state: RootState) => state.data[type]) as
     | AlbumObject
     | PlaylistObject
+    | TrackObject
     | undefined;
 
   return (
@@ -137,21 +140,15 @@ const CollectionMetadata = ({
         className="cursor-default"
         dangerouslySetInnerHTML={{
           __html:
-            type === "album" ? "" : (collection as PlaylistObject)?.description
+            type === "playlist"
+              ? (collection as PlaylistObject)?.description
+              : ""
         }}
       />
       <CollectionOwnerComponent
         owners={
-          type === "album"
-            ? (collection as AlbumObject)?.artists.map(
-                ({ type, id, name, images }) => ({
-                  type,
-                  id,
-                  name,
-                  image_url: images[0].url
-                })
-              ) || []
-            : [
+          type === "playlist"
+            ? [
                 {
                   type: "user",
                   id: (collection as PlaylistObject)?.owner.id,
@@ -159,6 +156,14 @@ const CollectionMetadata = ({
                   image_url: (collection as PlaylistObject)?.owner.images[0].url
                 }
               ]
+            : (collection as AlbumObject | TrackObject)?.artists.map(
+                ({ type, id, name, images }) => ({
+                  type,
+                  id,
+                  name,
+                  image_url: images[0].url
+                })
+              ) || []
         }
       />
       <Duration>24h 60min</Duration>
