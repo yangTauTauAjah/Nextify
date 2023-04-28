@@ -31,7 +31,7 @@ export const getServerSideProps: GetServerSideProps<
       album
     }: TrackObject = await getTrack(params.id);
 
-    const { tracks }: { tracks: TrackObject[] } = await getArtistTopTrack(
+    const tracks = await getArtistTopTrack(
       artist.id,
       (query?.locale as string) || "US"
     );
