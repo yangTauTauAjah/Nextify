@@ -115,7 +115,7 @@ const CollectionOwnerComponent = ({
             alt="image"
           />
         ) : (
-          <AccountCircle fontSize="large" />
+          <AccountCircle sx={{aspectRatio: '1', height: '100%'}} />
         )}
       </div>
       {owners.map(({ type, id, name }) => (
