@@ -7,22 +7,22 @@ import NowPlayingBar from './NowPlayingBar'
 const link = [
   {
     href: '/',
-    icon: <HomeRounded fontSize="medium" />,
+    icon: <HomeRounded sx={{fontSize: '6vh' }} />,
     text: 'Home'
   },
   {
     href: '/search',
-    icon: <SearchRounded fontSize="medium" />,
+    icon: <SearchRounded sx={{fontSize: '6vh' }} />,
     text: 'Search'
   },
   {
     href: '/collection',
-    icon: <LibraryMusicRounded fontSize="medium" />,
+    icon: <LibraryMusicRounded sx={{fontSize: '6vh' }} />,
     text: 'Your library'
   },
   {
     href: '/',
-    icon: <DownloadForOfflineRounded fontSize="medium" />,
+    icon: <DownloadForOfflineRounded sx={{fontSize: '6vh' }} />,
     text: 'Install App'
   }
 ]
