@@ -48,7 +48,7 @@ function Item({
           width: "auto",
           borderRadius: type === "artist" ? "100%" : "0.5rem"
         }}>
-        <Image sizes="10vw" src={image} fill alt="image" />
+        <Image sizes="300px" src={image} fill alt="image" />
       </div>
       <h3 style={{ fontSize: "1rem", marginTop: "1rem" }}>{title}</h3>
       {description}
