@@ -7,7 +7,7 @@ import {
   TrackObject
 } from "@/components/stateSlice/SpotifyAPI/interfaces";
 import { GetServerSideProps } from "next";
-import { Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { setTrack } from "@/components/stateSlice/SpotifyAPI/data";
@@ -24,8 +24,8 @@ export const getServerSideProps: GetServerSideProps<
   PlaylistObject | {}
 > = async ({ params, query }) => {
   if (params?.id && !(params.id instanceof Array)) {
-
     const {
+      id,
       name,
       artists: [artist],
       album
@@ -38,6 +38,7 @@ export const getServerSideProps: GetServerSideProps<
 
     const props: PlaylistObject = {
       type: "playlist",
+      id,
       name,
       description: "",
       owner: {
@@ -75,7 +76,19 @@ export default function Id(data: PlaylistObject) {
     <Stack gap={3} sx={{ padding: "2rem 1rem" }}>
       <CollectionThumbnail type="track" />
       <CollectionMetadata type="track" />
-      <Tracks type="track" />
+      <section>
+        <div>
+          <Box
+            component="p"
+            sx={{ color: ({ typography }) => typography.subtitle1.color }}>
+            Popular Tracks by
+          </Box>
+        </div>
+        <h1 style={{ marginBlock: "0.7rem", fontSize: "1.7rem" }}>
+          {data.owner.display_name}
+        </h1>
+        <Tracks sx={{ marginTop: "2rem" }} type="track" />
+      </section>
     </Stack>
   );
 }
