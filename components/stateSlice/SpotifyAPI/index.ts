@@ -1,26 +1,71 @@
-import { GET_PLAYLIST } from "./fields";
+// import { GET_PLAYLIST } from "./fields";
 import {
+  AccessToken,
   AlbumObject,
   ArtistObject,
   BearerToken,
   PlaylistObject,
+  RefreshToken,
   TrackObject,
   UserObject
 } from "./interfaces";
 
 const BASE_PATH = "https://api.spotify.com/v1";
+export const REDIRECT_URI = "http://localhost:3000/callback";
 
-async function getAccessToken(): Promise<BearerToken> {
-  const data: BearerToken = await fetch(
+async function getAccessToken(): Promise<BearerToken>;
+async function getAccessToken(code: string): Promise<RefreshToken>;
+
+async function getAccessToken(
+  code?: string
+): Promise<BearerToken | RefreshToken> {
+  if (code && code !== "") {
+    const data: RefreshToken = await fetch(
+      "https://accounts.spotify.com/api/token",
+      {
+        method: "post",
+        headers: {
+          Authorization:
+            "Basic " +
+            Buffer.from(
+              process.env.CLIENT_ID + ":" + process.env.CLIENT_SECRET
+            ),
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: `code=${code}&grant_type=authorization_code&redirect_uri=${REDIRECT_URI}`
+      }
+    ).then((data) => data.json());
+    return data;
+  } else {
+    const data: BearerToken = await fetch(
+      "https://accounts.spotify.com/api/token",
+      {
+        method: "post",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: `grant_type=client_credentials&client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`
+      }
+    ).then((data) => data.json());
+    return data;
+  }
+}
+
+async function refreshToken(refresh_token: string): Promise<AccessToken> {
+  const data: AccessToken = await fetch(
     "https://accounts.spotify.com/api/token",
     {
       method: "post",
       headers: {
+        Authorization:
+          "Basic " +
+          Buffer.from(process.env.CLIENT_ID + ":" + process.env.CLIENT_SECRET).toString('base64'),
         "Content-Type": "application/x-www-form-urlencoded"
       },
-      body: `grant_type=client_credentials&client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`
+      body: `grant_type=refresh_token&refresh_token=${refresh_token}&client_secret=${process.env.CLIENT_SECRET}`
     }
   ).then((data) => data.json());
+
   return data;
 }
 
@@ -31,6 +76,47 @@ export async function getUser(id: string): Promise<UserObject> {
     headers: { Authorization: `Bearer ${access_token}` }
   }).then((data) => data.json());
   return data;
+}
+
+export async function getCurrentUserProfile(code: string): Promise<UserObject> {
+  const { access_token } = await refreshToken(code);
+  let path = `${BASE_PATH}/me`;
+  const data = await fetch(path, {
+    headers: { Authorization: `Bearer ${access_token}` }
+  }).then((data) => data.json());
+  return data;
+}
+
+export async function getCurrentUserSavedAlbum(code: string): Promise<AlbumObject[]> {
+  const { access_token } = await refreshToken(code);
+  let path = `${BASE_PATH}/me/albums`;
+  const data: { items: { album: AlbumObject }[] } = await fetch(path, {
+    headers: { Authorization: `Bearer ${access_token}` }
+  }).then((data) => data.json());
+
+  return data.items.map((e) => e.album);
+}
+
+export async function getCurrentUserFollowedArtist(
+  code: string
+): Promise<ArtistObject[]> {
+  const { access_token } = await refreshToken(code);
+  let path = `${BASE_PATH}/me/following?type=artist`;
+  const data: { artists: { items: ArtistObject[] } } = await fetch(path, {
+    headers: { Authorization: `Bearer ${access_token}` }
+  }).then((data) => data.json());
+  
+  return data.artists.items;
+}
+
+export async function getCurrentUserPlaylist(code: string): Promise<PlaylistObject[]> {
+  const { access_token } = await refreshToken(code);
+  let path = `${BASE_PATH}/me/playlists`;
+  const data = await fetch(path, {
+    headers: { Authorization: `Bearer ${access_token}` }
+  }).then((data) => data.json());
+
+  return data.items;
 }
 
 export async function getArtist(ids: string[]): Promise<ArtistObject[]> {
@@ -122,7 +208,3 @@ export async function getTrack(id: string): Promise<TrackObject> {
 
   return { ...data, artists };
 }
-
-/* async function refreshToken(refresh_token: string): Promise<string> {
-  return
-} */
