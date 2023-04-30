@@ -39,7 +39,6 @@ const ArtistNameComponent = styled(Link)(({ theme }) => ({
   paddingBlock: "3px",
   lineHeight: theme.typography.subtitle1.fontSize,
   fontSize: theme.typography.subtitle1.fontSize,
-  color: theme.typography.subtitle1.color,
   "&::before": { background: theme.typography.subtitle1.color }
 }));
 
@@ -49,28 +48,50 @@ const SongMetadata = ({
   album,
   explicit,
   artists
-}: SongComponentInterface) => (
-  <div style={{ marginRight: "auto" }}>
-    <Box
-      component={Link}
-      sx={{
-        "&::before": {
-          background: "white"
-        }
-      }}
-      href={`/track/${id}`}>
-      {name}
-    </Box>
-    <div style={{ display: "flex", marginTop: "5px" }}>
-      {explicit && <Text>LYRICS</Text>}
-      {artists.map((e, i) => (
-        <ArtistNameComponent key={i} href={`/artist/${e.id}`}>
-          {e.name}
-        </ArtistNameComponent>
-      ))}
+}: SongComponentInterface) => {
+  /* const newArray = myArray.reduce((acc, curr, index, array) => {
+  acc.push(curr);
+  if (index !== array.length - 1) {
+    acc.push(0); // Insert your desired element here
+  }
+  return acc;
+}, []); */
+  return (
+    <div style={{ marginRight: "auto" }}>
+      <Box
+        component={Link}
+        sx={{
+          "&::before": {
+            background: "white"
+          }
+        }}
+        href={`/track/${id}`}>
+        {name}
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          marginTop: "5px",
+          "& > :is(a, span)": {
+            color: (theme) => theme.typography.subtitle1.color
+          }
+        }}>
+        {explicit && <Text>LYRICS</Text>}
+        {artists.reduce((acc: JSX.Element[], curr, index, array) => {
+          acc.push(
+            <ArtistNameComponent key={2 * index} href={`/artist/${curr.id}`}>
+              {curr.name}
+            </ArtistNameComponent>
+          );
+          if (index !== array.length - 1) {
+            acc.push(<span key={2 * (index + 1)}>,&nbsp;</span>);
+          }
+          return acc;
+        }, [])}
+      </Box>
     </div>
-  </div>
-);
+  );
+};
 
 const Text = styled(Typography)(({ theme }) => ({
   cursor: "default",
@@ -99,3 +120,7 @@ export default function Song({
     </Wrapper>
   );
 }
+
+/* const myArray = [1, 2, 3, 4, 5];
+
+const newArray =  */
