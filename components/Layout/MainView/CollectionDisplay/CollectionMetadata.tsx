@@ -88,8 +88,6 @@ const CollectionOwnerComponent = ({
 }: {
   owners: CollectionOwnerComponentInterface[];
 }) => {
-
-  console.log(owners)
   
   return (
     <div
