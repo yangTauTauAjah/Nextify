@@ -54,6 +54,7 @@ export interface PlaylistItems {
 
 export interface PlaylistObject {
   type: 'playlist',
+  id: string;
   name: string;
   description: string;
   images: ImageObject[];
@@ -65,6 +66,14 @@ export interface PlaylistObject {
 
 export interface BearerToken {
   access_token: string;
-  token_type: "bearer";
+  token_type: "Bearer";
   expires_in: number;
+}
+
+export interface AccessToken extends BearerToken {
+  scope: string,
+}
+
+export interface RefreshToken extends AccessToken {
+  refresh_token: string;
 }
