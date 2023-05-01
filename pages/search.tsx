@@ -24,7 +24,7 @@ export const getServerSideProps: GetServerSideProps<{
       limit,
       offset
     );
-    console.log(data);
+
     if (data) return { props: { data } };
   }
   return { notFound: true };
@@ -81,7 +81,7 @@ export default function Search(props: { data: CategoryObject[] }) {
           inputProps={{ "aria-label": "search" }}
         />
       </SearchComponent>
-      <div className="p-1">
+      <div className="p-1 pb-10">
         <h3 style={{ fontSize: "1rem" }}>Categories</h3>
         <Box
           className="grid gap-1 mt-1"
