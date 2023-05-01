@@ -7,8 +7,7 @@ import {
 import {
   AlbumObject,
   ArtistObject,
-  PlaylistObject,
-  UserObject
+  PlaylistObject
 } from "@/components/stateSlice/SpotifyAPI/interfaces";
 import {
   AccountCircle,
@@ -18,15 +17,17 @@ import {
   PlusOne,
   Search
 } from "@mui/icons-material";
-import { Fab, Stack, styled } from "@mui/material";
+import { Button, Fab, Stack, Typography, styled } from "@mui/material";
 import { GetServerSideProps } from "next";
 import Image from "next/image";
 import Music from "@/public/music_icon.svg";
 import Link from "next/link";
 import { parseCookie } from "./_app";
+import { useSelector } from "react-redux";
+import { RootState } from "@/components/store";
 
 interface LibraryDataInterface {
-  user: UserObject;
+  // user: UserObject;
   albums: AlbumObject[];
   artists: ArtistObject[];
   playlists: PlaylistObject[];
@@ -41,15 +42,15 @@ export const getServerSideProps: GetServerSideProps<
   if (!cookies.refresh_token) return { props: {} };
 
   const code = cookies.refresh_token;
-  const user = await getCurrentUserProfile(code);
+  // const user = await getCurrentUserProfile(code);
   const albums = await getCurrentUserSavedAlbum(code);
   const artists = await getCurrentUserFollowedArtist(code);
   const playlists = await getCurrentUserPlaylist(code);
 
-  if (!user || !albums || !artists || !playlists) return { props: {} };
+  if (/* !user || */ !albums || !artists || !playlists) return { props: {} };
 
   const data: LibraryDataInterface = {
-    user,
+    // user,
     albums,
     artists,
     playlists
@@ -68,23 +69,46 @@ const ExtendedFab = styled(Fab)({
 
 function GoToLoginPrompt() {
   return (
-    <div>
-      <h1>Go To Login Page to view this page</h1>
-    </div>
+    <Stack
+      className="gap-2 items-center justify-center"
+      sx={{ height: "100vh" }}>
+      <Typography
+        component="h3"
+        sx={{
+          textAlign: "center",
+          fontSize: (theme) => theme.typography.h4,
+          fontWeight: (theme) => theme.typography.fontWeightLight || "300"
+        }}>
+        Login to get full experience
+      </Typography>
+      <Button
+        color="primary"
+        variant="contained"
+        sx={{
+          borderRadius: "10rem",
+          padding: "0.5rem 2rem",
+          fontSize: "1rem",
+          letterSpacing: "2px"
+        }}>
+        Login
+      </Button>
+    </Stack>
   );
 }
 
 export default function Collection(data: LibraryDataInterface | {}) {
-  if ("user" in data) {
+  let user = useSelector((state: RootState) => state.data.user);
+
+  if ("albums" in data && user) {
     return (
       <>
         <Stack sx={{ padding: "1rem" }}>
           <div className="flex items-center my-1 gap-1">
             <div className="aspect-square rounded-full overflow-hidden h-2">
-              {data.user.images[0]?.url ? (
+              {user.images[0]?.url ? (
                 <Image
                   className="aspect-square h-full object-cover"
-                  src={data.user.images[0].url}
+                  src={user.images[0].url}
                   alt="img"
                   fill
                 />
@@ -111,7 +135,7 @@ export default function Collection(data: LibraryDataInterface | {}) {
             </ExtendedFab>
           </div>
         </Stack>
-        <Stack className="p-1 gap-1">
+        <Stack className="p-1 gap-1 pb-10">
           {data.playlists.map((e) => {
             return (
               <Link
