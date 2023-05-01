@@ -23,7 +23,7 @@ const TextComponent = styled("p")(({ theme: { typography } }) => ({
   overflow: "hidden"
 }));
 
-const Collection = ({
+export const Collection = ({
   title,
   type,
   collection
@@ -49,20 +49,11 @@ const Collection = ({
   </Section>
 );
 
-function MainView() {
+/* function MainView() {
   return (
-    <Stack sx={{ gap: "1.5rem", padding: "1rem", marginBottom: "10rem" }}>
-      <Recent />
-      <Collection title="Top List" collection={TopList.playlists.items} />
-      <Collection title="Discover" collection={Discover.playlists.items} />
-      <Collection title="Country" collection={Country.playlists.items} />
-      <Collection title="Indie" collection={Indie.playlists.items} />
-      <Collection title="Gaming" collection={Gaming.playlists.items} />
-      <Collection title="Mood" collection={Mood.playlists.items} />
-      <Collection title="Pop" collection={Pop.playlists.items} />
-      <Collection title="Artist" type="artist" collection={Artist.artists} />
-    </Stack>
+    
   );
 }
 
 export default MainView;
+ */
