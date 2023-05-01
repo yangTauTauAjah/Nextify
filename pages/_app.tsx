@@ -3,13 +3,16 @@ import { themeSettings } from "@/components/theme";
 import { ThemeProvider, createTheme } from "@mui/material";
 import type { AppInitialProps, AppProps } from "next/app";
 import { store } from "@/components/store";
-import { Provider } from "react-redux";
+import { Provider, useDispatch } from "react-redux";
 import A, { AppContext } from "next/app";
 import {
   getCurrentUserProfile,
   getUser
 } from "@/components/stateSlice/SpotifyAPI";
 import { UserObject } from "@/components/stateSlice/SpotifyAPI/interfaces";
+import { setUser } from "@/components/stateSlice/SpotifyAPI/data";
+import MobileWidget from "@/components/Layout/MobileWidget";
+import { Parent } from ".";
 
 export function parseCookie(str: string): Record<string, string | undefined> {
   return str
@@ -24,13 +27,24 @@ export function parseCookie(str: string): Record<string, string | undefined> {
 
 const Theme = createTheme(themeSettings);
 
-const App = (ctx: AppProps) => {
-  const { Component, pageProps } = ctx;
+function DefineUser({ user, children }: { user?: UserObject; children: any }) {
+  const dispatch = useDispatch();
+  if (user) dispatch(setUser(user));
+  return children;
+}
+
+const App = (ctx: AppProps & { user?: UserObject }) => {
+  const { Component, pageProps, user } = ctx;
 
   return (
     <ThemeProvider theme={Theme}>
       <Provider store={store}>
-        <Component {...pageProps} />
+        <DefineUser user={user}>
+          <Parent>
+            <Component {...pageProps} />
+            <MobileWidget />
+          </Parent>
+        </DefineUser>
       </Provider>
     </ThemeProvider>
   );
@@ -46,7 +60,7 @@ App.getInitialProps = async (context: AppContext) => {
   );
 
   if (req?.headers.cookie) {
-    const Cookie = parseCookie(req.headers.cookie)
+    const Cookie = parseCookie(req.headers.cookie);
 
     if (Cookie.refresh_token && pathname !== "/callback") {
       res?.setHeader("Set-Cookie", [
