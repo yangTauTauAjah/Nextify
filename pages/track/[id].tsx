@@ -20,50 +20,57 @@ export interface TrackCollectionInterface {
   topTrackByArtist: TrackObject[];
 }
 
-export const getServerSideProps: GetServerSideProps<
-  PlaylistObject | {}
-> = async ({ params, query }) => {
-  if (params?.id && !(params.id instanceof Array)) {
-    const {
-      id,
-      name,
-      artists: [artist],
-      album
-    }: TrackObject = await getTrack(params.id);
+export const getServerSideProps: GetServerSideProps<PlaylistObject> = async ({
+  params,
+  query
+}) => {
+  if (!params?.id || params.id instanceof Array) return { notFound: true };
 
-    const tracks = await getArtistTopTrack(
-      artist.id,
-      (query?.locale as string) || "US"
-    );
+  const track = await getTrack(params.id);
 
-    const props: PlaylistObject = {
-      type: "playlist",
-      id,
-      name,
-      description: "",
-      owner: {
-        id: artist.id,
-        display_name: artist.name,
-        images: artist.images,
-        type: "user"
-      },
-      images: album.images,
-      tracks: {
-        items: tracks.map((e) => ({
-          track: {
-            id: e.id,
-            name: e.name,
-            album: e.album,
-            artists: e.artists,
-            duration_ms: e.duration_ms,
-            explicit: e.explicit
-          }
-        }))
-      }
-    };
+  if (!track) return { notFound: true };
 
-    return { props };
-  } else return { notFound: true };
+  const {
+    id,
+    name,
+    artists: [artist],
+    album
+  } = track;
+
+  const tracks = await getArtistTopTrack(
+    artist.id,
+    (query?.locale as string) || "US"
+  );
+
+  if (!tracks) return { notFound: true };
+
+  const props: PlaylistObject = {
+    type: "playlist",
+    id,
+    name,
+    description: "",
+    owner: {
+      id: artist.id,
+      display_name: artist.name,
+      images: artist.images,
+      type: "user"
+    },
+    images: album.images,
+    tracks: {
+      items: tracks.map((e) => ({
+        track: {
+          id: e.id,
+          name: e.name,
+          album: e.album,
+          artists: e.artists,
+          duration_ms: e.duration_ms,
+          explicit: e.explicit
+        }
+      }))
+    }
+  };
+
+  return { props };
 };
 
 export default function Id(data: PlaylistObject) {
@@ -73,7 +80,7 @@ export default function Id(data: PlaylistObject) {
   }, [data, dispatch]);
 
   return (
-    <Stack gap={3} sx={{ padding: "2rem 1rem" }}>
+    <Stack className="pb-10" gap={3} sx={{ padding: "2rem 1rem" }}>
       <CollectionThumbnail type="track" />
       <CollectionMetadata type="track" />
       <section>

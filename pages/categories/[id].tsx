@@ -23,7 +23,7 @@ export default function Id(props: {
 }) {
   const { category, data } = props;
   return (
-    <div className="p-1">
+    <div className="p-1 pb-10">
       <h1
         style={{ fontSize: "2rem", marginBlock: "2rem", marginInline: "1rem" }}>
         {category}

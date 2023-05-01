@@ -142,7 +142,7 @@ export default function Id(data: ArtistDataInterface) {
     <>
       <Banner />
       <ArtistName />
-      <Wrapper>
+      <Wrapper className="pb-10">
         <ActionButtonsComponent />
         <PopularSection />
         <Section title="Artist Albums">

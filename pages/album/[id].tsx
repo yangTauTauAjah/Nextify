@@ -25,7 +25,7 @@ export default function Id(AlbumObject: AlbumObject) {
   }, [AlbumObject, dispatch]);
 
   return (
-    <Stack gap={3} sx={{ padding: "2rem 1rem" }}>
+    <Stack className="pb-10" gap={3} sx={{ padding: "2rem 1rem" }}>
       <PlaylistThumbnail type="album" />
       <PlaylistMetadata type="album" />
       <Tracks type="album" />

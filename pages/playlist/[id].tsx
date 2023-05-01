@@ -27,7 +27,7 @@ export default function Id(PlaylistObject: PlaylistObject) {
   }, [PlaylistObject, dispatch]);
 
   return (
-    <Stack gap={3} sx={{ padding: "2rem 1rem" }}>
+    <Stack className="pb-10" gap={3} sx={{ padding: "2rem 1rem" }}>
       <FilterComponent />
       <PlaylistThumbnail/>
       <PlaylistMetadata/>
