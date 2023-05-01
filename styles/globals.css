@@ -177,8 +177,40 @@ a:hover::before {
   flex-direction: column;
 }
 
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-1\/2 {
+  gap: 0.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
 .h-full {
   height: 100%;
+}
+
+.h-1 {
+  height: 1rem;
+}
+
+.h-2 {
+  height: 2rem;
+}
+
+.h-3 {
+  height: 3rem;
+}
+
+.h-4 {
+  height: 4rem;
+}
+
+.h-5 {
+  height: 5rem;
 }
 
 .inline {
@@ -209,6 +241,10 @@ a:hover::before {
   left: 0;
 }
 
+.m-1 {
+  margin: 1rem;
+}
+
 .mx-auto {
   margin-inline: auto;
 }
@@ -219,6 +255,22 @@ a:hover::before {
 
 .ml-auto {
   margin-left: auto;
+}
+
+.mx-1 {
+  margin-inline: 1rem;
+}
+
+.my-1 {
+  margin-block: 1rem;
+}
+
+.my-2 {
+  margin-block: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
 }
 
 .object-contain {
@@ -235,6 +287,26 @@ a:hover::before {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.px-1 {
+  padding-inline: 1rem;
+}
+
+.px-1\/2 {
+  padding-inline: 0.5rem;
+}
+
+.py-1 {
+  padding-block: 1rem;
+}
+
+.py-1\/2 {
+  padding-block: 0.5rem;
 }
 
 .relative {
@@ -255,4 +327,24 @@ a:hover::before {
 
 .w-full {
   width: 100%;
+}
+
+.w-1 {
+  width: 1rem;
+}
+
+.w-2 {
+  width: 2rem;
+}
+
+.w-3 {
+  width: 3rem;
+}
+
+.w-4 {
+  width: 4rem;
+}
+
+.w-5 {
+  width: 5rem;
 }
