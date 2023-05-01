@@ -177,12 +177,20 @@ a:hover::before {
   flex-direction: column;
 }
 
+.gap-1\/2 {
+  gap: 0.5rem;
+}
+
 .gap-1 {
   gap: 1rem;
 }
 
-.gap-1\/2 {
-  gap: 0.5rem;
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 2rem;
 }
 
 .grid {
@@ -291,6 +299,10 @@ a:hover::before {
 
 .p-1 {
   padding: 1rem;
+}
+
+.pb-10 {
+  padding-bottom: 10rem;
 }
 
 .px-1 {
