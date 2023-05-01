@@ -70,10 +70,22 @@ export interface BearerToken {
   expires_in: number;
 }
 
+export interface CategoryObject {
+  href: string;
+  icons: ImageObject[];
+  id: string;
+  name: string;
+}
+
 export interface AccessToken extends BearerToken {
   scope: string,
 }
 
 export interface RefreshToken extends AccessToken {
   refresh_token: string;
+}
+
+export interface ErrorRequestInterface {
+  error: string,
+  error_description: string
 }
