@@ -13,11 +13,16 @@ import { Provider, useDispatch } from "react-redux";
 import A, { AppContext } from "next/app";
 import {
   getCurrentUserProfile,
+  getCurrentlyPlayingTrack,
+  getRecentlyPlayedTrack,
   getUser
 } from "@/components/request";
-import { UserObject } from "@/components/interfaces";
-import { setUser } from "@/components/stateSlice/SpotifyAPI";
+import { TrackObject, UserObject } from "@/components/interfaces";
+import { setNowPlaying, setUser } from "@/components/stateSlice/SpotifyAPI";
 import MobileWidget from "@/components/Layout/MobileWidget";
+import { timeToSec } from "./callback";
+import { useEffect } from "react";
+import { Dictionary } from "@reduxjs/toolkit";
 
 export function parseCookie(str: string): Record<string, string | undefined> {
   return str
@@ -29,12 +34,21 @@ export function parseCookie(str: string): Record<string, string | undefined> {
     }, {});
 }
 
+interface GlobalState {
+  user?: UserObject;
+  nowPlaying?: TrackObject;
+}
+
 const Theme = createTheme(themeSettings);
 
-function Parent({ user, children }: { user?: UserObject; children: any }) {
+function Parent({ global, children }: { global?: GlobalState; children: any }) {
   const dispatch = useDispatch();
+
   const Theme = useTheme();
-  if (user) dispatch(setUser(user));
+  useEffect(() => {
+    if (global?.user) dispatch(setUser(global.user));
+    if (global?.nowPlaying) dispatch(setNowPlaying(global.nowPlaying));
+  }, [dispatch, global?.nowPlaying, global?.user]);
 
   return (
     <Box
@@ -68,13 +82,15 @@ function Parent({ user, children }: { user?: UserObject; children: any }) {
 //   }
 // }));
 
-const App = (ctx: AppProps & { user?: UserObject }) => {
-  const { Component, pageProps, user } = ctx;
+const App = (
+  ctx: AppProps & { user?: UserObject; nowPlaying: TrackObject }
+) => {
+  const { Component, pageProps, user, nowPlaying } = ctx;
 
   return (
     <ThemeProvider theme={Theme}>
       <Provider store={store}>
-        <Parent user={user}>
+        <Parent global={{ user, nowPlaying }}>
           <Component {...pageProps} />
           <MobileWidget />
         </Parent>
@@ -88,19 +104,34 @@ App.getInitialProps = async (context: AppContext) => {
     ctx: { req, res, pathname }
   } = context;
 
-  const r: AppInitialProps & { user?: UserObject } = await A.getInitialProps(
-    context
-  );
+  const r: AppInitialProps & { user?: UserObject; nowPlaying?: TrackObject } =
+    await A.getInitialProps(context);
 
   if (req?.headers.cookie) {
     const Cookie = parseCookie(req.headers.cookie);
 
-    if (Cookie.refresh_token && pathname !== "/callback") {
-      res?.setHeader("Set-Cookie", [
-        `refresh_token=${Cookie.refresh_token}; Max-Age=3600; Secure; HttpOnly; Path=/`
-      ]);
+    if (Cookie.refresh_token) {
+      const NowPlaying = await getCurrentlyPlayingTrack(Cookie.refresh_token);
+      if (NowPlaying) r.nowPlaying = NowPlaying;
+      else {
+        const recentlyPlayed = await getRecentlyPlayedTrack(
+          Cookie.refresh_token
+        );
+        if (recentlyPlayed) r.nowPlaying = recentlyPlayed[0];
+      }
+      
+      if (pathname !== "/callback") {
+        res?.setHeader("Set-Cookie", [
+          `refresh_token=${Cookie.refresh_token}; Max-Age=${timeToSec(
+            0,
+            0,
+            0,
+            3
+          )}; Secure; HttpOnly; Path=/`
+        ]);
 
-      r.user = await getCurrentUserProfile(Cookie.refresh_token);
+        r.user = await getCurrentUserProfile(Cookie.refresh_token);
+      }
     }
   }
 
