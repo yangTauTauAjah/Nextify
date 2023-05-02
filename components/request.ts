@@ -148,6 +148,48 @@ export async function getCurrentUserPlaylist(
   }
 }
 
+export async function getCurrentlyPlayingTrack(
+  token: string
+): Promise<TrackObject | void> {
+  const access_token = await refreshToken(token);
+  if ("access_token" in access_token) {
+    let path = `${BASE_PATH}/me/player/currently-playing`;
+    const data = await fetch(path, {
+      headers: { Authorization: `Bearer ${access_token.access_token}` }
+    })
+      .then((data) => data.json())
+      .catch((e) => {
+        console.log(e);
+      });
+
+    if (data) return data.item;
+  }
+}
+
+export async function getRecentlyPlayedTrack(
+  token: string
+): Promise<TrackObject[] | void> {
+  const access_token = await refreshToken(token);
+  if ("access_token" in access_token) {
+    let path = `${BASE_PATH}/me/player/recently-played`;
+    const data: { items: { track: TrackObject }[] } | undefined = await fetch(
+      path,
+      {
+        headers: { Authorization: `Bearer ${access_token.access_token}` }
+      }
+    )
+      .then((data) => {return data.json()})
+      .catch((e) => {
+        console.log(e);
+      });
+
+      console.log('ahsdghasivdnjknjkdsavjh')
+      console.log(data)
+
+    if (data && 'items' in data) return data.items.map((e) => e.track);
+  }
+}
+
 export async function getArtist(ids: string[]): Promise<ArtistObject[] | void> {
   const token = await getAccessToken();
   if ("access_token" in token) {
