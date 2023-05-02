@@ -1,9 +1,24 @@
-import { DevicesOther, FavoriteBorder, PlayCircle } from "@mui/icons-material";
+import { TrackObject } from "@/components/interfaces";
+import { RootState } from "@/components/store";
+import {
+  DevicesOther,
+  FavoriteBorder,
+  PlayArrowRounded
+} from "@mui/icons-material";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import { useSelector } from "react-redux";
 
-function NowPlayingBar() {
+function NowPlayingBar({
+  thumbnail,
+  songName,
+  artist
+}: {
+  thumbnail: string;
+  songName: string;
+  artist: string;
+}) {
   return (
     <Box
       sx={{
@@ -13,29 +28,35 @@ function NowPlayingBar() {
         alignItems: "center",
         padding: "0.5rem",
         height: "4rem",
-        background: "#00aa22",
+        background: (theme) => theme.palette.primary.main,
         borderRadius: "0.5rem",
         fontSize: "0.7rem"
       }}>
-      <div style={{ display: "flex", marginRight: "auto" }}>
-        <div style={{ height: "100%" }}>
+      <div className="flex mr-auto h-full gap-1 grow">
+        <div
+          className="aspect-square overflow-hidden"
+          style={{ borderRadius: "5px" }}>
           <Image
             sizes="10vw"
-            style={{ aspectRatio: "1", objectFit: "cover" }}
-            src=""
-            alt="image"></Image>
+            style={{ objectFit: "cover" }}
+            src={thumbnail}
+            fill
+            alt="image"
+          />
         </div>
-        <div>
-          <p style={{ fontWeight: "700" }}>Song name</p>
-          <p style={{ marginTop: "0.3rem" }}>song by</p>
+        <div style={{ alignItems: "center" }}>
+          <p style={{ fontWeight: "700" }}>{songName}</p>
+          <p style={{ marginTop: "0.3rem" }}>{artist}</p>
         </div>
       </div>
       <DevicesOther sx={{ fontSize: "2rem" }} />
       <FavoriteBorder sx={{ fontSize: "2rem" }} />
-      <PlayCircle sx={{ fontSize: "2rem" }} />
+      <PlayArrowRounded sx={{ fontSize: "2rem" }} />
       <span
         style={{
           position: "absolute",
+          overflow: "hidden",
+          borderRadius: "5px",
           left: "50%",
           bottom: "0",
           width: "95%",
