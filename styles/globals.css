@@ -153,6 +153,10 @@ a:hover::before {
   display: block;
 }
 
+.bottom-0 {
+  bottom: 0
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -195,6 +199,10 @@ a:hover::before {
 
 .grid {
   display: grid;
+}
+
+.grow {
+  flex-grow: 1;
 }
 
 .h-full {
