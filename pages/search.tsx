@@ -7,6 +7,9 @@ import { GetServerSideProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Search as Icon } from "@mui/icons-material";
+import { useDispatch } from "react-redux";
+import { setActiveLink } from "@/components/stateSlice/SpotifyAPI";
+import { useEffect } from "react";
 
 export const getServerSideProps: GetServerSideProps<{
   data: CategoryObject[];
@@ -69,6 +72,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Search(props: { data: CategoryObject[] }) {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setActiveLink(1))
+  }, [dispatch])
   return (
     <>
       <h1 className="px-1 my-1">Search</h1>
