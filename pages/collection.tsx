@@ -23,8 +23,12 @@ import Image from "next/image";
 import Music from "@/public/music_icon.svg";
 import Link from "next/link";
 import { parseCookie } from "./_app";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/components/store";
+import LoginAlert from "@/components/LoginPropmt";
+import React, { useEffect } from "react";
+import { useRouter } from "next/router";
+import { setActiveLink } from "@/components/stateSlice/SpotifyAPI";
 
 interface LibraryDataInterface {
   // user: UserObject;
@@ -68,10 +72,25 @@ const ExtendedFab = styled(Fab)({
 });
 
 function GoToLoginPrompt() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Stack
       className="gap-2 items-center justify-center"
       sx={{ height: "100vh" }}>
+      <LoginAlert
+        open={open}
+        handleClickOpen={handleClickOpen}
+        handleClose={handleClose}
+      />
       <Typography
         component="h3"
         sx={{
@@ -82,6 +101,7 @@ function GoToLoginPrompt() {
         Login to get full experience
       </Typography>
       <Button
+        onClick={handleClickOpen}
         color="primary"
         variant="contained"
         sx={{
@@ -98,6 +118,11 @@ function GoToLoginPrompt() {
 
 export default function Collection(data: LibraryDataInterface | {}) {
   let user = useSelector((state: RootState) => state.data.user);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(setActiveLink(2))
+  }, [dispatch])
 
   if ("albums" in data && user) {
     return (
