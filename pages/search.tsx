@@ -1,7 +1,7 @@
 
 
-import { getSeveralBrowseCategories } from "@/components/stateSlice/SpotifyAPI";
-import { CategoryObject } from "@/components/stateSlice/SpotifyAPI/interfaces";
+import { getSeveralBrowseCategories } from "@/components/request";
+import { CategoryObject } from "@/components/interfaces";
 import { Box, InputBase, styled, alpha } from "@mui/material";
 import { GetServerSideProps } from "next";
 import Image from "next/image";

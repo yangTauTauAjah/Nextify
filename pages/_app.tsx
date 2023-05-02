@@ -1,6 +1,12 @@
 import "@/styles/globals.css";
 import { themeSettings } from "@/components/theme";
-import { ThemeProvider, createTheme } from "@mui/material";
+import {
+  Box,
+  ThemeProvider,
+  createTheme,
+  styled,
+  useTheme
+} from "@mui/material";
 import type { AppInitialProps, AppProps } from "next/app";
 import { store } from "@/components/store";
 import { Provider, useDispatch } from "react-redux";
@@ -8,18 +14,16 @@ import A, { AppContext } from "next/app";
 import {
   getCurrentUserProfile,
   getUser
-} from "@/components/stateSlice/SpotifyAPI";
-import { UserObject } from "@/components/stateSlice/SpotifyAPI/interfaces";
-import { setUser } from "@/components/stateSlice/SpotifyAPI/data";
+} from "@/components/request";
+import { UserObject } from "@/components/interfaces";
+import { setUser } from "@/components/stateSlice/SpotifyAPI";
 import MobileWidget from "@/components/Layout/MobileWidget";
-import { Parent } from ".";
 
 export function parseCookie(str: string): Record<string, string | undefined> {
   return str
     .split(";")
     .map((v) => v.split("="))
-    .reduce((acc, v) => {
-      /* @ts-ignore */
+    .reduce((acc: NodeJS.Dict<string>, v) => {
       acc[decodeURIComponent(v[0].trim())] = decodeURIComponent(v[1].trim());
       return acc;
     }, {});
@@ -27,11 +31,42 @@ export function parseCookie(str: string): Record<string, string | undefined> {
 
 const Theme = createTheme(themeSettings);
 
-function DefineUser({ user, children }: { user?: UserObject; children: any }) {
+function Parent({ user, children }: { user?: UserObject; children: any }) {
   const dispatch = useDispatch();
+  const Theme = useTheme();
   if (user) dispatch(setUser(user));
-  return children;
+
+  return (
+    <Box
+      sx={{
+        [Theme.breakpoints.up("sm")]: {
+          gridTemplateAreas: `
+           "nav-bar         main-view      "
+           "now-playing-bar now-playing-bar"
+         `,
+          gridTemplateColumns: "auto 1fr",
+          gridTemplateRows: "auto 1fr auto"
+        }
+      }}>
+      {children}
+    </Box>
+  );
 }
+// styled("div")(({ theme }) => ({
+//   /* gridTemplateAreas: `
+//     "top-bar         top-bar         top-bar"
+//     "nav-bar         main-view       right-sidebar"
+//     "now-playing-bar now-playing-bar now-playing-bar"
+//   `, */
+//   [theme.breakpoints.up("sm")]: {
+//     gridTemplateAreas: `
+//       "nav-bar         main-view      "
+//       "now-playing-bar now-playing-bar"
+//     `,
+//     gridTemplateColumns: "auto 1fr",
+//     gridTemplateRows: "auto 1fr auto"
+//   }
+// }));
 
 const App = (ctx: AppProps & { user?: UserObject }) => {
   const { Component, pageProps, user } = ctx;
@@ -39,12 +74,10 @@ const App = (ctx: AppProps & { user?: UserObject }) => {
   return (
     <ThemeProvider theme={Theme}>
       <Provider store={store}>
-        <DefineUser user={user}>
-          <Parent>
-            <Component {...pageProps} />
-            <MobileWidget />
-          </Parent>
-        </DefineUser>
+        <Parent user={user}>
+          <Component {...pageProps} />
+          <MobileWidget />
+        </Parent>
       </Provider>
     </ThemeProvider>
   );

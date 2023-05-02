@@ -1,6 +1,6 @@
 import Item from "@/components/Layout/MainView/HomePage/Section/Collection/Item";
-import { getCategoryPlaylists, getSingleBrowseCategories } from "@/components/stateSlice/SpotifyAPI";
-import { PlaylistObject } from "@/components/stateSlice/SpotifyAPI/interfaces";
+import { getCategoryPlaylists, getSingleBrowseCategories } from "@/components/request";
+import { PlaylistObject } from "@/components/interfaces";
 import { Box } from "@mui/material";
 import { GetServerSideProps } from "next";
 

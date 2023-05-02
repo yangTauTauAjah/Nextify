@@ -1,7 +1,7 @@
 import {
   CollectionType,
   ComponentTypeInterface
-} from "@/components/stateSlice/SpotifyAPI/interfaces";
+} from "@/components/interfaces";
 import { RootState } from "@/components/store";
 import { Box, styled } from "@mui/material";
 import Image from "next/image";

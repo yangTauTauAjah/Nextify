@@ -44,22 +44,6 @@ import Artist from "@/data/recommendations/artists.json";
 
 const isAuthorized = false;
 
-export const Parent = styled("div")(({ theme }) => ({
-  /* gridTemplateAreas: `
-    "top-bar         top-bar         top-bar"
-    "nav-bar         main-view       right-sidebar"
-    "now-playing-bar now-playing-bar now-playing-bar"
-  `, */
-  [theme.breakpoints.up("sm")]: {
-    gridTemplateAreas: `
-      "nav-bar         main-view      "
-      "now-playing-bar now-playing-bar"
-    `,
-    gridTemplateColumns: "auto 1fr",
-    gridTemplateRows: "auto 1fr auto"
-  }
-}));
-
 export default function Main() {
   const Theme = useTheme();
   const screenWidth = useSelector(

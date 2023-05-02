@@ -3,12 +3,12 @@ import {
   getCurrentUserPlaylist,
   getCurrentUserProfile,
   getCurrentUserSavedAlbum
-} from "@/components/stateSlice/SpotifyAPI";
+} from "@/components/request";
 import {
   AlbumObject,
   ArtistObject,
   PlaylistObject
-} from "@/components/stateSlice/SpotifyAPI/interfaces";
+} from "@/components/interfaces";
 import {
   AccountCircle,
   Add,

@@ -4,7 +4,7 @@ import {
   AlbumObject,
   ArtistObject,
   TrackObject
-} from "../../../stateSlice/SpotifyAPI/interfaces";
+} from "../../../interfaces";
 import Link from "next/link";
 import { Box, Typography, styled } from "@mui/material";
 

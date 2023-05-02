@@ -19,7 +19,7 @@ import {
   PlaylistObject,
   TrackObject,
   UserObject
-} from "@/components/stateSlice/SpotifyAPI/interfaces";
+} from "@/components/interfaces";
 import { useEffect } from "react";
 
 interface CollectionOwnerComponentInterface {

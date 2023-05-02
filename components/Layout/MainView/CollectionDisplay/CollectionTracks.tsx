@@ -10,7 +10,7 @@ import {
   PlaylistItems,
   PlaylistObject,
   TrackObject
-} from "@/components/stateSlice/SpotifyAPI/interfaces";
+} from "@/components/interfaces";
 
 const Tracks = ({ type = "playlist", sx }: {type?: CollectionType, sx?: any}) => {
   let collection = useSelector((state: RootState) => state.data[type]) as

@@ -1,5 +1,4 @@
-import { getAccessToken } from "@/components/stateSlice/SpotifyAPI";
-import { RefreshToken } from "@/components/stateSlice/SpotifyAPI/interfaces";
+import { getAccessToken } from "@/components/request";
 import { GetServerSideProps } from "next";
 
 export const getServerSideProps: GetServerSideProps<{}> = async ({query, res}) => {

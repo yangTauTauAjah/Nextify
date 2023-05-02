@@ -1,16 +1,16 @@
 import {
   getArtistTopTrack,
   getTrack
-} from "@/components/stateSlice/SpotifyAPI";
+} from "@/components/request";
 import {
   PlaylistObject,
   TrackObject
-} from "@/components/stateSlice/SpotifyAPI/interfaces";
+} from "@/components/interfaces";
 import { GetServerSideProps } from "next";
 import { Box, Stack } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { setTrack } from "@/components/stateSlice/SpotifyAPI/data";
+import { setTrack } from "@/components/stateSlice/SpotifyAPI";
 import CollectionThumbnail from "@/components/Layout/MainView/CollectionDisplay/CollectionThumbnail";
 import CollectionMetadata from "@/components/Layout/MainView/CollectionDisplay/CollectionMetadata";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
@@ -24,53 +24,57 @@ export const getServerSideProps: GetServerSideProps<PlaylistObject> = async ({
   params,
   query
 }) => {
-  if (!params?.id || params.id instanceof Array) return { notFound: true };
+  if (params?.id && !(params.id instanceof Array)) {
+    const track = await getTrack(params.id);
 
-  const track = await getTrack(params.id);
+    if (!track) return { notFound: true };
 
-  if (!track) return { notFound: true };
+    const {
+      id,
+      name,
+      artists: [artist],
+      album
+    } = track;
 
-  const {
-    id,
-    name,
-    artists: [artist],
-    album
-  } = track;
+    if (!(query["locale"] instanceof Array)) {
+      const tracks = await getArtistTopTrack(
+        artist.id,
+        query["locale"] || "US"
+      );
 
-  const tracks = await getArtistTopTrack(
-    artist.id,
-    (query?.locale as string) || "US"
-  );
+      if (!tracks) return { notFound: true };
 
-  if (!tracks) return { notFound: true };
-
-  const props: PlaylistObject = {
-    type: "playlist",
-    id,
-    name,
-    description: "",
-    owner: {
-      id: artist.id,
-      display_name: artist.name,
-      images: artist.images,
-      type: "user"
-    },
-    images: album.images,
-    tracks: {
-      items: tracks.map((e) => ({
-        track: {
-          id: e.id,
-          name: e.name,
-          album: e.album,
-          artists: e.artists,
-          duration_ms: e.duration_ms,
-          explicit: e.explicit
+      const props: PlaylistObject = {
+        type: "playlist",
+        id,
+        name,
+        description: "",
+        owner: {
+          id: artist.id,
+          display_name: artist.name,
+          images: artist.images,
+          type: "user"
+        },
+        images: album.images,
+        tracks: {
+          items: tracks.map((e) => ({
+            track: {
+              id: e.id,
+              name: e.name,
+              album: e.album,
+              artists: e.artists,
+              duration_ms: e.duration_ms,
+              explicit: e.explicit
+            }
+          }))
         }
-      }))
-    }
-  };
+      };
 
-  return { props };
+      return { props };
+    }
+  }
+  
+  return { notFound: true };
 };
 
 export default function Id(data: PlaylistObject) {

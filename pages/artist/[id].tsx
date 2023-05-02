@@ -3,18 +3,18 @@ import {
   getArtistAlbum,
   getArtistTopTrack,
   getRelatedArtist
-} from "@/components/stateSlice/SpotifyAPI";
+} from "@/components/request";
 import {
   AlbumObject,
   ArtistObject,
   PlaylistObject,
   TrackObject
-} from "@/components/stateSlice/SpotifyAPI/interfaces";
+} from "@/components/interfaces";
 import { GetServerSideProps } from "next";
 import { Box, Stack, styled } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { setPlaylist } from "@/components/stateSlice/SpotifyAPI/data";
+import { setPlaylist } from "@/components/stateSlice/SpotifyAPI";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
 import Image from "next/image";
 import Section from "@/components/Layout/MainView/HomePage/Section";
@@ -26,17 +26,26 @@ export const getServerSideProps: GetServerSideProps<
   ArtistDataInterface | {}
 > = async ({ params, query }) => {
   if (params?.id && !(params.id instanceof Array)) {
-    const data: ArtistDataInterface = {
-      artist: (await getArtist([params.id]))[0],
-      albums: await getArtistAlbum(params.id),
-      related_artist: await getRelatedArtist(params.id),
-      top_tracks: await getArtistTopTrack(
-        params.id,
-        (query?.locale as string) || "US"
-      )
-    };
-    return { props: data };
-  } else return { notFound: true };
+    const artist = await getArtist([params.id]);
+    const albums = await getArtistAlbum(params.id);
+    const related_artist = await getRelatedArtist(params.id);
+    const top_tracks = await getArtistTopTrack(
+      params.id,
+      (query?.locale as string) || "US"
+    );
+
+    if (artist && albums && related_artist && top_tracks) {
+      const data: ArtistDataInterface = {
+        artist: artist[0],
+        albums,
+        related_artist,
+        top_tracks
+      };
+      return { props: data };
+    }
+  }
+
+  return { notFound: true };
 };
 
 interface ArtistDataInterface {
