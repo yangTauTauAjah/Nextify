@@ -41,8 +41,7 @@ import Gaming from "@/data/categories/Gaming.json";
 import Mood from "@/data/categories/Mood.json";
 import Pop from "@/data/categories/Pop.json";
 import Artist from "@/data/recommendations/artists.json";
-
-const isAuthorized = false;
+import { setActiveLink } from "@/components/stateSlice/SpotifyAPI";
 
 export default function Main() {
   const Theme = useTheme();
@@ -66,6 +65,10 @@ export default function Main() {
       else dispatch(forceResize("xl"));
     });
   }, [Theme.breakpoints.values, dispatch]);
+
+  useEffect(() => {
+    dispatch(setActiveLink(0))
+  }, [dispatch])
 
   return (
     /* <Parent>
