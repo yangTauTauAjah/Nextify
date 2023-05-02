@@ -80,14 +80,15 @@ async function refreshToken(
   return data;
 }
 
-export async function getUser(id: string): Promise<UserObject> {
-  /* @ts-ignore */
-  const { access_token } = await getAccessToken();
-  let path = `${BASE_PATH}/users/${id}`;
-  const data = await fetch(path, {
-    headers: { Authorization: `Bearer ${access_token}` }
-  }).then((data) => data.json());
-  return data;
+export async function getUser(id: string): Promise<UserObject | void> {
+  const token = await getAccessToken();
+  if ("access_token" in token) {
+    let path = `${BASE_PATH}/users/${id}`;
+    const data = await fetch(path, {
+      headers: { Authorization: `Bearer ${token.access_token}` }
+    }).then((data) => data.json());
+    return data;
+  }
 }
 
 export async function getCurrentUserProfile(
@@ -261,7 +262,7 @@ export async function getTrack(id: string): Promise<TrackObject | void> {
 export async function getSingleBrowseCategories(
   id: string,
   country?: string,
-  locale?: string,
+  locale?: string
 ): Promise<CategoryObject | void> {
   const token = await getAccessToken();
   if (!("access_token" in token)) return;

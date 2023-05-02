@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import screenWidthReducer from '@/components/stateSlice/screenWidth'
-import dataReducer from './stateSlice/SpotifyAPI/data'
+import dataReducer from './stateSlice/SpotifyAPI'
 
 export const store = configureStore({
   reducer: {
