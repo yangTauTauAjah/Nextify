@@ -348,9 +348,8 @@ export async function getSeveralBrowseCategories(
   const token = await getAccessToken();
   if (!("access_token" in token)) return;
 
-  let path = `${BASE_PATH}/browse/categories?`;
-  if (country) path += `country=${country}`;
-  if (locale) path += `locale=${locale}`;
+  let path = `${BASE_PATH}/browse/categories?country=${country || 'US'}&locale=${locale || 'en-US'}`;
+  
   if (limit) path += `limit=${limit}`;
   if (offset) path += `offset=${offset}`;
 

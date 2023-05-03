@@ -43,14 +43,30 @@ import Pop from "@/data/categories/Pop.json";
 import Artist from "@/data/recommendations/artists.json";
 import { setActiveLink } from "@/components/stateSlice/SpotifyAPI";
 
-export const getServerSideProps: GetServerSideProps<{data: PlaylistObject[]}> = async () => {
-  const data = await getCategoryPlaylist()
-  if (data) return {props: {data}}
+interface IndexPageDataInterface {data: {
+    category: string,
+    playlist: PlaylistObject[]
+  }[]}
+
+export const getServerSideProps: GetServerSideProps<IndexPageDataInterface> = async () => {
+  const categories= await getSeveralBrowseCategories()
+  
+  if (categories) {
+    let data = []
+    for (let i = 0; i < categories.length; i++) {
+      data.push({
+        category: categories[i].name,
+        playlist: await getCategoryPlaylist(categories[i].id)
+      })
+    }
+    
+    return {props: {data}}
+  }
   
   return {notFound: true}
 };
 
-export default function Main({data}: {data: PlaylistObject[]}) {
+export default function Main({data}: IndexPageDataInterface) {
   const Theme = useTheme();
   const screenWidth = useSelector(
     (state: RootState) => state.screenWidth.value
@@ -90,7 +106,7 @@ export default function Main({data}: {data: PlaylistObject[]}) {
       {
         data.map(e => {
           return (
-            <Collection title="Top List" collection={TopList.playlists.items} />
+            <Collection title={e.category} collection={e.playlists} />
           )
         })
       }
