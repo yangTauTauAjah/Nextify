@@ -6,7 +6,8 @@ const access_scope = [
   "user-follow-read",
   "user-read-email user-read-private",
   "user-read-currently-playing",
-  "user-read-recently-played"
+  "user-read-recently-played",
+  "user-top-read"
 ];
 const REDIRECT_URI = "http://localhost:3000/callback";
 
