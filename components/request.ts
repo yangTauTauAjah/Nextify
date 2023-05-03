@@ -91,6 +91,33 @@ export async function getUser(id: string): Promise<UserObject | void> {
   }
 }
 
+export async function getUserTopItem(
+  token: string,
+  type: "artists" | "tracks"
+): Promise<ArtistObject[] | TrackObject[] | void> {
+  const access_token = await refreshToken(token);
+  if ((access_token as AccessToken).access_token) {
+    let path = `${BASE_PATH}/me/top/${type}`;
+    if (type === "artists") {
+      const data: { items: ArtistObject[] } | void = await fetch(path, {
+        headers: {
+          Authorization: `Bearer ${(access_token as AccessToken).access_token}`
+        }
+      }).then((data) => data.json());
+
+      if (data && 'items' in data) return data.items;
+    } else {
+      const data: { items: TrackObject[] } | void = await fetch(path, {
+        headers: {
+          Authorization: `Bearer ${(access_token as AccessToken).access_token}`
+        }
+      }).then((data) => data.json());
+
+      if (data && 'items' in data) return data.items;
+    }
+  }
+}
+
 export async function getCurrentUserProfile(
   token: string
 ): Promise<UserObject | undefined> {
@@ -134,22 +161,39 @@ export async function getCurrentUserFollowedArtist(
   }
 }
 
-export async function getFeaturedPlaylist(country?: string, locale?: string, timestamp?: Date, limit?: number, offset?: number): Promise<PlaylistObject[] | void> {
+export async function getFeaturedPlaylist(
+  country?: string,
+  locale?: string,
+  timestamp?: Date,
+  limit?: number,
+  offset?: number
+): Promise<{ message: string; playlists: PlaylistObject[] } | void> {
   const access_token = await getAccessToken();
   if ("access_token" in access_token) {
-    let path = `${BASE_PATH}/browse/featured-playlists?`;
-    if (country) path += `country=${country || 'US'}`;
-    if (locale)
-    path += `locale=${locale || 'en-US'}`;
-    if (timestamp) path += `timestamp=${timestamp.toISOString()}`;
-    if (limit) path += `limit=${limit}`;
-    if (offset) path += `offset=${offset}`;
-    const data: {playlists: {items: PlaylistObject[]}} | undefined = await fetch(path, {
-      headers: { Authorization: `Bearer ${access_token.access_token}` }
-    }).then((data) => data.json())
-    .catch(e => {console.log(e)})
+    let path = `${BASE_PATH}/browse/featured-playlists`;
 
-    if (data && 'playlists' in data) return data.playlists.items;
+    let query = new URLSearchParams();
+
+    query.append("country", country || "US");
+    query.append("locale", locale || "en-US");
+    if (timestamp) query.append("timestamp", timestamp.toISOString());
+    if (limit) query.append("limit", limit.toString());
+    if (offset) query.append("offset", offset.toString());
+
+    path += `?${query.toString()}`;
+
+    const data:
+      | { message: string; playlists: { items: PlaylistObject[] } }
+      | undefined = await fetch(path, {
+      headers: { Authorization: `Bearer ${access_token.access_token}` }
+    })
+      .then((data) => data.json())
+      .catch((e) => {
+        console.log(e);
+      });
+
+    if (data && "playlists" in data)
+      return { message: data.message, playlists: data.playlists.items };
   }
 }
 
@@ -197,15 +241,14 @@ export async function getRecentlyPlayedTrack(
         headers: { Authorization: `Bearer ${access_token.access_token}` }
       }
     )
-      .then((data) => {return data.json()})
+      .then((data) => {
+        return data.json();
+      })
       .catch((e) => {
         console.log(e);
       });
 
-      console.log('ahsdghasivdnjknjkdsavjh')
-      console.log(data)
-
-    if (data && 'items' in data) return data.items.map((e) => e.track);
+    if (data && "items" in data) return data.items.map((e) => e.track);
   }
 }
 
@@ -230,12 +273,20 @@ export async function getArtistAlbum(
   const token = await getAccessToken();
   if (!("access_token" in token)) return;
 
-  let path = `${BASE_PATH}/artists/${id}/albums?`;
-  if (market) path += `market=${market}`;
+  let path = `${BASE_PATH}/artists/${id}/albums?market=${market}&market=${market}&include_groups=${include_groups?.join(
+    ","
+  )}&limit=${limit}&offset=${offset}`;
+
+  let query = new URLSearchParams();
+
+  if (market) query.append("market", market);
   if (include_groups && include_groups.length > 0)
-    path += `include_groups=${include_groups.join(",")}`;
-  if (limit) path += `limit=${limit}`;
-  if (offset) path += `offset=${offset}`;
+    query.append("include_groups", include_groups.join(" "));
+  if (limit) query.append("limit", limit.toString());
+  if (offset) query.append("offset", offset.toString());
+
+  path += `?${query.toString()}`;
+
   const data = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
   }).then((data) => data.json());
@@ -273,13 +324,18 @@ export async function getRelatedArtist(
 
 export async function getPlaylist(
   id: string,
-  fields?: string
+  fields?: string[]
 ): Promise<PlaylistObject | void> {
   const token = await getAccessToken();
   if (!("access_token" in token)) return;
 
-  let path = `${BASE_PATH}/playlists/${id}`;
-  if (fields && fields !== "") path += `?fields=${fields}`;
+  let path = `${BASE_PATH}/playlists/${id}?fields=${fields}`;
+
+  let query = new URLSearchParams();
+  if (fields && fields.length > 0) query.append("fields", fields.join(" "));
+
+  path += `?${query.toString()}`;
+
   const data = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
   }).then((data) => data.json());
@@ -328,9 +384,12 @@ export async function getSingleBrowseCategories(
   const token = await getAccessToken();
   if (!("access_token" in token)) return;
 
-  let path = `${BASE_PATH}/browse/categories/${id}?`;
-  if (country) path += `country=${country}`;
-  if (locale) path += `locale=${locale}`;
+  let path = `${BASE_PATH}/browse/categories/${id}`;
+
+  let query = new URLSearchParams();
+  if (country) query.append("country", country);
+  if (locale) query.append("locale", locale);
+  path += `?${query.toString()}`;
 
   const data: CategoryObject = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
@@ -342,20 +401,27 @@ export async function getSingleBrowseCategories(
 export async function getSeveralBrowseCategories(
   country?: string,
   locale?: string,
-  limit?: string,
-  offset?: string
+  limit?: number,
+  offset?: number
 ): Promise<CategoryObject[] | void> {
   const token = await getAccessToken();
   if (!("access_token" in token)) return;
 
-  let path = `${BASE_PATH}/browse/categories?country=${country || 'US'}&locale=${locale || 'en-US'}`;
-  
-  if (limit) path += `limit=${limit}`;
-  if (offset) path += `offset=${offset}`;
+  let path = `${BASE_PATH}/browse/categories`;
+
+  let query = new URLSearchParams();
+  query.append("country", country || "US");
+  query.append("locale", locale || "en-US");
+  if (limit) query.append("limit", limit.toString());
+  if (offset) query.append("offset", offset.toString());
+  path += `?${query.toString()}`;
 
   const data: { categories: { items: CategoryObject[] } } = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
   }).then((data) => data.json());
+
+  // console.log("getSeveralBrowseCategories");
+  // console.log(data);
 
   return data.categories.items;
 }
@@ -369,14 +435,20 @@ export async function getCategoryPlaylists(
   const token = await getAccessToken();
   if (!("access_token" in token)) return;
 
-  let path = `${BASE_PATH}/browse/categories/${id}/playlists?`;
-  if (country) path += `country=${country}`;
-  if (limit) path += `limit=${limit}`;
-  if (offset) path += `offset=${offset}`;
+  let path = `${BASE_PATH}/browse/categories/${id}/playlists`;
+
+  let query = new URLSearchParams();
+  query.append("country", country || "US");
+  if (limit) query.append("limit", limit.toString());
+  if (offset) query.append("offset", offset.toString());
+  path += `?${query.toString()}`;
 
   const data: { playlists: { items: PlaylistObject[] } } = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
   }).then((data) => data.json());
+
+  // console.log("getCategoryPlaylists");
+  // console.log(data);
 
   return data.playlists.items;
 }
