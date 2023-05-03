@@ -12,6 +12,12 @@ import Gaming from "@/data/categories/Gaming.json";
 import Mood from "@/data/categories/Mood.json";
 import Pop from "@/data/categories/Pop.json";
 import Artist from "@/data/recommendations/artists.json";
+import {
+  ArtistObject,
+  ImageObject,
+  PlaylistObject,
+  UserObject
+} from "@/components/interfaces";
 
 const TextComponent = styled("p")(({ theme: { typography } }) => ({
   fontSize: typography.subtitle1.fontSize,
@@ -25,26 +31,40 @@ const TextComponent = styled("p")(({ theme: { typography } }) => ({
 
 export const Collection = ({
   title,
-  type,
   collection
 }: {
   title: string;
-  type?: "playlist" | "artist";
-  collection: any[];
+  collection: PlaylistObject[] | ArtistObject[];
 }) => (
   <Section title={title}>
-    {collection.map(({ id, name, owner, description, images }) => {
-      description ??= type === "playlist" ? `By ${owner?.name}` : "Artist";
-      return (
-        <Item
-          key={id}
-          image={images[0].url}
-          title={name}
-          href={`/playlist/${id}`}
-          type={type || "playlist"}
-          description={<TextComponent>{description}</TextComponent>}
-        />
-      );
+    {collection.map((props) => {
+      // console.log(props)
+      if (!props?.type) return
+      if (props.type === "artist") {
+        const { id, images, name, type } = props;
+        return (
+          <Item
+            key={id}
+            image={images[0].url}
+            title={name}
+            href={`/artist/${id}`}
+            type={type}
+            description={<TextComponent>Artist</TextComponent>}
+          />
+        );
+      } else {
+        const { id, images, name, description, type } = props;
+        return (
+          <Item
+            key={id}
+            image={images[0].url}
+            title={name}
+            href={`/playlist/${id}`}
+            type={type}
+            description={<TextComponent>{description}</TextComponent>}
+          />
+        );
+      }
     })}
   </Section>
 );
