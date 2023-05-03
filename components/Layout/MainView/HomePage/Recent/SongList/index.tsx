@@ -1,10 +1,11 @@
 import React from 'react'
 import Song from './Song'
 import mock from '@/data/mock.json'
+import { PlaylistObject } from '@/components/interfaces'
 
 const Songs = mock.playlists.items
 
-function SongList() {
+function SongList({playlists}: {playlists: PlaylistObject[]}) {
   return (
     <div
       style={{
@@ -15,7 +16,7 @@ function SongList() {
       }}
     >
       {
-        Songs.map(({id, name, images}) => (
+        playlists.map(({id, name, images}) => (
           <Song key={id} title={name} image={images[0].url} href={`/playlist/${id}`} />
         ))
       }
