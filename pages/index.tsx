@@ -43,7 +43,14 @@ import Pop from "@/data/categories/Pop.json";
 import Artist from "@/data/recommendations/artists.json";
 import { setActiveLink } from "@/components/stateSlice/SpotifyAPI";
 
-export default function Main() {
+export const getServerSideProps: GetServerSideProps<{data: PlaylistObject[]}> = async () => {
+  const data = await getCategoryPlaylist()
+  if (data) return {props: {data}}
+  
+  return {notFound: true}
+};
+
+export default function Main({data}: {data: PlaylistObject[]}) {
   const Theme = useTheme();
   const screenWidth = useSelector(
     (state: RootState) => state.screenWidth.value
@@ -80,14 +87,21 @@ export default function Main() {
         <MainView /> */
     <Stack className="pb-10" sx={{ gap: "1.5rem", padding: "1rem" }}>
       <Recent />
-      <Collection title="Top List" collection={TopList.playlists.items} />
+      {
+        data.map(e => {
+          return (
+            <Collection title="Top List" collection={TopList.playlists.items} />
+          )
+        })
+      }
+      {/*<Collection title="Top List" collection={TopList.playlists.items} />
       <Collection title="Discover" collection={Discover.playlists.items} />
       <Collection title="Country" collection={Country.playlists.items} />
       <Collection title="Indie" collection={Indie.playlists.items} />
       <Collection title="Gaming" collection={Gaming.playlists.items} />
       <Collection title="Mood" collection={Mood.playlists.items} />
       <Collection title="Pop" collection={Pop.playlists.items} />
-      <Collection title="Artist" type="artist" collection={Artist.artists} />
+      <Collection title="Artist" type="artist" collection={Artist.artists} />*/}
     </Stack>
     /*
         {screenWidth === 'xs' && <MobileWidget />

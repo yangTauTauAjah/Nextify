@@ -134,6 +134,25 @@ export async function getCurrentUserFollowedArtist(
   }
 }
 
+export async function getFeaturedPlaylist(country?: string, locale?: string, timestamp?: Date, limit?: number, offset?: number): Promise<PlaylistObject[] | void> {
+  const access_token = await getAccessToken();
+  if ("access_token" in access_token) {
+    let path = `${BASE_PATH}/browse/featured-playlists?`;
+    if (country) path += `country=${country || 'US'}`;
+    if (locale)
+    path += `locale=${locale || 'en-US'}`;
+    if (timestamp) path += `timestamp=${timestamp.toISOString()}`;
+    if (limit) path += `limit=${limit}`;
+    if (offset) path += `offset=${offset}`;
+    const data: {playlists: {items: PlaylistObject[]}} | undefined = await fetch(path, {
+      headers: { Authorization: `Bearer ${access_token.access_token}` }
+    }).then((data) => data.json())
+    .catch(e => {console.log(e)})
+
+    if (data && 'playlists' in data) return data.playlists.items;
+  }
+}
+
 export async function getCurrentUserPlaylist(
   token: string
 ): Promise<PlaylistObject[] | void> {
