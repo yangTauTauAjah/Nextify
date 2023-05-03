@@ -42,31 +42,62 @@ import Mood from "@/data/categories/Mood.json";
 import Pop from "@/data/categories/Pop.json";
 import Artist from "@/data/recommendations/artists.json";
 import { setActiveLink } from "@/components/stateSlice/SpotifyAPI";
+import { ArtistObject, PlaylistObject } from "@/components/interfaces";
+import {
+  getArtist,
+  getCategoryPlaylists,
+  getFeaturedPlaylist,
+  getSeveralBrowseCategories,
+  getUserTopItem
+} from "@/components/request";
+import { GetServerSideProps } from "next";
 
-interface IndexPageDataInterface {data: {
-    category: string,
-    playlist: PlaylistObject[]
-  }[]}
+interface IndexPageDataInterface {
+  featuredPlaylist: {
+    message: string;
+    playlists: PlaylistObject[];
+  };
+  categories: {
+    category: string;
+    playlists: PlaylistObject[];
+  }[];
+  artists: ArtistObject[] | null;
+}
 
-export const getServerSideProps: GetServerSideProps<IndexPageDataInterface> = async () => {
-  const categories= await getSeveralBrowseCategories()
-  
-  if (categories) {
-    let data = []
-    for (let i = 0; i < categories.length; i++) {
-      data.push({
-        category: categories[i].name,
-        playlist: await getCategoryPlaylist(categories[i].id)
-      })
+export const getServerSideProps: GetServerSideProps<
+  IndexPageDataInterface
+> = async ({ req }) => {
+
+    const categories = await getSeveralBrowseCategories("US", "en-US", 8);
+    const featuredPlaylist = await getFeaturedPlaylist("US", "en-US");
+    let artists = null
+    if (req.cookies.refresh_token) artists = ((await getUserTopItem(req.cookies.refresh_token, "artists")) || null) as ArtistObject[] | null;
+
+    if (categories && featuredPlaylist) {
+      let data = [];
+
+      for (let i = 0; i < categories.length; i++) {
+        const playlists = await getCategoryPlaylists(categories[i].id);
+        if (playlists) data.push({ category: categories[i].name, playlists });
+      }
+
+      return {
+        props: {
+          featuredPlaylist: {
+            message: featuredPlaylist.message,
+            playlists: featuredPlaylist.playlists
+          },
+          artists,
+          categories: data
+        }
+      };
     }
-    
-    return {props: {data}}
-  }
-  
-  return {notFound: true}
+
+
+  return { notFound: true };
 };
 
-export default function Main({data}: IndexPageDataInterface) {
+export default function Main(data: IndexPageDataInterface) {
   const Theme = useTheme();
   const screenWidth = useSelector(
     (state: RootState) => state.screenWidth.value
@@ -90,8 +121,8 @@ export default function Main({data}: IndexPageDataInterface) {
   }, [Theme.breakpoints.values, dispatch]);
 
   useEffect(() => {
-    dispatch(setActiveLink(0))
-  }, [dispatch])
+    dispatch(setActiveLink(0));
+  }, [dispatch]);
 
   return (
     /* <Parent>
@@ -102,14 +133,20 @@ export default function Main({data}: IndexPageDataInterface) {
         </>
         <MainView /> */
     <Stack className="pb-10" sx={{ gap: "1.5rem", padding: "1rem" }}>
-      <Recent />
-      {
-        data.map(e => {
-          return (
-            <Collection title={e.category} collection={e.playlists} />
-          )
-        })
-      }
+      <Recent
+        message={data.featuredPlaylist.message}
+        playlists={data.featuredPlaylist.playlists}
+      />
+      {data.categories.map((e) => {
+        return (
+          <Collection
+            key={e.category}
+            title={e.category}
+            collection={e.playlists}
+          />
+        );
+      })}
+      {/* {data.artists && <Collection title="Artist" collection={data.artists} />} */}
       {/*<Collection title="Top List" collection={TopList.playlists.items} />
       <Collection title="Discover" collection={Discover.playlists.items} />
       <Collection title="Country" collection={Country.playlists.items} />
