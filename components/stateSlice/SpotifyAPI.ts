@@ -1,34 +1,50 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { AlbumObject, PlaylistObject, TrackObject, UserObject } from "../interfaces";
+import {
+  AlbumObject,
+  PlaylistObject,
+  TrackObject,
+  UserObject
+} from "../interfaces";
 
 export type DisplaySlice = {
-  timestamp: number,
-  activeLink: number,
-  nowPlaying?: TrackObject,
-  user?: UserObject,
-  album?: AlbumObject,
-  playlist?: PlaylistObject,
-  track?: PlaylistObject
-}
+  timestamp: number;
+  isPlaying: boolean;
+  activeLink: number;
+  nowPlaying?: TrackObject;
+  user?: UserObject;
+  album?: AlbumObject;
+  playlist?: PlaylistObject;
+  track?: PlaylistObject;
+};
 
-const initialState: DisplaySlice = {timestamp: 0, activeLink: 0};
+const initialState: DisplaySlice = {
+  timestamp: 0,
+  isPlaying: false,
+  activeLink: 0
+};
 
 export const display = createSlice({
   name: "playlist",
   initialState,
   reducers: {
+    incrementTimestamp(state) {
+      state.timestamp += 1
+    },
     setTimestamp(state, action: PayloadAction<number>) {
-      state.activeLink = action.payload
+      state.timestamp = action.payload;
+    },
+    setIsPlaying(state, action: PayloadAction<boolean>) {
+      state.isPlaying = action.payload;
     },
     setActiveLink(state, action: PayloadAction<number>) {
-      state.activeLink = action.payload
+      state.activeLink = action.payload;
     },
     setNowPlaying(state, action: PayloadAction<TrackObject>) {
-      state.nowPlaying = action.payload
+      state.nowPlaying = action.payload;
     },
     setUser(state, action: PayloadAction<UserObject>) {
-      state.user = action.payload
+      state.user = action.payload;
     },
     setPlaylist(state, action: PayloadAction<PlaylistObject>) {
       state.playlist = action.payload;
@@ -42,6 +58,16 @@ export const display = createSlice({
   }
 });
 
-export const { setPlaylist, setAlbum, setTrack, setUser, setActiveLink, setNowPlaying, setTimestamp } = display.actions;
+export const {
+  setPlaylist,
+  setAlbum,
+  setTrack,
+  setUser,
+  setActiveLink,
+  setNowPlaying,
+  setTimestamp,
+  setIsPlaying,
+  incrementTimestamp
+} = display.actions;
 
 export default display.reducer;
