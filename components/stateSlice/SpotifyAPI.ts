@@ -13,7 +13,7 @@ export type DisplaySlice = {
   track?: PlaylistObject
 }
 
-const initialState: DisplaySlice = {timestamp: 0, duration: 0, activeLink: 0};
+const initialState: DisplaySlice = {timestamp: 0, activeLink: 0};
 
 export const display = createSlice({
   name: "playlist",
