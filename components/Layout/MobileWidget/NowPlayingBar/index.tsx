@@ -3,7 +3,8 @@ import { RootState } from "@/components/store";
 import {
   DevicesOther,
   FavoriteBorder,
-  PlayArrowRounded
+  PlayArrowRounded,
+  StopRounded
 } from "@mui/icons-material";
 import { Box } from "@mui/material";
 import Image from "next/image";
@@ -11,14 +12,22 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 function NowPlayingBar({
+  IsPlaying,
+  Timestamp,
+  incrementTimestamp,
   thumbnail,
   songName,
   artist
 }: {
+  IsPlaying: boolean;
+  Timestamp: number;
+  incrementTimestamp: () => any;
   thumbnail: string;
   songName: string;
   artist: string;
 }) {
+  const nowPlaying = useSelector((state: RootState) => state.data.nowPlaying);
+
   return (
     <Box
       sx={{
@@ -51,7 +60,19 @@ function NowPlayingBar({
       </div>
       <DevicesOther sx={{ fontSize: "2rem" }} />
       <FavoriteBorder sx={{ fontSize: "2rem" }} />
-      <PlayArrowRounded sx={{ fontSize: "2rem" }} />
+      {IsPlaying ? (
+        <StopRounded
+          className="hover:pointer"
+          onClick={() => incrementTimestamp()}
+          sx={{ fontSize: "2rem" }}
+        />
+      ) : (
+        <PlayArrowRounded
+          className="hover:pointer"
+          onClick={() => incrementTimestamp()}
+          sx={{ fontSize: "2rem" }}
+        />
+      )}
       <span
         style={{
           position: "absolute",
@@ -64,13 +85,15 @@ function NowPlayingBar({
           background: "rgba(255,255,255,0.3)",
           transform: "translateX(-50%)"
         }}>
-        <span
-          style={{
-            display: "block",
-            background: "white",
-            width: "10%",
-            height: "100%"
-          }}></span>
+        {nowPlaying && (
+          <span
+            style={{
+              display: "block",
+              background: "white",
+              width: `${(Timestamp / (nowPlaying?.duration_ms/1000)) * 100}%`,
+              height: "100%"
+            }}></span>
+        )}
       </span>
     </Box>
   );

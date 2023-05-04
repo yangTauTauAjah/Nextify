@@ -1,28 +1,20 @@
 import "@/styles/globals.css";
 import { themeSettings } from "@/components/theme";
-import {
-  Box,
-  ThemeProvider,
-  createTheme,
-  styled,
-  useTheme
-} from "@mui/material";
+import { Box, ThemeProvider, createTheme, useTheme } from "@mui/material";
 import type { AppInitialProps, AppProps } from "next/app";
 import { store } from "@/components/store";
-import { Provider, useDispatch } from "react-redux";
+import { Provider, useDispatch, useSelector } from "react-redux";
 import A, { AppContext } from "next/app";
 import {
   getCurrentUserProfile,
   getCurrentlyPlayingTrack,
-  getRecentlyPlayedTrack,
-  getUser
+  getRecentlyPlayedTrack
 } from "@/components/request";
 import { TrackObject, UserObject } from "@/components/interfaces";
 import { setNowPlaying, setUser } from "@/components/stateSlice/SpotifyAPI";
 import MobileWidget from "@/components/Layout/MobileWidget";
 import { timeToSec } from "./callback";
-import { useEffect } from "react";
-import { Dictionary } from "@reduxjs/toolkit";
+import { useCallback, useEffect, useState } from "react";
 
 export function parseCookie(str: string): Record<string, string | undefined> {
   return str
@@ -45,6 +37,7 @@ function Parent({ global, children }: { global?: GlobalState; children: any }) {
   const dispatch = useDispatch();
 
   const Theme = useTheme();
+
   useEffect(() => {
     if (global?.user) dispatch(setUser(global.user));
     if (global?.nowPlaying) dispatch(setNowPlaying(global.nowPlaying));
@@ -82,6 +75,29 @@ function Parent({ global, children }: { global?: GlobalState; children: any }) {
 //   }
 // }));
 
+function Widget() {
+  const [IsPlaying, setIsPlaying] = useState(false);
+  const [Timestamp, setTimestamp] = useState(0);
+  const [Id, setId] = useState<NodeJS.Timer>();
+
+  const incrementTimestamp = useCallback(() => {
+    setIsPlaying((prev) => !prev);
+    if (!IsPlaying)
+      setId(setInterval(() => setTimestamp((prev) => prev + 1), 1000));
+    else clearInterval(Id);
+  }, [IsPlaying, Id]);
+
+  return (
+    <>
+      <MobileWidget
+        Timestamp={Timestamp}
+        IsPlaying={IsPlaying}
+        incrementTimestamp={incrementTimestamp}
+      />
+    </>
+  );
+}
+
 const App = (
   ctx: AppProps & { user?: UserObject; nowPlaying: TrackObject }
 ) => {
@@ -92,7 +108,7 @@ const App = (
       <Provider store={store}>
         <Parent global={{ user, nowPlaying }}>
           <Component {...pageProps} />
-          <MobileWidget />
+          <Widget />
         </Parent>
       </Provider>
     </ThemeProvider>
@@ -119,7 +135,7 @@ App.getInitialProps = async (context: AppContext) => {
         );
         if (recentlyPlayed) r.nowPlaying = recentlyPlayed[0];
       }
-      
+
       if (pathname !== "/callback") {
         res?.setHeader("Set-Cookie", [
           `refresh_token=${Cookie.refresh_token}; Max-Age=${timeToSec(

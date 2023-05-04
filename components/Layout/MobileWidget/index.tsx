@@ -39,7 +39,15 @@ const link = [
   }
 ];
 
-function MobileWidget() {
+function MobileWidget({
+  IsPlaying,
+  Timestamp,
+  incrementTimestamp
+}: {
+  IsPlaying: boolean;
+  Timestamp: number;
+  incrementTimestamp: () => any;
+}) {
   const router = useRouter();
   const nowPlaying = useSelector((state: RootState) => state.data.nowPlaying);
   let init = 0;
@@ -62,6 +70,9 @@ function MobileWidget() {
       }}>
       {nowPlaying && (
         <NowPlayingBar
+          IsPlaying={IsPlaying}
+          Timestamp={Timestamp}
+          incrementTimestamp={incrementTimestamp}
           thumbnail={nowPlaying.album.images[0]?.url}
           songName={nowPlaying.name}
           artist={nowPlaying.artists[0]?.name}
