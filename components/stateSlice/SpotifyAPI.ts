@@ -4,6 +4,7 @@ import { AlbumObject, PlaylistObject, TrackObject, UserObject } from "../interfa
 
 export type DisplaySlice = {
   timestamp: number,
+  duration: number,
   activeLink: number,
   nowPlaying?: TrackObject,
   user?: UserObject,
@@ -12,7 +13,7 @@ export type DisplaySlice = {
   track?: PlaylistObject
 }
 
-const initialState: DisplaySlice = {timestamp: 0, activeLink: 0};
+const initialState: DisplaySlice = {timestamp: 0, duration: 0, activeLink: 0};
 
 export const display = createSlice({
   name: "playlist",
@@ -20,6 +21,9 @@ export const display = createSlice({
   reducers: {
     setTimestamp(state, action: PayloadAction<number>) {
       state.activeLink = action.payload
+    },
+    setDuration(state, action: PayloadAction<number>) {
+      state.duration = action.payload
     },
     setActiveLink(state, action: PayloadAction<number>) {
       state.activeLink = action.payload
@@ -42,6 +46,6 @@ export const display = createSlice({
   }
 });
 
-export const { setPlaylist, setAlbum, setTrack, setUser, setActiveLink, setNowPlaying, setTimestamp } = display.actions;
+export const { setTimestamp, setDuration, setDusetPlaylist, setAlbum, setTrack, setUser, setActiveLink, setNowPlaying } = display.actions;
 
 export default display.reducer;
