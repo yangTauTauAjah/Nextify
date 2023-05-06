@@ -201,7 +201,11 @@ a:hover::before {
   display: grid;
 }
 
-.grow {
+.grow-0 {
+  flex-grow: 0;
+}
+
+.grow-1 {
   flex-grow: 1;
 }
 
@@ -241,8 +245,16 @@ a:hover::before {
   display: inline-block;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .justify-center {
@@ -313,6 +325,10 @@ a:hover::before {
   padding: 1rem;
 }
 
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
 .pb-10 {
   padding-bottom: 10rem;
 }
@@ -345,6 +361,14 @@ a:hover::before {
   position: sticky;
 }
 
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.shrink-1 {
+  flex-shrink: 1;
+}
+
 .top-0 {
   top: 0;
 }
@@ -371,4 +395,13 @@ a:hover::before {
 
 .w-5 {
   width: 5rem;
+}
+
+.white-hover {
+  color: #ffffff80 !important;
+  transition: 100ms color ease-in-out;
+}
+
+.white-hover:hover {
+  color: white !important;
 }
