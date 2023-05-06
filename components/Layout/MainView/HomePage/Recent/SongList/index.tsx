@@ -9,6 +9,7 @@ function SongList({playlists}: {playlists: PlaylistObject[]}) {
   return (
     <div
       style={{
+        padding: '1rem',
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fill, minmax(12rem, 1fr))',
         gap: '0.5rem',
