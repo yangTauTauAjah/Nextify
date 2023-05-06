@@ -14,18 +14,25 @@ import { useEffect } from "react";
 export const getServerSideProps: GetServerSideProps<{
   data: CategoryObject[];
 }> = async ({ query }) => {
-  const { country, locale, limit, offset } = query;
+  let { country, locale, limit, offset } = query;
   if (
     !(country instanceof Array) &&
     !(locale instanceof Array) &&
     !(limit instanceof Array) &&
     !(offset instanceof Array)
   ) {
+
+    let limitNum
+    let offsetNum
+
+    if (limit) limitNum = Number.parseInt(limit)
+    if (offset) offsetNum = Number.parseInt(offset)
+
     const data = await getSeveralBrowseCategories(
       country,
       locale,
-      limit,
-      offset
+      limitNum,
+      offsetNum
     );
 
     if (data) return { props: { data } };
