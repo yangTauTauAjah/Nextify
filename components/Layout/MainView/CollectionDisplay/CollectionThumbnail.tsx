@@ -1,19 +1,14 @@
-import {
-  CollectionType,
-  ComponentTypeInterface
-} from "@/components/interfaces";
-import { RootState } from "@/components/store";
+import { AlbumObject, PlaylistObject } from "@/components/interfaces";
 import { Box, styled } from "@mui/material";
 import Image from "next/image";
-import { useSelector } from "react-redux";
 
 const Wrapper = styled(Box)({
   height: "15rem",
   width: "100%"
 });
 
-const PlaylistThumbnail = ({ type = "playlist" }: ComponentTypeInterface) => {
-  let collection = useSelector((state: RootState) => state.data[type]);
+const PlaylistThumbnail = ({ collection }: {collection: PlaylistObject | AlbumObject}) => {
+
   return (
     <Wrapper>
       <Image
