@@ -1,10 +1,8 @@
 import { MoreVert } from "@mui/icons-material";
 import Image from "next/image";
-import { AlbumObject, ArtistObject, TrackObject } from "../../../interfaces";
+import { AlbumObject, ArtistObject } from "../../../interfaces";
 import Link from "next/link";
 import { Box, Typography, styled } from "@mui/material";
-import { useDispatch } from "react-redux";
-import { setNowPlaying } from "@/components/stateSlice/SpotifyAPI";
 
 export interface SongComponentInterface {
   id: string;
@@ -13,6 +11,7 @@ export interface SongComponentInterface {
   explicit: boolean;
   artists: ArtistObject[];
   duration_ms: number;
+  onClick?: () => any
 }
 
 const Wrapper = styled(Box)({
@@ -107,24 +106,15 @@ export default function Song({
   album,
   explicit,
   artists,
-  duration_ms
+  onClick
 }: SongComponentInterface) {
-  const dispatch = useDispatch();
 
   return (
     <Wrapper
-      onClick={() =>
-        dispatch(
-          setNowPlaying({ album, artists, duration_ms, explicit, id, name })
-        )
-      }>
+      onClick={onClick}>
       {album && <ImageComponent src={album.images[0].url} />}
       <SongMetadata id={id} name={name} explicit={explicit} artists={artists} />
       <MoreVert />
     </Wrapper>
   );
 }
-
-/* const myArray = [1, 2, 3, 4, 5];
-
-const newArray =  */
