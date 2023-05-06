@@ -1,19 +1,23 @@
 import { TrackObject } from "@/components/interfaces";
+import { playNext, playPrevious } from "@/components/stateSlice/SpotifyAPI";
 import { RootState } from "@/components/store";
 import {
   DevicesOther,
   FavoriteBorder,
   PlayArrowRounded,
+  SkipNextRounded,
+  SkipPreviousRounded,
   StopRounded
 } from "@mui/icons-material";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 function NowPlayingBar({
   IsPlaying,
   Timestamp,
+  setTimestamp,
   incrementTimestamp,
   thumbnail,
   songName,
@@ -21,11 +25,13 @@ function NowPlayingBar({
 }: {
   IsPlaying: boolean;
   Timestamp: number;
-  incrementTimestamp: () => any;
+  setTimestamp: (...params: any[]) => any;
+  incrementTimestamp: (...params: any[]) => any;
   thumbnail: string;
   songName: string;
   artist: string;
 }) {
+  const dispatch = useDispatch();
   const nowPlaying = useSelector((state: RootState) => state.data.nowPlaying);
 
   return (
@@ -41,9 +47,9 @@ function NowPlayingBar({
         borderRadius: "0.5rem",
         fontSize: "0.7rem"
       }}>
-      <div className="flex mr-auto h-full gap-1 grow">
+      <div className="flex mr-auto h-full gap-1 grow-1">
         <div
-          className="aspect-square overflow-hidden"
+          className="aspect-square overflow-hidden shrink-0"
           style={{ borderRadius: "5px" }}>
           <Image
             sizes="10vw"
@@ -53,26 +59,40 @@ function NowPlayingBar({
             alt="image"
           />
         </div>
-        <div style={{ alignItems: "center" }}>
+        <div style={{ alignSelf: "center" }}>
           <p style={{ fontWeight: "700" }}>{songName}</p>
           <p style={{ marginTop: "0.3rem" }}>{artist}</p>
         </div>
       </div>
-      <DevicesOther sx={{ fontSize: "2rem" }} />
-      <FavoriteBorder sx={{ fontSize: "2rem" }} />
+      <SkipPreviousRounded
+        className="hover:pointer"
+        onClick={() => {
+          dispatch(playPrevious());
+          // setTimestamp(0);
+        }}
+        sx={{ fontSize: "2rem" }}
+      />
       {IsPlaying ? (
         <StopRounded
           className="hover:pointer"
-          onClick={() => incrementTimestamp()}
+          onClick={() => incrementTimestamp(false)}
           sx={{ fontSize: "2rem" }}
         />
       ) : (
         <PlayArrowRounded
           className="hover:pointer"
-          onClick={() => incrementTimestamp()}
+          onClick={() => incrementTimestamp(true)}
           sx={{ fontSize: "2rem" }}
         />
       )}
+      <SkipNextRounded
+        className="hover:pointer"
+        onClick={() => {
+          dispatch(playNext());
+          // setTimestamp(0);
+        }}
+        sx={{ fontSize: "2rem" }}
+      />
       <span
         style={{
           position: "absolute",
@@ -90,7 +110,7 @@ function NowPlayingBar({
             style={{
               display: "block",
               background: "white",
-              width: `${(Timestamp / (nowPlaying?.duration_ms/1000)) * 100}%`,
+              width: `${(Timestamp / (nowPlaying?.duration_ms / 1000)) * 100}%`,
               height: "100%"
             }}></span>
         )}
