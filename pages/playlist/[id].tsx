@@ -4,9 +4,6 @@ import { GetServerSideProps } from "next";
 import { Stack } from "@mui/material";
 import { GET_PLAYLIST } from "@/components/fields";
 import FilterComponent from "@/components/Layout/MainView/CollectionDisplay/FilterComponent";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { setPlaylist } from "@/components/stateSlice/SpotifyAPI";
 import PlaylistThumbnail from "@/components/Layout/MainView/CollectionDisplay/CollectionThumbnail";
 import PlaylistMetadata from "@/components/Layout/MainView/CollectionDisplay/CollectionMetadata";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
@@ -22,17 +19,17 @@ export const getServerSideProps: GetServerSideProps<PlaylistObject> = async ({
 };
 
 export default function Id(PlaylistObject: PlaylistObject) {
-  const dispatch = useDispatch();
+  /* const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setPlaylist(PlaylistObject));
-  }, [PlaylistObject, dispatch]);
+    dispatch(setCollection(PlaylistObject));
+  }, [PlaylistObject, dispatch]); */
 
   return (
     <Stack className="pb-10" gap={3} sx={{ padding: "2rem 1rem" }}>
       <FilterComponent />
-      <PlaylistThumbnail />
-      <PlaylistMetadata />
-      <Tracks />
+      <PlaylistThumbnail collection={PlaylistObject} />
+      <PlaylistMetadata collection={PlaylistObject}  />
+      <Tracks collection={PlaylistObject} />
     </Stack>
   );
 }

@@ -2,9 +2,6 @@ import { getAlbum } from "@/components/request";
 import { AlbumObject } from "@/components/interfaces";
 import { GetServerSideProps } from "next";
 import { Stack } from "@mui/material";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { setAlbum } from "@/components/stateSlice/SpotifyAPI";
 import PlaylistThumbnail from "@/components/Layout/MainView/CollectionDisplay/CollectionThumbnail";
 import PlaylistMetadata from "@/components/Layout/MainView/CollectionDisplay/CollectionMetadata";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
@@ -21,16 +18,16 @@ export const getServerSideProps: GetServerSideProps<AlbumObject> = async ({
 };
 
 export default function Id(AlbumObject: AlbumObject) {
-  const dispatch = useDispatch();
+  /* const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setAlbum(AlbumObject));
-  }, [AlbumObject, dispatch]);
+    dispatch(setCollection(AlbumObject));
+  }, [AlbumObject, dispatch]); */
 
   return (
     <Stack className="pb-10" gap={3} sx={{ padding: "2rem 1rem" }}>
-      <PlaylistThumbnail type="album" />
-      <PlaylistMetadata type="album" />
-      <Tracks type="album" />
+      <PlaylistThumbnail collection={AlbumObject} />
+      <PlaylistMetadata collection={AlbumObject} />
+      <Tracks collection={AlbumObject} />
     </Stack>
   );
 }

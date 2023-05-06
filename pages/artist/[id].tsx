@@ -11,10 +11,8 @@ import {
   TrackObject
 } from "@/components/interfaces";
 import { GetServerSideProps } from "next";
-import { Box, Stack, styled } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { setPlaylist } from "@/components/stateSlice/SpotifyAPI";
+import { Stack, styled } from "@mui/material";
+import { useSelector } from "react-redux";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
 import Image from "next/image";
 import Section from "@/components/Layout/MainView/HomePage/Section";
@@ -62,7 +60,7 @@ const Wrapper = styled(Stack)({
 });
 
 function Banner() {
-  let collection = useSelector((state: RootState) => state.data.playlist);
+  let collection = useSelector((state: RootState) => state.data.collection);
   return (
     <div className="fixed top-0 left-0 w-full aspect-square">
       {collection?.images[0].url && collection?.images[0].url !== "" && (
@@ -78,7 +76,7 @@ function Banner() {
 }
 
 function ArtistName() {
-  let collection = useSelector((state: RootState) => state.data.playlist);
+  let collection = useSelector((state: RootState) => state.data.collection);
   return (
     <h1
       style={{
@@ -118,17 +116,17 @@ function ActionButtonsComponent() {
   );
 }
 
-function PopularSection() {
+function PopularSection({ collection }: { collection: PlaylistObject }) {
   return (
     <section>
       <h1>Popular</h1>
-      <Tracks sx={{ padding: "1rem 0 2rem" }} />
+      <Tracks collection={collection} sx={{ padding: "1rem 0 2rem" }} />
     </section>
   );
 }
 
 export default function Id(data: ArtistDataInterface) {
-  const dispatch = useDispatch();
+  /* const dispatch = useDispatch();
   useEffect(() => {
     const collectionData: PlaylistObject = {
       id: data.artist.id,
@@ -144,8 +142,8 @@ export default function Id(data: ArtistDataInterface) {
       tracks: { items: data.top_tracks.map((e) => ({ track: e })) },
       type: "playlist"
     };
-    dispatch(setPlaylist(collectionData));
-  }, [data, dispatch]);
+    dispatch(setCollection(collectionData));
+  }, [data, dispatch]); */
 
   return (
     <>
@@ -153,7 +151,22 @@ export default function Id(data: ArtistDataInterface) {
       <ArtistName />
       <Wrapper className="pb-10">
         <ActionButtonsComponent />
-        <PopularSection />
+        <PopularSection
+          collection={{
+            id: data.artist.id,
+            name: data.artist.name,
+            description: "",
+            owner: {
+              display_name: "",
+              id: "",
+              images: [{ url: "", height: 0, width: 0 }],
+              type: "user"
+            },
+            images: data.artist.images,
+            tracks: { items: data.top_tracks.map((e) => ({ track: e })) },
+            type: "playlist"
+          }}
+        />
         <Section title="Artist Albums">
           {data.albums.map(({ id, name, release_date, images }) => {
             return (
