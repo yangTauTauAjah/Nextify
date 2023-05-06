@@ -1,13 +1,6 @@
+import { timeToSec } from "@/components/functions";
 import { getAccessToken } from "@/components/request";
 import { GetServerSideProps } from "next";
-
-export const timeToSec = (
-  sec: number = 0,
-  min: number = 0,
-  hour: number = 0,
-  day: number = 0,
-  month: number = 0
-): number => sec + 60 * (min + 60 * (hour + 24 * (day + month * 30)));
 
 export const getServerSideProps: GetServerSideProps<{}> = async ({
   query,
