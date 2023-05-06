@@ -8,18 +8,15 @@ import {
 } from "../interfaces";
 
 export type DisplaySlice = {
-  timestamp: number;
   isPlaying: boolean;
   activeLink: number;
   nowPlaying?: TrackObject;
+  playingOrder?: number;
   user?: UserObject;
-  album?: AlbumObject;
-  playlist?: PlaylistObject;
-  track?: PlaylistObject;
+  collection?: PlaylistObject | AlbumObject;
 };
 
 const initialState: DisplaySlice = {
-  timestamp: 0,
   isPlaying: false,
   activeLink: 0
 };
@@ -28,17 +25,14 @@ export const display = createSlice({
   name: "playlist",
   initialState,
   reducers: {
-    incrementTimestamp(state) {
-      state.timestamp += 1
-    },
-    setTimestamp(state, action: PayloadAction<number>) {
-      state.timestamp = action.payload;
-    },
     setIsPlaying(state, action: PayloadAction<boolean>) {
       state.isPlaying = action.payload;
     },
     setActiveLink(state, action: PayloadAction<number>) {
       state.activeLink = action.payload;
+    },
+    setPlayingOrder(state, action: PayloadAction<number>) {
+      state.playingOrder = action.payload;
     },
     setNowPlaying(state, action: PayloadAction<TrackObject>) {
       state.nowPlaying = action.payload;
@@ -46,28 +40,67 @@ export const display = createSlice({
     setUser(state, action: PayloadAction<UserObject>) {
       state.user = action.payload;
     },
-    setPlaylist(state, action: PayloadAction<PlaylistObject>) {
-      state.playlist = action.payload;
+    setCollection(state, action: PayloadAction<PlaylistObject | AlbumObject>) {
+      state.playingOrder = 0;
+      state.collection = action.payload;
     },
-    setAlbum(state, action: PayloadAction<AlbumObject>) {
-      state.album = action.payload;
+    playNext(state) {
+      console.log("next");
+      console.log(state.playingOrder);
+      console.log(state.collection?.tracks.items.length);
+      if (
+        !state.collection ||
+        state.playingOrder === null ||
+        state.playingOrder === undefined ||
+        state.playingOrder >= state.collection.tracks.items.length - 1
+      )
+        return;
+
+      const { type } = state.collection;
+
+      state.playingOrder += 1;
+
+      if (type === "album")
+        state.nowPlaying = state.collection.tracks.items[state.playingOrder];
+      else if (type === "playlist")
+        state.nowPlaying =
+          state.collection.tracks.items[state.playingOrder].track;
     },
-    setTrack(state, action: PayloadAction<PlaylistObject>) {
-      state.track = action.payload;
+    playPrevious(state) {
+      console.log("prev");
+      console.log(state.playingOrder);
+      console.log(state.collection?.tracks.items.length);
+
+      if (
+        !state.collection ||
+        state.playingOrder === null ||
+        state.playingOrder === undefined ||
+        state.playingOrder <= 0
+      )
+        return;
+
+      const { type } = state.collection;
+
+      state.playingOrder -= 1;
+
+      if (type === "album")
+        state.nowPlaying = state.collection.tracks.items[state.playingOrder];
+      else if (type === "playlist")
+        state.nowPlaying =
+          state.collection.tracks.items[state.playingOrder].track;
     }
   }
 });
 
 export const {
-  setPlaylist,
-  setAlbum,
-  setTrack,
+  setCollection,
   setUser,
   setActiveLink,
   setNowPlaying,
-  setTimestamp,
   setIsPlaying,
-  incrementTimestamp
+  setPlayingOrder,
+  playNext,
+  playPrevious
 } = display.actions;
 
 export default display.reducer;
