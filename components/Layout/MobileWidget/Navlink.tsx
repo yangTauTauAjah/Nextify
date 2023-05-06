@@ -9,7 +9,7 @@ export default function NavLink(props: {
   link: Array<{ href: string; icon: React.ReactNode; text: string }>;
 }) {
   const active = useSelector((state: RootState) => state.data.activeLink);
-  const dispatch = useDispatch();
+
   return (
     <Box
       sx={{
