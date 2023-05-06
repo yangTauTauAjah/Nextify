@@ -13,8 +13,9 @@ import React, { useState } from "react";
 import NavLink from "./Navlink";
 import NowPlayingBar from "./NowPlayingBar";
 import { useRouter } from "next/router";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/components/store";
+import { setNowPlaying, setPlayingOrder } from "@/components/stateSlice/SpotifyAPI";
 
 const link = [
   {
@@ -42,14 +43,17 @@ const link = [
 function MobileWidget({
   IsPlaying,
   Timestamp,
+  setTimestamp,
   incrementTimestamp
 }: {
   IsPlaying: boolean;
   Timestamp: number;
-  incrementTimestamp: () => any;
+  setTimestamp: (...params: any[]) => any;
+  incrementTimestamp: (...params: any[]) => any;
 }) {
   const router = useRouter();
-  const nowPlaying = useSelector((state: RootState) => state.data.nowPlaying);
+  const dispatch = useDispatch();
+  const state = useSelector((state: RootState) => state.data);
   let init = 0;
 
   switch (router.pathname) {
@@ -61,6 +65,23 @@ function MobileWidget({
       break;
   }
 
+  /* function skip() {
+    if (!state.collection || !state.playingOrder) return;
+
+    dispatch(setPlayingOrder(state.playingOrder + 1))
+
+    if (state.collection.type === "album")
+      dispatch(
+        setNowPlaying(state.collection.tracks.items[state.playingOrder + 1])
+      );
+    else if (state.collection.type === "playlist")
+      dispatch(
+        setNowPlaying(
+          state.collection.tracks.items[state.playingOrder + 1].track
+        )
+      );
+  } */
+
   return (
     <Stack
       className="fixed left-0 bottom-0 w-full px-1"
@@ -68,14 +89,15 @@ function MobileWidget({
         background:
           "linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)"
       }}>
-      {nowPlaying && (
+      {state.nowPlaying && (
         <NowPlayingBar
           IsPlaying={IsPlaying}
           Timestamp={Timestamp}
+          setTimestamp={setTimestamp}
           incrementTimestamp={incrementTimestamp}
-          thumbnail={nowPlaying.album.images[0]?.url}
-          songName={nowPlaying.name}
-          artist={nowPlaying.artists[0]?.name}
+          thumbnail={state.nowPlaying.album.images[0]?.url}
+          songName={state.nowPlaying.name}
+          artist={state.nowPlaying.artists[0]?.name}
         />
       )}
       <NavLink link={link} />
