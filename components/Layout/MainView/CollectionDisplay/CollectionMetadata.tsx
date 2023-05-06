@@ -1,6 +1,4 @@
 import { Box, Stack, styled } from "@mui/material";
-import { useSelector } from "react-redux";
-import { RootState } from "@/components/store";
 import {
   AccountCircle,
   DownloadRounded,
@@ -13,14 +11,8 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   AlbumObject,
-  ArtistObject,
-  CollectionType,
-  ComponentTypeInterface,
   PlaylistObject,
-  TrackObject,
-  UserObject
 } from "@/components/interfaces";
-import { useEffect } from "react";
 
 interface CollectionOwnerComponentInterface {
   type: "artist" | "user";
@@ -133,20 +125,16 @@ const CollectionOwnerComponent = ({
   );
 };
 
-const CollectionMetadata = ({ type = "playlist" }: ComponentTypeInterface) => {
-  let collection = useSelector((state: RootState) => state.data[type]) as
-    | AlbumObject
-    | PlaylistObject
-    | undefined;
+const CollectionMetadata = ({ collection }: {collection: PlaylistObject | AlbumObject}) => {
 
   let data: CollectionMetadaComponentInterface = {
-    name: collection?.name || '',
+    name: collection.name || '',
     description: "",
     owners: []
   };
 
-  if (type === "album") {
-    (collection as AlbumObject | undefined)?.artists.forEach(
+  if (collection.type === 'album') {
+    collection.artists.forEach(
       ({ type, id, name, images }) => data.owners.push({
         type,
         id,
@@ -154,14 +142,14 @@ const CollectionMetadata = ({ type = "playlist" }: ComponentTypeInterface) => {
         image_url: images[0].url
       })
     );
-  } else {
+  } else if (collection.type === 'playlist') {
     data.owners.push({
-      type: type === 'playlist' ? 'user' : 'artist',
-      id: (collection as PlaylistObject | undefined)?.owner.id || '',
-      name: (collection as PlaylistObject | undefined)?.owner.display_name || '',
-      image_url: (collection as PlaylistObject | undefined)?.owner.images[0].url || ''
+      type: collection.type === 'playlist' ? 'user' : 'artist',
+      id: collection.owner.id || '',
+      name: collection.owner.display_name || '',
+      image_url: collection.owner.images[0].url || ''
     });
-    data.description = (collection as PlaylistObject | undefined)?.description || '';
+    data.description = collection?.description || '';
   }
 
   return (
