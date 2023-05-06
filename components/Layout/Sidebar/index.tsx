@@ -4,29 +4,30 @@ import { Box, useTheme } from "@mui/material";
 import NavLink from "./Navlink";
 import PlayLists from "./Playlists";
 import InstallApp from "./InstallApp";
+import { PlaylistObject } from "@/components/interfaces";
 
 const link = [
   {
-    href: '/',
+    href: "/",
     icon: <Home fontSize="medium" />,
-    text: 'Home'
+    text: "Home"
   },
   {
-    href: '/search',
+    href: "/search",
     icon: <Search fontSize="medium" />,
-    text: 'Search'
+    text: "Search"
   },
   {
-    href: '/collection',
+    href: "/collection",
     icon: <LibraryMusic fontSize="medium" />,
-    text: 'Your library'
+    text: "Your library"
   }
-]
+];
 const list = [
   {
-    href: '/',
-    text: 'playlist1'
-  },
+    href: "/",
+    text: "playlist1"
+  }
   /* {
     href: '/',
     text: 'playlist2'
@@ -111,56 +112,52 @@ const list = [
     href: '/',
     text: 'playlist6'
   } */
-]
+];
 
 const Logo = () => {
-
-  const Theme = useTheme()
-
-  return (
-    <Box 
-      sx={{ 
-        display: 'none', 
-        height: '2.5rem', 
-        marginBottom: '2rem', 
-        [Theme.breakpoints.up('sm')]: { 
-          display: 'unset' 
-        } 
-      }}
-    >
-      <SpotifyLogo fill='#ffffff' />
-    </Box>
-  )
-}
-
-
-
-
-export default function Sidebar() {
-
-  const Theme = useTheme()
+  const Theme = useTheme();
 
   return (
     <Box
       sx={{
-        position: 'fixed',
-        bottom: '0',
-        display: 'flex',
-        justifyContent: 'space-between',
-        background: 'linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)',
-        paddingInline: '1.5rem',
-        width: '100%',
-        height: '4rem',
-        gridArea: 'nav-bar',
-        [Theme.breakpoints.up('sm')]: {
-          width: '240px',
+        display: "none",
+        height: "2.5rem",
+        marginBottom: "2rem",
+        [Theme.breakpoints.up("sm")]: {
+          display: "unset"
         }
-      }}
-    >
+      }}>
+      <SpotifyLogo fill="#ffffff" />
+    </Box>
+  );
+};
+
+export default function Sidebar({
+  currentPlaylistId,
+  list
+}: {
+  currentPlaylistId?: string;
+  list: { id: string; text: string }[];
+}) {
+  const Theme = useTheme();
+
+  return (
+    <Box
+      sx={{
+        position: "relative",
+        display: "flex",
+        justifyContent: "space-between",
+        flexDirection: "column",
+        background:
+          "linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
+        padding: "1rem",
+        width: "240px",
+        gridArea: "nav-bar"
+      }}>
       <Logo />
       <NavLink link={link} />
-      <PlayLists list={list} />
+      <PlayLists currentPlaylistId={currentPlaylistId} list={list} />
       <InstallApp />
     </Box>
-  )
+  );
 }
