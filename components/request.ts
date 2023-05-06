@@ -96,12 +96,12 @@ export async function getUserTopItem(
   type: "artists" | "tracks"
 ): Promise<ArtistObject[] | TrackObject[] | void> {
   const access_token = await refreshToken(token);
-  if ((access_token as AccessToken).access_token) {
+  if ('access_token' in access_token) {
     let path = `${BASE_PATH}/me/top/${type}`;
     if (type === "artists") {
       const data: { items: ArtistObject[] } | void = await fetch(path, {
         headers: {
-          Authorization: `Bearer ${(access_token as AccessToken).access_token}`
+          Authorization: `Bearer ${access_token.access_token}`
         }
       }).then((data) => data.json());
 
@@ -109,7 +109,7 @@ export async function getUserTopItem(
     } else {
       const data: { items: TrackObject[] } | void = await fetch(path, {
         headers: {
-          Authorization: `Bearer ${(access_token as AccessToken).access_token}`
+          Authorization: `Bearer ${access_token.access_token}`
         }
       }).then((data) => data.json());
 
@@ -122,11 +122,11 @@ export async function getCurrentUserProfile(
   token: string
 ): Promise<UserObject | undefined> {
   const access_token = await refreshToken(token);
-  if ((access_token as AccessToken).access_token) {
+  if ('access_token' in access_token) {
     let path = `${BASE_PATH}/me`;
     const data = await fetch(path, {
       headers: {
-        Authorization: `Bearer ${(access_token as AccessToken).access_token}`
+        Authorization: `Bearer ${access_token.access_token}`
       }
     }).then((data) => data.json());
     return data;
@@ -324,7 +324,7 @@ export async function getRelatedArtist(
 
 export async function getPlaylist(
   id: string,
-  fields?: string[]
+  fields?: string
 ): Promise<PlaylistObject | void> {
   const token = await getAccessToken();
   if (!("access_token" in token)) return;
@@ -332,7 +332,7 @@ export async function getPlaylist(
   let path = `${BASE_PATH}/playlists/${id}?fields=${fields}`;
 
   let query = new URLSearchParams();
-  if (fields && fields.length > 0) query.append("fields", fields.join(" "));
+  if (fields) query.append("fields", fields);
 
   path += `?${query.toString()}`;
 
