@@ -36,7 +36,7 @@ export const Collection = ({
   title: string;
   collection: PlaylistObject[] | ArtistObject[];
 }) => (
-  <Section title={title}>
+  <Section style={{padding: '1rem'}} title={title}>
     {collection.map((props) => {
       // console.log(props)
       if (!props?.type) return
