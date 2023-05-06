@@ -51,6 +51,9 @@ import {
   getUserTopItem
 } from "@/components/request";
 import { GetServerSideProps } from "next";
+import Greeting from "@/components/Layout/MainView/HomePage/Recent/Greeting";
+import Header from "@/components/Layout/MainView/HomePage/Recent/Header";
+import SongList from "@/components/Layout/MainView/HomePage/Recent/SongList";
 
 interface IndexPageDataInterface {
   featuredPlaylist: {
@@ -67,42 +70,42 @@ interface IndexPageDataInterface {
 export const getServerSideProps: GetServerSideProps<
   IndexPageDataInterface
 > = async ({ req }) => {
+  const categories = await getSeveralBrowseCategories("US", "en-US", 8);
+  const featuredPlaylist = await getFeaturedPlaylist("US", "en-US");
+  let artists = null;
+  if (req.cookies.refresh_token)
+    artists = ((await getUserTopItem(req.cookies.refresh_token, "artists")) ||
+      null) as ArtistObject[] | null;
 
-    const categories = await getSeveralBrowseCategories("US", "en-US", 8);
-    const featuredPlaylist = await getFeaturedPlaylist("US", "en-US");
-    let artists = null
-    if (req.cookies.refresh_token) artists = ((await getUserTopItem(req.cookies.refresh_token, "artists")) || null) as ArtistObject[] | null;
+  if (categories && featuredPlaylist) {
+    let data = [];
 
-    if (categories && featuredPlaylist) {
-      let data = [];
-
-      for (let i = 0; i < categories.length; i++) {
-        const playlists = await getCategoryPlaylists(categories[i].id);
-        if (playlists) data.push({ category: categories[i].name, playlists });
-      }
-
-      return {
-        props: {
-          featuredPlaylist: {
-            message: featuredPlaylist.message,
-            playlists: featuredPlaylist.playlists
-          },
-          artists,
-          categories: data
-        }
-      };
+    for (let i = 0; i < categories.length; i++) {
+      const playlists = await getCategoryPlaylists(categories[i].id);
+      if (playlists) data.push({ category: categories[i].name, playlists });
     }
 
+    return {
+      props: {
+        featuredPlaylist: {
+          message: featuredPlaylist.message,
+          playlists: featuredPlaylist.playlists
+        },
+        artists,
+        categories: data
+      }
+    };
+  }
 
   return { notFound: true };
 };
 
 export default function Main(data: IndexPageDataInterface) {
   const Theme = useTheme();
-  const screenWidth = useSelector(
+  const dispatch = useDispatch();
+  /* const screenWidth = useSelector(
     (state: RootState) => state.screenWidth.value
   );
-  const dispatch = useDispatch();
 
   useEffect(() => {
     const { xs, sm, md, lg, xl } = Theme.breakpoints.values;
@@ -118,25 +121,28 @@ export default function Main(data: IndexPageDataInterface) {
         dispatch(forceResize("lg"));
       else dispatch(forceResize("xl"));
     });
-  }, [Theme.breakpoints.values, dispatch]);
+  }, [Theme.breakpoints.values, dispatch]); */
 
   useEffect(() => {
     dispatch(setActiveLink(0));
   }, [dispatch]);
 
   return (
-    /* <Parent>
-      {
-        screenWidth !== 'xs' && <>
-          <Sidebar />
-          <NowPlayingBar />
-        </>
-        <MainView /> */
-    <Stack className="pb-10" sx={{ gap: "1.5rem", padding: "1rem" }}>
-      <Recent
-        message={data.featuredPlaylist.message}
-        playlists={data.featuredPlaylist.playlists}
-      />
+    <Stack className="pb-10" sx={{ gap: "1.5rem" }}>
+      <Stack
+        sx={{
+          padding: '1rem',
+          gap: '1rem',
+          zIndex: '10',
+          position: "sticky",
+          top: "calc(-1 * (37px + 3rem))",
+          background: "rgba(15, 15, 15, 1)",
+          borderBottom: "solid 2px rgba(10, 10, 10, 1)"
+        }}>
+        <Greeting message={data.featuredPlaylist.message} />
+        <Header />
+      </Stack>
+      <SongList playlists={data.featuredPlaylist.playlists} />
       {data.categories.map((e) => {
         return (
           <Collection
@@ -146,34 +152,19 @@ export default function Main(data: IndexPageDataInterface) {
           />
         );
       })}
-      {/* {data.artists && <Collection title="Artist" collection={data.artists} />} */}
-      {/*<Collection title="Top List" collection={TopList.playlists.items} />
-      <Collection title="Discover" collection={Discover.playlists.items} />
-      <Collection title="Country" collection={Country.playlists.items} />
-      <Collection title="Indie" collection={Indie.playlists.items} />
-      <Collection title="Gaming" collection={Gaming.playlists.items} />
-      <Collection title="Mood" collection={Mood.playlists.items} />
-      <Collection title="Pop" collection={Pop.playlists.items} />
-      <Collection title="Artist" type="artist" collection={Artist.artists} />*/}
     </Stack>
-    /*
-        {screenWidth === 'xs' && <MobileWidget />
-      <MobileWidget />}
-    </Parent> */
   );
 }
 
-/* export async function getServerSideProps() {
+/* <Parent>
+      {
+        screenWidth !== 'xs' && <>
+          <Sidebar />
+          <NowPlayingBar />
+        </>
+        <MainView /> */
 
-  if (!isAuthorized) {
-    return {
-      redirect: {
-        destination: 'https://accounts.spotify.com/authorize?response_type=code&client_id=b6f05292d14148a08f5e70d8fe2ba898&scope=user-read-private user-read-email user-modify-playback-state&redirect_uri=http://localhost:3000&state=34fFs29kd09',
-        permanent: false,
-      },
-    }
-  }
-  return {
-    props: {}
-  }
-} */
+/*
+        {screenWidth === 'xs' && <MobileWidget />
+      <MobileWidget />}
+    </Parent> */
