@@ -8,9 +8,6 @@ import {
 } from "@/components/interfaces";
 import { GetServerSideProps } from "next";
 import { Box, Stack } from "@mui/material";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { setTrack } from "@/components/stateSlice/SpotifyAPI";
 import CollectionThumbnail from "@/components/Layout/MainView/CollectionDisplay/CollectionThumbnail";
 import CollectionMetadata from "@/components/Layout/MainView/CollectionDisplay/CollectionMetadata";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
@@ -78,15 +75,15 @@ export const getServerSideProps: GetServerSideProps<PlaylistObject> = async ({
 };
 
 export default function Id(data: PlaylistObject) {
-  const dispatch = useDispatch();
+  /* const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setTrack(data));
-  }, [data, dispatch]);
+    dispatch(setCollection(data));
+  }, [data, dispatch]); */
 
   return (
     <Stack className="pb-10" gap={3} sx={{ padding: "2rem 1rem" }}>
-      <CollectionThumbnail type="track" />
-      <CollectionMetadata type="track" />
+      <CollectionThumbnail collection={data} />
+      <CollectionMetadata collection={data} />
       <section>
         <div>
           <Box
@@ -98,7 +95,7 @@ export default function Id(data: PlaylistObject) {
         <h1 style={{ marginBlock: "0.7rem", fontSize: "1.7rem" }}>
           {data.owner.display_name}
         </h1>
-        <Tracks sx={{ marginTop: "2rem" }} type="track" />
+        <Tracks collection={data} sx={{ marginTop: "2rem" }} />
       </section>
     </Stack>
   );
