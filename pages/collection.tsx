@@ -1,7 +1,6 @@
 import {
   getCurrentUserFollowedArtist,
   getCurrentUserPlaylist,
-  getCurrentUserProfile,
   getCurrentUserSavedAlbum
 } from "@/components/request";
 import {
@@ -14,27 +13,69 @@ import {
   Add,
   LibraryMusic,
   MoreVert,
-  PlusOne,
   Search
 } from "@mui/icons-material";
 import { Button, Fab, Stack, Typography, styled } from "@mui/material";
 import { GetServerSideProps } from "next";
 import Image from "next/image";
-import Music from "@/public/music_icon.svg";
 import Link from "next/link";
-import { parseCookie } from "./_app";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/components/store";
-import LoginAlert from "@/components/LoginPropmt";
 import React, { useEffect } from "react";
-import { useRouter } from "next/router";
 import { setActiveLink } from "@/components/stateSlice/SpotifyAPI";
+import { parseCookie } from "@/components/functions";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import { useRouter } from "next/router";
 
 interface LibraryDataInterface {
-  // user: UserObject;
   albums: AlbumObject[];
   artists: ArtistObject[];
-  playlists: PlaylistObject[];
+}
+
+export function LoginAlert({
+  open,
+  handleClose
+}: {
+  open: boolean;
+  handleClose?: () => any;
+}) {
+  const router = useRouter();
+  return (
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      aria-labelledby="alert-dialog-title"
+      aria-describedby="alert-dialog-description">
+      <DialogTitle id="alert-dialog-title">{"Warning!"}</DialogTitle>
+      <DialogContent>
+        <DialogContentText id="alert-dialog-description">
+          In order for this application to work properly, we need to collect
+          your Spotify data from the official Spotify API. And to do so, you
+          would later need to accept{" "}
+          <a href="https://developer.spotify.com/terms">
+            Spotify Developer Terms of Service
+          </a>
+          . Are you sure you want to proceed to login?
+        </DialogContentText>
+      </DialogContent>
+      <DialogActions>
+        <Button variant="outlined" onClick={handleClose} autoFocus>
+          Go Back
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => {
+            router.push("/login");
+          }}>
+          Proceed To Login
+        </Button>
+      </DialogActions>
+    </Dialog>
+  );
 }
 
 export const getServerSideProps: GetServerSideProps<
@@ -46,18 +87,15 @@ export const getServerSideProps: GetServerSideProps<
   if (!cookies.refresh_token) return { props: {} };
 
   const code = cookies.refresh_token;
-  // const user = await getCurrentUserProfile(code);
   const albums = await getCurrentUserSavedAlbum(code);
   const artists = await getCurrentUserFollowedArtist(code);
   const playlists = await getCurrentUserPlaylist(code);
 
-  if (/* !user || */ !albums || !artists || !playlists) return { props: {} };
+  if (!albums || !artists || !playlists) return { props: {} };
 
   const data: LibraryDataInterface = {
-    // user,
     albums,
-    artists,
-    playlists
+    artists
   };
 
   return { props: data };
@@ -86,11 +124,7 @@ function GoToLoginPrompt() {
     <Stack
       className="gap-2 items-center justify-center"
       sx={{ height: "100vh" }}>
-      <LoginAlert
-        open={open}
-        handleClickOpen={handleClickOpen}
-        handleClose={handleClose}
-      />
+      <LoginAlert open={open} handleClose={handleClose} />
       <Typography
         component="h3"
         sx={{
@@ -116,18 +150,22 @@ function GoToLoginPrompt() {
   );
 }
 
-export default function Collection(data: LibraryDataInterface | {}) {
+export default function Collection(
+  data: (LibraryDataInterface & { savedPlaylist?: PlaylistObject[] }) | {}
+) {
   let user = useSelector((state: RootState) => state.data.user);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setActiveLink(2))
-  }, [dispatch])
+    dispatch(setActiveLink(2));
+  }, [dispatch]);
 
-  if ("albums" in data && user) {
+  if ("albums" in data && user && data.savedPlaylist) {
     return (
-      <>
-        <Stack sx={{ padding: "1rem" }}>
+      <div>
+        <Stack
+          sx={{ zIndex: "10", background: "rgba(15, 15, 15, 1)" }}
+          className="p-1 sticky top-0">
           <div className="flex items-center my-1 gap-1">
             <div className="aspect-square rounded-full overflow-hidden h-2">
               {user.images[0]?.url ? (
@@ -161,7 +199,7 @@ export default function Collection(data: LibraryDataInterface | {}) {
           </div>
         </Stack>
         <Stack className="p-1 gap-1 pb-10">
-          {data.playlists.map((e) => {
+          {data.savedPlaylist.map((e) => {
             return (
               <Link
                 key={e.id}
@@ -270,7 +308,7 @@ export default function Collection(data: LibraryDataInterface | {}) {
             );
           })}
         </Stack>
-      </>
+      </div>
     );
   } else {
     return <GoToLoginPrompt />;
