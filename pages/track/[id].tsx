@@ -1,16 +1,11 @@
-import {
-  getArtistTopTrack,
-  getTrack
-} from "@/components/request";
-import {
-  PlaylistObject,
-  TrackObject
-} from "@/components/interfaces";
+import { getArtistTopTrack, getTrack } from "@/components/request";
+import { PlaylistObject, TrackObject } from "@/components/interfaces";
 import { GetServerSideProps } from "next";
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, useTheme } from "@mui/material";
 import CollectionThumbnail from "@/components/Layout/MainView/CollectionDisplay/CollectionThumbnail";
 import CollectionMetadata from "@/components/Layout/MainView/CollectionDisplay/CollectionMetadata";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
+import Backlight from "@/components/Layout/MainView/Backlight";
 
 export interface TrackCollectionInterface {
   trackData: TrackObject;
@@ -70,11 +65,12 @@ export const getServerSideProps: GetServerSideProps<PlaylistObject> = async ({
       return { props };
     }
   }
-  
+
   return { notFound: true };
 };
 
 export default function Id(data: PlaylistObject) {
+  const Theme = useTheme();
   /* const dispatch = useDispatch();
   useEffect(() => {
     dispatch(setCollection(data));
@@ -82,8 +78,21 @@ export default function Id(data: PlaylistObject) {
 
   return (
     <Stack className="pb-10" gap={3} sx={{ padding: "2rem 1rem" }}>
-      <CollectionThumbnail collection={data} />
-      <CollectionMetadata collection={data} />
+      <Backlight />
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          gap: '1.5rem',
+          [Theme.breakpoints.up("sm")]: {
+            flexDirection: "row",
+            alignItems: 'end',
+            gap: '3rem'
+          }
+        }}>
+        <CollectionThumbnail collection={data} />
+        <CollectionMetadata type='Song' collection={data} />
+      </Box>
       <section>
         <div>
           <Box

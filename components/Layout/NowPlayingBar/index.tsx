@@ -19,9 +19,9 @@ export default function NowPlayingBar({
   return (
     <Box
       sx={{
+        display: 'none',
         position: "relative",
         width: "100%",
-        display: "flex",
         padding: "10px",
         marginInline: "auto",
         gridArea: "now-playing-bar",
@@ -31,7 +31,10 @@ export default function NowPlayingBar({
         height: "90px",
         background: "#181818",
         borderTop: "solid 1px #222222",
-        paddingInline: "1rem"
+        paddingInline: "1rem",
+        [Theme.breakpoints.up('sm')]: {
+          display: "flex"
+        }
       }}>
       <Widget />
       <PlayerControl

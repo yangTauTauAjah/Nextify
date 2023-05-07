@@ -1,21 +1,16 @@
 import {
-  DownloadForOfflineOutlined,
   DownloadForOfflineRounded,
-  Home,
   HomeRounded,
-  LibraryMusic,
   LibraryMusicRounded,
-  Search,
   SearchRounded
 } from "@mui/icons-material";
-import { Box, Stack } from "@mui/material";
-import React, { useState } from "react";
+import { Stack, useTheme } from "@mui/material";
+import React from "react";
 import NavLink from "./Navlink";
 import NowPlayingBar from "./NowPlayingBar";
 import { useRouter } from "next/router";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "@/components/store";
-import { setNowPlaying, setPlayingOrder } from "@/components/stateSlice/SpotifyAPI";
 
 const link = [
   {
@@ -51,19 +46,10 @@ function MobileWidget({
   setTimestamp: (...params: any[]) => any;
   incrementTimestamp: (...params: any[]) => any;
 }) {
-  const router = useRouter();
-  const dispatch = useDispatch();
-  const state = useSelector((state: RootState) => state.data);
-  let init = 0;
 
-  switch (router.pathname) {
-    case "/search":
-      init = 1;
-      break;
-    case "/collection":
-      init = 2;
-      break;
-  }
+  const router = useRouter();
+  const state = useSelector((state: RootState) => state.data);
+  const Theme = useTheme()
 
   /* function skip() {
     if (!state.collection || !state.playingOrder) return;
@@ -87,7 +73,10 @@ function MobileWidget({
       className="fixed left-0 bottom-0 w-full px-1"
       sx={{
         background:
-          "linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)"
+          "linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
+          [Theme.breakpoints.up('sm')]: {
+            display: "none"
+          }
       }}>
       {state.nowPlaying && (
         <NowPlayingBar

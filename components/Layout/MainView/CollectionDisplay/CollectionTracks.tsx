@@ -1,13 +1,13 @@
-import { RootState } from "@/components/store";
-import { Stack } from "@mui/material";
-import { useDispatch, useSelector } from "react-redux";
-import Song, { SongComponentInterface } from "./Track";
+import { Box, Stack, useTheme } from "@mui/material";
+import { useDispatch } from "react-redux";
+import Song from "./Track";
 import {
   setCollection,
   setNowPlaying,
   setPlayingOrder
 } from "@/components/stateSlice/SpotifyAPI";
 import { AlbumObject, PlaylistObject } from "@/components/interfaces";
+import { MoreHoriz, PlayCircle } from "@mui/icons-material";
 
 const Tracks = ({
   collection,
@@ -16,25 +16,31 @@ const Tracks = ({
   collection: PlaylistObject | AlbumObject;
   sx?: any;
 }) => {
-  // let collection = useSelector((state: RootState) => state.data.collection);
+  const Theme = useTheme();
+
   const dispatch = useDispatch();
-
-  // let data: SongComponentInterface[] = [];
-
-  /* if (collection?.type === "album") {
-    collection?.tracks.items.map((e) => {
-      const { id, name, artists, album, explicit, duration_ms } = e;
-      data.push({ id, name, artists, album, explicit, duration_ms });
-    });
-  } else if (collection?.type === "playlist") {
-    collection?.tracks.items.forEach((e) => {
-      const { id, name, album, artists, explicit, duration_ms } = e.track;
-      data.push({ id, name, album, artists, explicit, duration_ms });
-    });
-  } */
 
   return (
     <Stack sx={sx} gap={2}>
+      <Box
+        sx={{
+          display: "none",
+          marginBottom: '1rem',
+          gap: "1rem",
+          alignItems: "center",
+          [Theme.breakpoints.up("sm")]: {
+            display: "flex"
+          }
+        }}>
+        <PlayCircle
+          className="cursor-pointer"
+          sx={{
+            fontSize: "4rem",
+            color: ({ palette }) => palette.primary.main
+          }}
+        />
+        <MoreHoriz className="white-hover" sx={{ fontSize: "2rem" }} />
+      </Box>
       {collection.type === "album"
         ? collection.tracks.items.map(
             ({ album, artists, duration_ms, explicit, id, name }, i) => {

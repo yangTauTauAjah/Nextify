@@ -144,15 +144,18 @@ export default function Sidebar({
   return (
     <Box
       sx={{
+        display: 'none',
         position: "relative",
-        display: "flex",
         justifyContent: "space-between",
         flexDirection: "column",
         background:
           "linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%)",
         padding: "1rem",
         width: "240px",
-        gridArea: "nav-bar"
+        gridArea: "nav-bar",
+        [Theme.breakpoints.up('sm')]: {
+          display: "flex"
+        }
       }}>
       <Logo />
       <NavLink link={link} />
