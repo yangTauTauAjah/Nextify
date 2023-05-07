@@ -7,9 +7,13 @@ function InstallApp() {
   const Theme = useTheme();
 
   return (
-    <Link href="/" legacyBehavior>
+    <Link
+      href="https://open.spotify.com/download"
+      legacyBehavior>
       <Box
         component="a"
+        target="_blank"
+        rel="noopener noreferrer"
         className="white-hover cursor-pointer flex items-center gap-1 shrink-0"
         sx={{ height: "3rem" }}>
         <DownloadForOfflineOutlined fontSize="medium" />
