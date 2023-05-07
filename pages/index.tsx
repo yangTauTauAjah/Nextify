@@ -128,7 +128,15 @@ export default function Main(data: IndexPageDataInterface) {
   }, [dispatch]);
 
   return (
-    <Stack className="pb-10" sx={{ gap: "1.5rem" }}>
+    <Stack
+      className="pb-10"
+      sx={{
+        gap: "1.5rem",
+        height: "100vh",
+        [Theme.breakpoints.up("sm")]: {
+          height: "100%"
+        }
+      }}>
       <Backlight />
       <Stack
         sx={{
@@ -150,29 +158,35 @@ export default function Main(data: IndexPageDataInterface) {
           <Collection
             key={e.category}
             title={e.category}
-            collection={e.playlists.filter(e => !!e).map((e) => {
-              return {
-                id: e.id,
-                description: <TextComponent>{e.description}</TextComponent>,
-                name: e.name,
-                image: e.images[0].url,
-                type: e.type
-              };
-            })}
+            collection={e.playlists
+              .filter((e) => !!e)
+              .map((e) => {
+                return {
+                  id: e.id,
+                  description: <TextComponent>{e.description}</TextComponent>,
+                  name: e.name,
+                  image: e.images[0].url,
+                  type: e.type
+                };
+              })}
           />
         );
       })}
       <Collection
-        title='Artists'
-        collection={data.artists?.filter(e => !!e).map((e) => {
-          return {
-            id: e.id,
-            description: <TextComponent>Artist</TextComponent>,
-            name: e.name,
-            image: e.images[0].url,
-            type: e.type
-          };
-        }) || []}
+        title="Artists"
+        collection={
+          data.artists
+            ?.filter((e) => !!e)
+            .map((e) => {
+              return {
+                id: e.id,
+                description: <TextComponent>Artist</TextComponent>,
+                name: e.name,
+                image: e.images[0].url,
+                type: e.type
+              };
+            }) || []
+        }
       />
     </Stack>
   );
