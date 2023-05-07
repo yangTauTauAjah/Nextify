@@ -31,7 +31,7 @@ function PlayerControl({
     <Box
       sx={{ width: "33.33%" }}
       className="flex flex-col h-full justify-between items-center">
-      <Box className='flex flex-row gap1 items-center'>
+      <Box className='flex flex-row gap-1 items-center'>
         <Shuffle className="hover:pointer white-hover" />
         <SkipPrevious
           onClick={() => dispatch(playPrevious())}
