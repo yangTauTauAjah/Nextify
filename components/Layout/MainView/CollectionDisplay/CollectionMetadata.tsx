@@ -9,7 +9,13 @@ import {
 } from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
-import { AlbumObject, PlaylistObject } from "@/components/interfaces";
+import {
+  AlbumObject,
+  ArtistObject,
+  PlaylistObject,
+  TrackObject,
+  UserObject
+} from "@/components/interfaces";
 import { useTheme } from "@mui/material";
 
 interface CollectionOwnerComponentInterface {
@@ -22,7 +28,7 @@ interface CollectionOwnerComponentInterface {
 interface CollectionMetadaComponentInterface {
   name: string;
   description: string;
-  owners: CollectionOwnerComponentInterface[];
+  owners: ArtistObject[] | UserObject[];
 }
 
 const Wrapper = styled(Stack)(({ theme }) => ({
@@ -86,7 +92,7 @@ const ActionButtonsComponent = () => {
 const CollectionOwnerComponent = ({
   owners
 }: {
-  owners: CollectionOwnerComponentInterface[];
+  owners: { image?: string; type: string; name: string; id: string }[];
 }) => {
   return (
     <div
@@ -103,10 +109,10 @@ const CollectionOwnerComponent = ({
           borderRadius: "100px",
           overflow: "hidden"
         }}>
-        {owners[0].image_url && owners[0].image_url !== "" ? (
+        {owners[0].image && owners[0].image !== "" ? (
           <Image
             sizes="10vw"
-            src={owners[0].image_url}
+            src={owners[0].image}
             fill
             style={{ objectFit: "contain" }}
             alt="image"
@@ -134,37 +140,16 @@ const CollectionOwnerComponent = ({
 
 const CollectionMetadata = ({
   type,
-  collection
+  name,
+  description,
+  owners
 }: {
-  type: string,
-  collection: PlaylistObject | AlbumObject;
+  type: string;
+  name: string;
+  owners: ArtistObject[] | UserObject[];
+  description: string;
 }) => {
   const Theme = useTheme();
-
-  let data: CollectionMetadaComponentInterface = {
-    name: collection.name || "",
-    description: "",
-    owners: []
-  };
-
-  if (collection.type === "album") {
-    collection.artists.forEach(({ type, id, name, images }) =>
-      data.owners.push({
-        type,
-        id,
-        name,
-        image_url: images[0].url
-      })
-    );
-  } else if (collection.type === "playlist") {
-    data.owners.push({
-      type: collection.type === "playlist" ? "user" : "artist",
-      id: collection.owner.id || "",
-      name: collection.owner.display_name || "",
-      image_url: collection.owner.images[0].url || ""
-    });
-    data.description = collection?.description || "";
-  }
 
   return (
     <Wrapper gap={1}>
@@ -190,14 +175,23 @@ const CollectionMetadata = ({
             fontWeight: Theme.typography.fontWeightBold
           }
         }}>
-        {data?.name}
+        {name}
       </Typography>
       <Description
         className="cursor-default"
-        dangerouslySetInnerHTML={{ __html: data.description }}
+        dangerouslySetInnerHTML={{ __html: description }}
       />
-      {data.owners.length > 0 && (
-        <CollectionOwnerComponent owners={data.owners} />
+      {owners.length > 0 && (
+        <CollectionOwnerComponent
+          owners={owners.map((e) => {
+            return {
+              id: e.id,
+              name: e.type === 'artist' ? e.name : e.display_name,
+              type: e.type,
+              image: e.images[0].url
+            };
+          })}
+        />
       )}
       <Duration>24h 60min</Duration>
       <ActionButtonsComponent />
