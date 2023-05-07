@@ -8,8 +8,8 @@ const Wrapper = styled(Box)(({ theme }) => ({
   flexShrink: "0",
   height: "15rem",
   width: "100%",
-  background: "rgba(45, 45, 45, 1)",
   [theme.breakpoints.up("sm")]: {
+    background: "rgba(45, 45, 45, 1)",
     width: "unset"
   }
 }));
