@@ -15,8 +15,15 @@ function Collection({ children }: CollectionInterface) {
         width: '100%',
         overflow: 'auto',
         gap: '1rem',
-        '&::-webkit-scrollbar': {
-          width: '0px'
+        "&::-webkit-scrollbar": {
+          width: "10px",
+          height: "10px"
+        },
+        "&::-webkit-scrollbar-thumb": {
+          background: "rgba(0,0,0,0)"
+        },
+        "&:hover::-webkit-scrollbar-thumb": {
+          background: "rgba(255,255,255,.1)"
         }
       }}
     >

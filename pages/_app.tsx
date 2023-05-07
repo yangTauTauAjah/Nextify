@@ -58,11 +58,24 @@ function Parent({ global, children }: { global?: GlobalState; children: any }) {
         gridTemplateRows: "auto 1fr auto",
         "& > *:nth-child(1)": {
           gridArea: "main-view",
-          overflow: "auto"
+          overflow: "auto",
+          "&::-webkit-scrollbar": {
+            width: "10px",
+            height: "10px"
+          },
+          "&::-webkit-scrollbar-thumb": {
+            background: "rgba(255,255,255,.0)",
+            transition: "background-color 1s ease-in-out"
+          },
+          "&:hover::-webkit-scrollbar-thumb": {
+            background: "rgba(255,255,255,.1)"
+          }
         },
         [Theme.breakpoints.up("sm")]: {
           display: "grid",
-          height: "100vh"
+          height: "100vh",
+          overflowX: 'auto',
+          minWidth: Theme.breakpoints.values.lg
         }
       }}>
       {children}
@@ -71,12 +84,10 @@ function Parent({ global, children }: { global?: GlobalState; children: any }) {
 }
 
 function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObject[] }) {
-  const router = useRouter()
+  const router = useRouter();
   const [IsPlaying, setIsPlaying] = useState(false);
   const [Timestamp, setTimestamp] = useState(360);
   const [Id, setId] = useState<NodeJS.Timer>();
-
-  console.log(router.query)
 
   const state = useSelector((state: RootState) => state.data);
   const dispatch = useDispatch();
@@ -113,16 +124,18 @@ function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObject[] }) {
     IsPlaying
   ]);
 
-  useEffect(() => setTimestamp(0), [state.playingOrder]);
+  useEffect(() => {
+    if (state.playingOrder) setTimestamp(0);
+  }, [state.playingOrder]);
 
   return (
     <>
-      {/* <MobileWidget
+      <MobileWidget
         Timestamp={Timestamp}
         setTimestamp={setTimestamp}
         IsPlaying={IsPlaying}
         incrementTimestamp={setIsPlaying}
-      /> */}
+      />
       <Sidebar
         currentPlaylistId={router.query.id?.toString()}
         list={(savedPlaylist || []).map((e) => ({

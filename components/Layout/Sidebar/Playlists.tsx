@@ -17,13 +17,13 @@ export default function PlayLists({list, currentPlaylistId}: {
         marginBottom: "auto",
         "&::-webkit-scrollbar": {
           width: "10px",
-          background: "rgba(0,0,0,0)"
+          height: "10px"
         },
         "&::-webkit-scrollbar-thumb": {
-          background: "rgba(255,255,255,.0)"
+          background: "rgba(0,0,0,0)"
         },
         "&:hover::-webkit-scrollbar-thumb": {
-          background: "rgba(255,255,255,.3)"
+          background: "rgba(255,255,255,.1)"
         }
       }}>
       {list.map((e, i) => (
