@@ -59,16 +59,17 @@ function Parent({ global, children }: { global?: GlobalState; children: any }) {
         "& > *:nth-child(1)": {
           gridArea: "main-view",
           overflow: "auto",
+          overflowY: "overlay",
           "&::-webkit-scrollbar": {
             width: "10px",
             height: "10px"
           },
           "&::-webkit-scrollbar-thumb": {
-            background: "rgba(255,255,255,.0)",
+            background: "rgba(0,0,0,0)",
             transition: "background-color 1s ease-in-out"
           },
           "&:hover::-webkit-scrollbar-thumb": {
-            background: "rgba(255,255,255,.1)"
+            background: "rgba(30, 30, 30, 1)"
           }
         },
         [Theme.breakpoints.up("sm")]: {
@@ -187,24 +188,24 @@ App.getInitialProps = async (context: AppContext) => {
     savedPlaylist?: PlaylistObject[];
   } = await A.getInitialProps(context);
 
-  if (!req?.headers.cookie) return;
+  if (!req?.headers.cookie) return { ...r };
 
   const Cookie = parseCookie(req.headers.cookie);
 
-  if (!Cookie.refresh_token) return;
+  if (!Cookie.refresh_token) return { ...r };
 
-  const NowPlaying = await getCurrentlyPlayingTrack(Cookie.refresh_token);
+  // const NowPlaying = await getCurrentlyPlayingTrack(Cookie.refresh_token);
   const savedPlaylist = await getCurrentUserPlaylist(Cookie.refresh_token);
 
   if (savedPlaylist) r.savedPlaylist = savedPlaylist;
-  if (NowPlaying) {
+  /* if (NowPlaying) {
     r.nowPlaying = NowPlaying;
-  } else {
+  } else { */
     const recentlyPlayed = await getRecentlyPlayedTrack(Cookie.refresh_token);
     if (recentlyPlayed) r.nowPlaying = recentlyPlayed[0];
-  }
+  // }
 
-  if (pathname === "/callback") return;
+  if (pathname === "/callback") return { ...r };
 
   res?.setHeader("Set-Cookie", [
     `refresh_token=${Cookie.refresh_token}; Max-Age=${timeToSec(
