@@ -96,7 +96,7 @@ export async function getUserTopItem(
   type: "artists" | "tracks"
 ): Promise<ArtistObject[] | TrackObject[] | void> {
   const access_token = await refreshToken(token);
-  if ('access_token' in access_token) {
+  if ("access_token" in access_token) {
     let path = `${BASE_PATH}/me/top/${type}`;
     if (type === "artists") {
       const data: { items: ArtistObject[] } | void = await fetch(path, {
@@ -105,7 +105,7 @@ export async function getUserTopItem(
         }
       }).then((data) => data.json());
 
-      if (data && 'items' in data) return data.items;
+      if (data && "items" in data) return data.items;
     } else {
       const data: { items: TrackObject[] } | void = await fetch(path, {
         headers: {
@@ -113,7 +113,7 @@ export async function getUserTopItem(
         }
       }).then((data) => data.json());
 
-      if (data && 'items' in data) return data.items;
+      if (data && "items" in data) return data.items;
     }
   }
 }
@@ -122,7 +122,7 @@ export async function getCurrentUserProfile(
   token: string
 ): Promise<UserObject | undefined> {
   const access_token = await refreshToken(token);
-  if ('access_token' in access_token) {
+  if ("access_token" in access_token) {
     let path = `${BASE_PATH}/me`;
     const data = await fetch(path, {
       headers: {
@@ -188,8 +188,8 @@ export async function getFeaturedPlaylist(
       headers: { Authorization: `Bearer ${access_token.access_token}` }
     })
       .then((data) => data.json())
-      .catch((e) => {
-        console.log(e);
+      .catch((err) => {
+        console.log(err);
       });
 
     if (data && "playlists" in data)
@@ -221,8 +221,8 @@ export async function getCurrentlyPlayingTrack(
       headers: { Authorization: `Bearer ${access_token.access_token}` }
     })
       .then((data) => data.json())
-      .catch((e) => {
-        console.log(e);
+      .catch((err) => {
+        console.log(err);
       });
 
     if (data) return data.item;
@@ -244,8 +244,8 @@ export async function getRecentlyPlayedTrack(
       .then((data) => {
         return data.json();
       })
-      .catch((e) => {
-        console.log(e);
+      .catch((err) => {
+        console.log(err);
       });
 
     if (data && "items" in data) return data.items.map((e) => e.track);
@@ -451,4 +451,49 @@ export async function getCategoryPlaylists(
   // console.log(data);
 
   return data.playlists.items;
+}
+
+export async function search(
+  q: string,
+  type: ('album' | 'artist' | 'playlist' | 'track')[],
+  market?: string,
+  limit?: number,
+  offset?: number
+): Promise<{
+  albums: AlbumObject[];
+  artists: ArtistObject[];
+  playlists: PlaylistObject[];
+  tracks: TrackObject[];
+} | void> {
+  const token = await getAccessToken();
+  if (!("access_token" in token)) return;
+
+  let path = `${BASE_PATH}/search`;
+
+  let query = new URLSearchParams();
+  query.append("q", q);
+  query.append("type", type.join(","));
+  if (market) query.append("limit", market);
+  if (limit) query.append("limit", limit.toString());
+  if (offset) query.append("offset", offset.toString());
+  path += `?${query.toString()}`;
+
+  const data: {
+    albums?: { items: AlbumObject[] };
+    artists?: { items: ArtistObject[] };
+    playlists?: { items: PlaylistObject[] };
+    tracks?: { items: TrackObject[] };
+  } | void = await fetch(path, {
+    headers: { Authorization: `Bearer ${token.access_token}` }
+  })
+    .then((data) => data.json())
+    .catch((err) => console.log(err));
+
+  if (data)
+    return {
+      albums: data.albums?.items || [],
+      artists: data.artists?.items || [],
+      playlists: data.playlists?.items || [],
+      tracks: data.tracks?.items || []
+    };
 }
