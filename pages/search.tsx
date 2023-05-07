@@ -98,7 +98,7 @@ export const getServerSideProps: GetServerSideProps<
 
 const SearchComponent = styled("div")(({ theme }) => ({
   position: "relative",
-  marginLeft: 0,
+  marginInline: '1rem',
   width: "auto",
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15)
@@ -259,7 +259,7 @@ export default function Search(props: SearchDataInterface) {
               <Box
                 key={e.id}
                 component={Link}
-                href={`/categories/${e.id}?t=${e.name}`}
+                href={`/categories/${e.id}`}
                 className="flex items-center"
                 sx={{
                   overflow: "hidden",
