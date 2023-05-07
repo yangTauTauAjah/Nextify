@@ -15,7 +15,7 @@ export const getServerSideProps: GetServerSideProps<{
   if (params && "id" in params && params.id && !(params.id instanceof Array)) {
     const category = await getSingleBrowseCategories(params.id);
     const data = await getCategoryPlaylists(params.id);
-    console.log(params.id)
+
     if (data && category) return { props: { category: category.name, data } };
   }
 
