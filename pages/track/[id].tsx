@@ -71,10 +71,6 @@ export const getServerSideProps: GetServerSideProps<PlaylistObject> = async ({
 
 export default function Id(data: PlaylistObject) {
   const Theme = useTheme();
-  /* const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(setCollection(data));
-  }, [data, dispatch]); */
 
   return (
     <Stack className="pb-10" gap={3} sx={{ padding: "2rem 1rem" }}>
@@ -83,15 +79,26 @@ export default function Id(data: PlaylistObject) {
         sx={{
           display: "flex",
           flexDirection: "column",
-          gap: '1.5rem',
+          gap: "1.5rem",
           [Theme.breakpoints.up("sm")]: {
             flexDirection: "row",
-            alignItems: 'end',
-            gap: '3rem'
+            alignItems: "end",
+            gap: "3rem"
           }
         }}>
         <CollectionThumbnail collection={data} />
-        <CollectionMetadata type='Song' collection={data} />
+        <CollectionMetadata
+          type="Song"
+          name={data.name}
+          description={data.description}
+          owners={[
+            {
+              ...data.owner,
+              type: "artist",
+              name: data.owner.display_name,
+            }
+          ]}
+        />
       </Box>
       <section>
         <div>

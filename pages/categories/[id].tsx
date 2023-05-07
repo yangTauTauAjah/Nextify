@@ -1,8 +1,12 @@
 import Item from "@/components/Layout/MainView/HomePage/Section/Collection/Item";
-import { getCategoryPlaylists, getSingleBrowseCategories } from "@/components/request";
+import {
+  getCategoryPlaylists,
+  getSingleBrowseCategories
+} from "@/components/request";
 import { PlaylistObject } from "@/components/interfaces";
 import { Box } from "@mui/material";
 import { GetServerSideProps } from "next";
+import Backlight from "@/components/Layout/MainView/Backlight";
 
 export const getServerSideProps: GetServerSideProps<{
   category: string;
@@ -11,6 +15,7 @@ export const getServerSideProps: GetServerSideProps<{
   if (params && "id" in params && params.id && !(params.id instanceof Array)) {
     const category = await getSingleBrowseCategories(params.id);
     const data = await getCategoryPlaylists(params.id);
+    console.log(params.id)
     if (data && category) return { props: { category: category.name, data } };
   }
 
@@ -24,6 +29,7 @@ export default function Id(props: {
   const { category, data } = props;
   return (
     <div className="p-1 pb-10">
+      <Backlight />
       <h1
         style={{ fontSize: "2rem", marginBlock: "2rem", marginInline: "1rem" }}>
         {category}

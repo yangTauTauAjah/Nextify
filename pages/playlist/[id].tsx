@@ -8,7 +8,7 @@ import PlaylistThumbnail from "@/components/Layout/MainView/CollectionDisplay/Co
 import PlaylistMetadata from "@/components/Layout/MainView/CollectionDisplay/CollectionMetadata";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
 import Backlight from "@/components/Layout/MainView/Backlight";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const getServerSideProps: GetServerSideProps<PlaylistObject> = async ({
   params
@@ -23,9 +23,43 @@ export const getServerSideProps: GetServerSideProps<PlaylistObject> = async ({
 export default function Id(PlaylistObject: PlaylistObject) {
   const [word, setWord] = useState(new RegExp("", "i"));
   const [sort, setSort] = useState<"title" | "artist">("title");
+  const [filteredData, setFilteredData] = useState(PlaylistObject);
   const Theme = useTheme();
 
-  const Songs = useRef([...PlaylistObject.tracks.items]);
+  useEffect(() => {
+    let _ = {
+      ...PlaylistObject,
+      tracks: {
+        items: PlaylistObject.tracks.items.filter(
+          (e) => !!word.exec(e.track.name)
+        )
+      }
+    };
+
+    if (sort === "title") {
+      _.tracks.items = _.tracks.items.sort((a, b) => {
+        if (a.track.name < b.track.name) {
+          return -1;
+        }
+        if (a.track.name > b.track.name) {
+          return 1;
+        }
+        return 0;
+      });
+    } else if (sort === "artist") {
+      _.tracks.items = _.tracks.items.sort((a, b) => {
+        if (a.track.artists[0].name < b.track.artists[0].name) {
+          return -1;
+        }
+        if (a.track.artists[0].name > b.track.artists[0].name) {
+          return 1;
+        }
+        return 0;
+      });
+    }
+
+    setFilteredData(_);
+  }, [PlaylistObject, word, sort]);
 
   return (
     <Stack className="pb-10" gap={3} sx={{ padding: "2rem 1rem" }}>
@@ -42,40 +76,15 @@ export default function Id(PlaylistObject: PlaylistObject) {
             gap: "3rem"
           }
         }}>
-        <PlaylistThumbnail collection={PlaylistObject} />
-        <PlaylistMetadata type="Playlist" collection={PlaylistObject} />
+        <PlaylistThumbnail collection={filteredData} />
+        <PlaylistMetadata
+          type="Playlist"
+          name={filteredData.name}
+          description={filteredData.description}
+          owners={[filteredData.owner]}
+        />
       </Box>
-      <Tracks
-        collection={(() => {
-          PlaylistObject.tracks.items = Songs.current.filter(
-            (e) => !!word.exec(e.track.name)
-          );
-
-          if (sort === "title") {
-            PlaylistObject.tracks.items.sort((a, b) => {
-              if (a.track.name < b.track.name) {
-                return -1;
-              }
-              if (a.track.name > b.track.name) {
-                return 1;
-              }
-              return 0;
-            });
-          } else if (sort === "artist") {
-            PlaylistObject.tracks.items.sort((a, b) => {
-              if (a.track.artists[0].name < b.track.artists[0].name) {
-                return -1;
-              }
-              if (a.track.artists[0].name > b.track.artists[0].name) {
-                return 1;
-              }
-              return 0;
-            });
-          }
-
-          return PlaylistObject;
-        })()}
-      />
+      <Tracks collection={filteredData} />
     </Stack>
   );
 }

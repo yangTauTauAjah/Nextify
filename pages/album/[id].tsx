@@ -36,7 +36,12 @@ export default function Id(AlbumObject: AlbumObject) {
           }
         }}>
         <PlaylistThumbnail collection={AlbumObject} />
-        <PlaylistMetadata type="Album" collection={AlbumObject} />
+        <PlaylistMetadata
+          type="Album"
+          name={AlbumObject.name}
+          description=""
+          owners={AlbumObject.artists}
+        />
       </Box>
       <Tracks collection={AlbumObject} />
     </Stack>
