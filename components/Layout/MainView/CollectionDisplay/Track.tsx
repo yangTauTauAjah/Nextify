@@ -4,16 +4,6 @@ import { AlbumObject, ArtistObject } from "../../../interfaces";
 import Link from "next/link";
 import { Box, Typography, styled } from "@mui/material";
 
-export interface SongComponentInterface {
-  id: string;
-  name: string;
-  album: AlbumObject;
-  explicit: boolean;
-  artists: ArtistObject[];
-  duration_ms: number;
-  onClick?: () => any
-}
-
 const Wrapper = styled(Box)({
   display: "flex",
   height: "3rem",
@@ -33,7 +23,7 @@ const ImageComponent = ({ src }: { src: string }) => (
   </div>
 );
 
-const ArtistNameComponent = styled(Link)(({ theme }) => ({
+export const ArtistNameComponent = styled(Link)(({ theme }) => ({
   paddingBlock: "3px",
   lineHeight: theme.typography.subtitle1.fontSize,
   fontSize: theme.typography.subtitle1.fontSize,
@@ -107,11 +97,17 @@ export default function Song({
   explicit,
   artists,
   onClick
-}: SongComponentInterface) {
-
+}: {
+  id: string;
+  name: string;
+  album: AlbumObject;
+  explicit: boolean;
+  artists: ArtistObject[];
+  duration_ms: number;
+  onClick?: () => any;
+}) {
   return (
-    <Wrapper
-      onClick={onClick}>
+    <Wrapper onClick={onClick}>
       {album && <ImageComponent src={album.images[0].url} />}
       <SongMetadata id={id} name={name} explicit={explicit} artists={artists} />
       <MoreVert />

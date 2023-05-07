@@ -1,5 +1,6 @@
 import {
-  /* MainView, */ Collection
+  /* MainView, */ Collection,
+  TextComponent
 } from "@/components/Layout/MainView/HomePage";
 import Recent from "@/components/Layout/MainView/HomePage/Recent";
 import MobileWidget from "@/components/Layout/MobileWidget";
@@ -27,9 +28,10 @@ import {
   DevicesOther,
   VolumeUp,
   VolumeOff,
-  Launch
+  Launch,
+  GradingRounded
 } from "@mui/icons-material";
-import { Box, Stack, styled, useTheme } from "@mui/material";
+import { Box, Stack, alpha, styled, useTheme } from "@mui/material";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Typography } from "@mui/material/styles/createTypography";
@@ -54,6 +56,7 @@ import { GetServerSideProps } from "next";
 import Greeting from "@/components/Layout/MainView/HomePage/Recent/Greeting";
 import Header from "@/components/Layout/MainView/HomePage/Recent/Header";
 import SongList from "@/components/Layout/MainView/HomePage/Recent/SongList";
+import Backlight from "@/components/Layout/MainView/Backlight";
 
 interface IndexPageDataInterface {
   featuredPlaylist: {
@@ -103,9 +106,6 @@ export const getServerSideProps: GetServerSideProps<
 export default function Main(data: IndexPageDataInterface) {
   const Theme = useTheme();
   const dispatch = useDispatch();
-  /* const screenWidth = useSelector(
-    (state: RootState) => state.screenWidth.value
-  );
 
   useEffect(() => {
     const { xs, sm, md, lg, xl } = Theme.breakpoints.values;
@@ -121,7 +121,7 @@ export default function Main(data: IndexPageDataInterface) {
         dispatch(forceResize("lg"));
       else dispatch(forceResize("xl"));
     });
-  }, [Theme.breakpoints.values, dispatch]); */
+  }, [Theme.breakpoints.values, dispatch]);
 
   useEffect(() => {
     dispatch(setActiveLink(0));
@@ -129,15 +129,17 @@ export default function Main(data: IndexPageDataInterface) {
 
   return (
     <Stack className="pb-10" sx={{ gap: "1.5rem" }}>
+      <Backlight />
       <Stack
         sx={{
-          padding: '1rem',
-          gap: '1rem',
-          zIndex: '10',
+          padding: "1rem",
+          gap: "1rem",
+          zIndex: "10",
           position: "sticky",
           top: "calc(-1 * (37px + 3rem))",
-          background: "rgba(15, 15, 15, 1)",
-          borderBottom: "solid 2px rgba(10, 10, 10, 1)"
+          background: "rgba(15, 15, 15, 0.7)",
+          borderBottom: "solid 2px rgba(10, 10, 10, 1)",
+          backdropFilter: "blur(5px)"
         }}>
         <Greeting message={data.featuredPlaylist.message} />
         <Header />
@@ -148,7 +150,15 @@ export default function Main(data: IndexPageDataInterface) {
           <Collection
             key={e.category}
             title={e.category}
-            collection={e.playlists}
+            collection={e.playlists.filter(e => !!e).map((e) => {
+              return {
+                id: e.id,
+                description: <TextComponent>{e.description}</TextComponent>,
+                name: e.name,
+                image: e.images[0].url,
+                type: e.type
+              };
+            })}
           />
         );
       })}
