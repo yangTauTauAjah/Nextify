@@ -10,8 +10,8 @@ export default function Widget() {
   const state = useSelector((state: RootState) => state.data.nowPlaying);
 
   return (
-    <Stack
-      className="flex-row items-center gap-1"
+    <Box
+      className="flex flex-row items-center gap-1"
       sx={{
         width: "33.33%"
       }}>
@@ -61,6 +61,6 @@ export default function Widget() {
       </Box>
       <FavoriteBorder className="white-hover" />
       <PictureInPictureAlt className="white-hover" />
-    </Stack>
+    </Box>
   );
 }

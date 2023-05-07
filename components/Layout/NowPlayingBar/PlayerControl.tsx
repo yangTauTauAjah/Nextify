@@ -31,7 +31,7 @@ function PlayerControl({
     <Box
       sx={{ width: "33.33%" }}
       className="flex flex-col h-full justify-between items-center">
-      <Stack direction="row" gap="1rem" alignItems="center">
+      <Box className='flex flex-row gap1 items-center'>
         <Shuffle className="hover:pointer white-hover" />
         <SkipPrevious
           onClick={() => dispatch(playPrevious())}
@@ -58,8 +58,8 @@ function PlayerControl({
           fontSize="large"
         />
         <Repeat className="hover:pointer white-hover" />
-      </Stack>
-      <Stack className="flex-row items-center w-full" gap="0.8rem">
+      </Box>
+      <Box className="flex flex-row items-center w-full" gap="0.8rem">
         <Typography
           sx={{
             fontSize: Theme.typography.subtitle1.fontSize,
@@ -100,7 +100,7 @@ function PlayerControl({
               .padStart(2, "0")}`) ||
             "0:00"}
         </Typography>
-      </Stack>
+      </Box>
     </Box>
   );
 }
