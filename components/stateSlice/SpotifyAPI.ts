@@ -45,9 +45,6 @@ export const display = createSlice({
       state.collection = action.payload;
     },
     playNext(state) {
-      console.log("next");
-      console.log(state.playingOrder);
-      console.log(state.collection?.tracks.items.length);
       if (
         !state.collection ||
         state.playingOrder === null ||
@@ -67,9 +64,6 @@ export const display = createSlice({
           state.collection.tracks.items[state.playingOrder].track;
     },
     playPrevious(state) {
-      console.log("prev");
-      console.log(state.playingOrder);
-      console.log(state.collection?.tracks.items.length);
 
       if (
         !state.collection ||
