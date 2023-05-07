@@ -11,10 +11,6 @@ export default function NavLink({
   const Theme = useTheme();
   const state = useSelector((state: RootState) => state.data);
 
-  state.activeLink;
-
-  console.log(state.activeLink)
-
   return (
     <Box
       className="flex flex-col justify-between items-start w-full gap-1 pb-1"
