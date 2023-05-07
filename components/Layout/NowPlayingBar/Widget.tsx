@@ -30,7 +30,7 @@ export default function Widget() {
           alt="music"
         />
       </Box>
-      <Box className="mr-auto">
+      <Box>
         <Box
           component={Link}
           sx={{ "&::before": { background: "white" } }}
