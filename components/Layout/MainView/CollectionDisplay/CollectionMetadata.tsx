@@ -1,4 +1,4 @@
-import { Box, Stack, styled } from "@mui/material";
+import { Box, Stack, Typography, styled } from "@mui/material";
 import {
   AccountCircle,
   DownloadRounded,
@@ -9,10 +9,8 @@ import {
 } from "@mui/icons-material";
 import Image from "next/image";
 import Link from "next/link";
-import {
-  AlbumObject,
-  PlaylistObject,
-} from "@/components/interfaces";
+import { AlbumObject, PlaylistObject } from "@/components/interfaces";
+import { useTheme } from "@mui/material";
 
 interface CollectionOwnerComponentInterface {
   type: "artist" | "user";
@@ -48,39 +46,48 @@ const Description = styled(Box)(({ theme: { typography, palette } }) => ({
   }
 }));
 
-const Duration = styled("p")(({ theme: { typography } }) => ({
-  color: typography.subtitle1.color,
-  fontSize: typography.subtitle1.fontSize
+const Duration = styled("p")(({ theme }) => ({
+  color: theme.typography.subtitle1.color,
+  fontSize: theme.typography.subtitle1.fontSize,
+  [theme.breakpoints.up("sm")]: {
+    display: "none"
+  }
 }));
 
-const ActionButtonsComponent = () => (
-  <div
-    style={{
-      display: "flex",
-      gap: "0.7rem",
-      alignItems: "center"
-    }}>
-    <FavoriteBorderRounded className="cursor-pointer" fontSize="medium" />
-    <DownloadRounded className="cursor-pointer" fontSize="medium" />
-    <MoreVert
-      className="cursor-pointer"
-      sx={{ marginRight: "auto" }}
-      fontSize="medium"
-    />
-    <Shuffle className="cursor-pointer" fontSize="medium" />
-    <PlayCircle
-      className="cursor-pointer"
-      sx={{ fontSize: "3rem", color: ({ palette }) => palette.primary.main }}
-    />
-  </div>
-);
+const ActionButtonsComponent = () => {
+  const Theme = useTheme();
+
+  return (
+    <Box
+      sx={{
+        display: "flex",
+        gap: "0.7rem",
+        alignItems: "center",
+        [Theme.breakpoints.up("sm")]: {
+          display: "none"
+        }
+      }}>
+      <FavoriteBorderRounded className="cursor-pointer" fontSize="medium" />
+      <DownloadRounded className="cursor-pointer" fontSize="medium" />
+      <MoreVert
+        className="cursor-pointer"
+        sx={{ marginRight: "auto" }}
+        fontSize="medium"
+      />
+      <Shuffle className="cursor-pointer" fontSize="medium" />
+      <PlayCircle
+        className="cursor-pointer"
+        sx={{ fontSize: "3rem", color: ({ palette }) => palette.primary.main }}
+      />
+    </Box>
+  );
+};
 
 const CollectionOwnerComponent = ({
   owners
 }: {
   owners: CollectionOwnerComponentInterface[];
 }) => {
-  
   return (
     <div
       style={{
@@ -96,7 +103,7 @@ const CollectionOwnerComponent = ({
           borderRadius: "100px",
           overflow: "hidden"
         }}>
-        {owners[0].image_url && owners[0].image_url !== '' ? (
+        {owners[0].image_url && owners[0].image_url !== "" ? (
           <Image
             sizes="10vw"
             src={owners[0].image_url}
@@ -105,7 +112,7 @@ const CollectionOwnerComponent = ({
             alt="image"
           />
         ) : (
-          <AccountCircle sx={{aspectRatio: '1', height: '100%'}} />
+          <AccountCircle sx={{ aspectRatio: "1", height: "100%" }} />
         )}
       </div>
       {owners.map(({ type, id, name }) => (
@@ -125,41 +132,73 @@ const CollectionOwnerComponent = ({
   );
 };
 
-const CollectionMetadata = ({ collection }: {collection: PlaylistObject | AlbumObject}) => {
+const CollectionMetadata = ({
+  type,
+  collection
+}: {
+  type: string,
+  collection: PlaylistObject | AlbumObject;
+}) => {
+  const Theme = useTheme();
 
   let data: CollectionMetadaComponentInterface = {
-    name: collection.name || '',
+    name: collection.name || "",
     description: "",
     owners: []
   };
 
-  if (collection.type === 'album') {
-    collection.artists.forEach(
-      ({ type, id, name, images }) => data.owners.push({
+  if (collection.type === "album") {
+    collection.artists.forEach(({ type, id, name, images }) =>
+      data.owners.push({
         type,
         id,
         name,
         image_url: images[0].url
       })
     );
-  } else if (collection.type === 'playlist') {
+  } else if (collection.type === "playlist") {
     data.owners.push({
-      type: collection.type === 'playlist' ? 'user' : 'artist',
-      id: collection.owner.id || '',
-      name: collection.owner.display_name || '',
-      image_url: collection.owner.images[0].url || ''
+      type: collection.type === "playlist" ? "user" : "artist",
+      id: collection.owner.id || "",
+      name: collection.owner.display_name || "",
+      image_url: collection.owner.images[0].url || ""
     });
-    data.description = collection?.description || '';
+    data.description = collection?.description || "";
   }
 
   return (
     <Wrapper gap={1}>
-      <h2>{data?.name}</h2>
+      <Typography
+        variant="h1"
+        sx={{
+          display: "none",
+          [Theme.breakpoints.up("sm")]: {
+            display: "unset",
+            fontSize: "1rem",
+            fontWeight: Theme.typography.fontWeightBold
+          }
+        }}>
+        {type}
+      </Typography>
+      <Typography
+        variant="h1"
+        sx={{
+          fontSize: Theme.typography.h5.fontSize,
+          fontWeight: Theme.typography.fontWeightMedium,
+          [Theme.breakpoints.up("sm")]: {
+            fontSize: "5rem",
+            fontWeight: Theme.typography.fontWeightBold
+          }
+        }}>
+        {data?.name}
+      </Typography>
       <Description
         className="cursor-default"
         dangerouslySetInnerHTML={{ __html: data.description }}
       />
-      {data.owners.length > 0 && <CollectionOwnerComponent owners={data.owners} />}
+      {data.owners.length > 0 && (
+        <CollectionOwnerComponent owners={data.owners} />
+      )}
       <Duration>24h 60min</Duration>
       <ActionButtonsComponent />
     </Wrapper>
