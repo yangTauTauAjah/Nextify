@@ -38,7 +38,7 @@ export default function Id(props: {
           return (
             <Item
               key={e.id}
-              href={`playlist/${e.id}`}
+              href={`/playlist/${e.id}`}
               title={e.name}
               image={e.images[0].url}
               description={e.description}
