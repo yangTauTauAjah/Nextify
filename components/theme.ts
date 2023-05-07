@@ -124,6 +124,9 @@ export const themeSettings: ThemeOptions = {
     h3: {
       fontFamily: "'Ubuntu', sans-serif"
     },
+    h4: {
+      fontSize: "1rem"
+    },
     subtitle1: {
       fontSize: '0.8rem',
       color: 'rgba(255,255,255,.5)'
