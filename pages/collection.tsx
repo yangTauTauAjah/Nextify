@@ -208,7 +208,7 @@ export default function Collection(
                 <div
                   style={{
                     display: e.images[0]?.url ? "initial" : "flex",
-                    background: "rgba(255, 255, 255, 0.1)"
+                    background: "rgba(45, 45, 45, 1)"
                   }}
                   className="aspect-square h-full overflow-hidden items-center justify-center">
                   {e.images[0]?.url ? (
