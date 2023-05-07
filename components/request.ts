@@ -387,7 +387,7 @@ export async function getSingleBrowseCategories(
   let path = `${BASE_PATH}/browse/categories/${id}`;
 
   let query = new URLSearchParams();
-  if (country) query.append("country", country);
+  query.append("country", country || 'US');
   if (locale) query.append("locale", locale);
   path += `?${query.toString()}`;
 
