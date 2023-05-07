@@ -405,3 +405,8 @@ a:hover::before {
 .white-hover:hover {
   color: white !important;
 }
+
+.scrollbar-hover {
+  width: 10px;
+  background: rgba(0,0,0,0)
+}
