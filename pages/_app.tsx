@@ -36,6 +36,7 @@ interface GlobalState {
 const Theme = createTheme(themeSettings);
 
 function Parent({ global, children }: { global?: GlobalState; children: any }) {
+  console.log('Parent Component')
   const dispatch = useDispatch();
 
   const Theme = useTheme();
@@ -85,6 +86,7 @@ function Parent({ global, children }: { global?: GlobalState; children: any }) {
 }
 
 function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObject[] }) {
+  console.log('Widget component')
   const router = useRouter();
   const [IsPlaying, setIsPlaying] = useState(false);
   const [Timestamp, setTimestamp] = useState(360);
@@ -161,6 +163,7 @@ const App = (
     savedPlaylist?: PlaylistObject[];
   }
 ) => {
+  console.log('App component')
   const { Component, pageProps, user, nowPlaying, savedPlaylist } = ctx;
 
   pageProps.savedPlaylist = savedPlaylist;
