@@ -3,6 +3,7 @@ import { AlbumObject } from "@/components/interfaces";
 import { GetServerSideProps } from "next";
 
 import Button from "@mui/material/Button";
+import Box from "@mui/material/Stack";
 import Stack from "@mui/material/Stack";
 import useTheme from "@mui/material/styles/useTheme";
 

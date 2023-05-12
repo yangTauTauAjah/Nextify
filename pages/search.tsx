@@ -7,13 +7,7 @@ import {
   TrackObject
 } from "@/components/interfaces";
 
-import Box from "@mui/material/Box";
-import InputBase from "@mui/material/InputBase";
-import styled from "@mui/material/styled";
-import alpha from "@mui/material/alpha";
-import useTheme from "@mui/material/useTheme";
-import Typography from "@mui/material/Typography";
-import Stack from "@mui/material/Stack";
+import {useTheme, Box, InputBase, styled, alpha, Typography, Stack} from "@mui/material";
 
 import { GetServerSideProps } from "next";
 import Image from "next/image";

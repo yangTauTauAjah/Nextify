@@ -12,10 +12,7 @@ import {
 } from "@/components/interfaces";
 import { GetServerSideProps } from "next";
 
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
-import useTheme from "@mui/material/styles/useTheme";
+import {styled, Box, Button, Stack, Typography, useTheme} from '@mui/material';
 
 import { useSelector } from "react-redux";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";

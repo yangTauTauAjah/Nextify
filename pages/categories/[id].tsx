@@ -4,7 +4,9 @@ import {
   getSingleBrowseCategories
 } from "@/components/request";
 import { PlaylistObject } from "@/components/interfaces";
+
 import Box from "@mui/material/Box";
+
 import { GetServerSideProps } from "next";
 import Backlight from "@/components/Layout/MainView/Backlight";
 

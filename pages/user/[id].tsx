@@ -12,6 +12,7 @@ export default function Page() {
       className="gap-1 items-center justify-center"
       sx={{
         height: "100vh",
+        [Theme.breakpoints.up("sm")]: {
           height: "100%"
         }
       }}>
