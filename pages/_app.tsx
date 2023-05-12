@@ -1,35 +1,35 @@
-// import "@/styles/globals.css";
-// import { Provider, useDispatch, useSelector } from "react-redux";
-// import { useRouter } from "next/router";
-// import type { AppInitialProps, AppProps } from "next/app";
-// import { themeSettings } from "@/components/theme";
-// import Box from "@mui/material/Box";
-// import {ThemeProvider} from "@mui/material";
-// import {createTheme} from "@mui/material";
-// import {useTheme} from "@mui/material";
-// import { RootState, store } from "@/components/store";
-// import A, { AppContext } from "next/app";
-// import {
-//   getCurrentUserPlaylist,
-//   getCurrentUserProfile,
-//   getCurrentlyPlayingTrack,
-//   getRecentlyPlayedTrack
-// } from "@/components/request";
-// import {
-//   PlaylistObject,
-//   TrackObject,
-//   UserObject
-// } from "@/components/interfaces";
-// import {
-//   playNext,
-//   setNowPlaying,
-//   setUser
-// } from "@/components/stateSlice/SpotifyAPI";
-// import MobileWidget from "@/components/Layout/MobileWidget";
-// import { useEffect, useState } from "react";
-// import NowPlayingBar from "@/components/Layout/NowPlayingBar";
-// import Sidebar from "@/components/Layout/Sidebar";
-// import { parseCookie, timeToSec } from "@/components/functions";
+import "@/styles/globals.css";
+import { Provider, useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import type { AppInitialProps, AppProps } from "next/app";
+import { themeSettings } from "@/components/theme";
+import Box from "@mui/material/Box";
+import {ThemeProvider} from "@mui/material";
+import {createTheme} from "@mui/material";
+import {useTheme} from "@mui/material";
+import { RootState, store } from "@/components/store";
+import A, { AppContext } from "next/app";
+import {
+  getCurrentUserPlaylist,
+  getCurrentUserProfile,
+  getCurrentlyPlayingTrack,
+  getRecentlyPlayedTrack
+} from "@/components/request";
+import {
+  PlaylistObject,
+  TrackObject,
+  UserObject
+} from "@/components/interfaces";
+import {
+  playNext,
+  setNowPlaying,
+  setUser
+} from "@/components/stateSlice/SpotifyAPI";
+import MobileWidget from "@/components/Layout/MobileWidget";
+import { useEffect, useState } from "react";
+import NowPlayingBar from "@/components/Layout/NowPlayingBar";
+import Sidebar from "@/components/Layout/Sidebar";
+import { parseCookie, timeToSec } from "@/components/functions";
 
 // interface GlobalState {
 //   user?: UserObject;
