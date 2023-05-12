@@ -159,17 +159,17 @@ function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObject[] }) {
   );
 }
 
-const App = (/* 
+const App = (
   ctx: AppProps & {
     user?: UserObject;
     nowPlaying: TrackObject;
     savedPlaylist?: PlaylistObject[];
   }
- */) => {
-  /* console.log('App component')
+) => {
+  console.log('App component')
   const { Component, pageProps, user, nowPlaying, savedPlaylist } = ctx;
 
-  pageProps.savedPlaylist = savedPlaylist; */
+  pageProps.savedPlaylist = savedPlaylist;
 
   return (
     <h1>Hello world</h1>
