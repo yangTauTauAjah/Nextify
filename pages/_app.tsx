@@ -29,19 +29,20 @@ const App = (
     savedPlaylist?: PlaylistObject[];
   }
 ) => {
-  console.log("App component");
+
   const { Component, pageProps, user, nowPlaying, savedPlaylist } = ctx;
 
   pageProps.savedPlaylist = savedPlaylist;
 
   return (
     <ThemeProvider theme={Theme}>
-      <Provider store={store}>
+    <h1>Hello world</h1>
+      {/* <Provider store={store}>
         <Parent global={{ user, nowPlaying }}>
           <Component {...pageProps} savedPlaylist={savedPlaylist} />
           <Widget savedPlaylist={savedPlaylist} />
         </Parent>
-      </Provider>
+      </Provider> */}
     </ThemeProvider>
   );
 };
