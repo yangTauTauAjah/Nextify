@@ -1,14 +1,13 @@
 import "@/styles/globals.css";
+import { Provider, useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import type { AppInitialProps, AppProps } from "next/app";
 import { themeSettings } from "@/components/theme";
-
 import Box from "@mui/material/Box";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import createTheme from "@mui/material/styles/createTheme";
 import useTheme from "@mui/material/styles/useTheme";
-
-import type { AppInitialProps, AppProps } from "next/app";
 import { RootState, store } from "@/components/store";
-import { Provider, useDispatch, useSelector } from "react-redux";
 import A, { AppContext } from "next/app";
 import {
   getCurrentUserPlaylist,
@@ -31,7 +30,6 @@ import { useEffect, useState } from "react";
 import NowPlayingBar from "@/components/Layout/NowPlayingBar";
 import Sidebar from "@/components/Layout/Sidebar";
 import { parseCookie, timeToSec } from "@/components/functions";
-import { useRouter } from "next/router";
 
 interface GlobalState {
   user?: UserObject;
@@ -91,7 +89,7 @@ function Parent({ global, children }: { global?: GlobalState; children: any }) {
 }
 
 function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObject[] }) {
-  console.log('Widget component')
+
   const router = useRouter();
   const [IsPlaying, setIsPlaying] = useState(false);
   const [Timestamp, setTimestamp] = useState(360);
