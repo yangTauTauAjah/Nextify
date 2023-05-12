@@ -47,48 +47,48 @@ const App = (
   );
 };
 
-// App.getInitialProps = async (context: AppContext) => {
-//   const {
-//     ctx: { req, res, pathname }
-//   } = context;
+App.getInitialProps = async (context: AppContext) => {
+  const {
+    ctx: { req, res, pathname }
+  } = context;
 
-//   const r: AppInitialProps & {
-//     user?: UserObject;
-//     nowPlaying?: TrackObject;
-//     savedPlaylist?: PlaylistObject[];
-//   } = await A.getInitialProps(context);
+  const r: AppInitialProps & {
+    user?: UserObject;
+    nowPlaying?: TrackObject;
+    savedPlaylist?: PlaylistObject[];
+  } = await A.getInitialProps(context);
 
-//   if (!req?.headers.cookie) return { ...r };
+  if (!req?.headers.cookie) return { ...r };
 
-//   const Cookie = parseCookie(req.headers.cookie);
+  const Cookie = parseCookie(req.headers.cookie);
 
-//   if (!Cookie.refresh_token) return { ...r };
+  if (!Cookie.refresh_token) return { ...r };
 
-//   // const NowPlaying = await getCurrentlyPlayingTrack(Cookie.refresh_token);
-//   const savedPlaylist = await getCurrentUserPlaylist(Cookie.refresh_token);
+  // const NowPlaying = await getCurrentlyPlayingTrack(Cookie.refresh_token);
+  const savedPlaylist = await getCurrentUserPlaylist(Cookie.refresh_token);
 
-//   if (savedPlaylist) r.savedPlaylist = savedPlaylist;
-//   /* if (NowPlaying) {
-//     r.nowPlaying = NowPlaying;
-//   } else { */
-//   const recentlyPlayed = await getRecentlyPlayedTrack(Cookie.refresh_token);
-//   if (recentlyPlayed) r.nowPlaying = recentlyPlayed[0];
-//   // }
+  if (savedPlaylist) r.savedPlaylist = savedPlaylist;
+  /* if (NowPlaying) {
+    r.nowPlaying = NowPlaying;
+  } else { */
+  const recentlyPlayed = await getRecentlyPlayedTrack(Cookie.refresh_token);
+  if (recentlyPlayed) r.nowPlaying = recentlyPlayed[0];
+  // }
 
-//   if (pathname === "/callback") return { ...r };
+  if (pathname === "/callback") return { ...r };
 
-//   res?.setHeader("Set-Cookie", [
-//     `refresh_token=${Cookie.refresh_token}; Max-Age=${timeToSec(
-//       0,
-//       0,
-//       0,
-//       3
-//     )}; Secure; HttpOnly; Path=/`
-//   ]);
+  res?.setHeader("Set-Cookie", [
+    `refresh_token=${Cookie.refresh_token}; Max-Age=${timeToSec(
+      0,
+      0,
+      0,
+      3
+    )}; Secure; HttpOnly; Path=/`
+  ]);
 
-//   r.user = await getCurrentUserProfile(Cookie.refresh_token);
+  r.user = await getCurrentUserProfile(Cookie.refresh_token);
 
-//   return { ...r };
-// };
+  return { ...r };
+};
 
 export default App;
