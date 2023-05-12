@@ -1,34 +1,20 @@
+import { GetServerSideProps } from "next";
+import { useEffect } from "react";
 import {
-  /* MainView, */ Collection,
+  Collection,
   TextComponent
 } from "@/components/Layout/MainView/HomePage";
-import Recent from "@/components/Layout/MainView/HomePage/Recent";
-import MobileWidget from "@/components/Layout/MobileWidget";
-import NowPlayingBar from "@/components/Layout/NowPlayingBar";
-import Sidebar from "@/components/Layout/Sidebar";
 import { forceResize } from "@/components/stateSlice/screenWidth";
-import { RootState } from "@/components/store";
-import { Box, Stack, alpha, styled, useTheme } from "@mui/material";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import TopList from "@/data/categories/toplist.json";
-import Discover from "@/data/featured_6.json";
-import Country from "@/data/categories/Country.json";
-import Indie from "@/data/categories/Indie.json";
-import Gaming from "@/data/categories/Gaming.json";
-import Mood from "@/data/categories/Mood.json";
-import Pop from "@/data/categories/Pop.json";
-import Artist from "@/data/recommendations/artists.json";
+import { Stack, useTheme } from "@mui/material";
+import { useDispatch } from "react-redux";
 import { setActiveLink } from "@/components/stateSlice/SpotifyAPI";
 import { ArtistObject, PlaylistObject } from "@/components/interfaces";
 import {
-  getArtist,
   getCategoryPlaylists,
   getFeaturedPlaylist,
   getSeveralBrowseCategories,
   getUserTopItem
 } from "@/components/request";
-import { GetServerSideProps } from "next";
 import Greeting from "@/components/Layout/MainView/HomePage/Recent/Greeting";
 import Header from "@/components/Layout/MainView/HomePage/Recent/Header";
 import SongList from "@/components/Layout/MainView/HomePage/Recent/SongList";
