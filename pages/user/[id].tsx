@@ -1,4 +1,7 @@
-import { Button, Stack, Typography, useTheme } from "@mui/material";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import Typography from "@mui/material/Typography";
+import useTheme from "@mui/material/styles/useTheme";
 import React from "react";
 
 export default function Page() {
@@ -9,7 +12,6 @@ export default function Page() {
       className="gap-1 items-center justify-center"
       sx={{
         height: "100vh",
-        [Theme.breakpoints.up("sm")]: {
           height: "100%"
         }
       }}>

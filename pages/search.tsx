@@ -6,19 +6,19 @@ import {
   PlaylistObject,
   TrackObject
 } from "@/components/interfaces";
-import {
-  Box,
-  InputBase,
-  styled,
-  alpha,
-  useTheme,
-  Typography,
-  Stack
-} from "@mui/material";
+
+import Box from "@mui/material/Box";
+import InputBase from "@mui/material/InputBase";
+import styled from "@mui/material/styled";
+import alpha from "@mui/material/alpha";
+import useTheme from "@mui/material/useTheme";
+import Typography from "@mui/material/Typography";
+import Stack from "@mui/material/Stack";
+
 import { GetServerSideProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Search as Icon } from "@mui/icons-material";
+import Icon from "@mui/icons-material/Search";
 import { useDispatch } from "react-redux";
 import {
   setActiveLink,

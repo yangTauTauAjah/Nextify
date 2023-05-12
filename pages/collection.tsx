@@ -8,13 +8,14 @@ import {
   ArtistObject,
   PlaylistObject
 } from "@/components/interfaces";
-import {
-  AccountCircle,
-  Add,
-  LibraryMusic,
-  MoreVert,
-  Search
-} from "@mui/icons-material";
+
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import Add from "@mui/icons-material/Add";
+import LibraryMusic from "@mui/icons-material/LibraryMusic";
+import MoreVert from "@mui/icons-material/MoreVert";
+import Search from "@mui/icons-material/Search";
+
+
 import { Button, Fab, Stack, Typography, styled } from "@mui/material";
 import { GetServerSideProps } from "next";
 import Image from "next/image";

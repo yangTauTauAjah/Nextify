@@ -1,6 +1,11 @@
 import "@/styles/globals.css";
 import { themeSettings } from "@/components/theme";
-import { Box, ThemeProvider, createTheme, useTheme } from "@mui/material";
+
+import Box from "@mui/material/Box";
+import ThemeProvider from "@mui/material/styles/ThemeProvider";
+import createTheme from "@mui/material/styles/createTheme";
+import useTheme from "@mui/material/styles/useTheme";
+
 import type { AppInitialProps, AppProps } from "next/app";
 import { RootState, store } from "@/components/store";
 import { Provider, useDispatch, useSelector } from "react-redux";

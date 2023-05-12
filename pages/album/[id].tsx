@@ -1,7 +1,11 @@
 import { getAlbum } from "@/components/request";
 import { AlbumObject } from "@/components/interfaces";
 import { GetServerSideProps } from "next";
-import { Box, Stack, useTheme } from "@mui/material";
+
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import useTheme from "@mui/material/styles/useTheme";
+
 import PlaylistThumbnail from "@/components/Layout/MainView/CollectionDisplay/CollectionThumbnail";
 import PlaylistMetadata from "@/components/Layout/MainView/CollectionDisplay/CollectionMetadata";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";

@@ -8,33 +8,9 @@ import NowPlayingBar from "@/components/Layout/NowPlayingBar";
 import Sidebar from "@/components/Layout/Sidebar";
 import { forceResize } from "@/components/stateSlice/screenWidth";
 import { RootState } from "@/components/store";
-import {
-  Home,
-  Search,
-  LibraryMusic,
-  DownloadForOfflineOutlined,
-  Favorite,
-  FavoriteBorder,
-  PictureInPictureAlt,
-  ChevronLeft,
-  ChevronRight,
-  Shuffle,
-  SkipPrevious,
-  SkipNext,
-  PlayCircle,
-  StopCircle,
-  Repeat,
-  QueueMusic,
-  DevicesOther,
-  VolumeUp,
-  VolumeOff,
-  Launch,
-  GradingRounded
-} from "@mui/icons-material";
 import { Box, Stack, alpha, styled, useTheme } from "@mui/material";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Typography } from "@mui/material/styles/createTypography";
 import TopList from "@/data/categories/toplist.json";
 import Discover from "@/data/featured_6.json";
 import Country from "@/data/categories/Country.json";
@@ -191,16 +167,3 @@ export default function Main(data: IndexPageDataInterface) {
     </Stack>
   );
 }
-
-/* <Parent>
-      {
-        screenWidth !== 'xs' && <>
-          <Sidebar />
-          <NowPlayingBar />
-        </>
-        <MainView /> */
-
-/*
-        {screenWidth === 'xs' && <MobileWidget />
-      <MobileWidget />}
-    </Parent> */
