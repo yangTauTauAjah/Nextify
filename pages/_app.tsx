@@ -166,10 +166,10 @@ const App = (
     savedPlaylist?: PlaylistObject[];
   }
 ) => {
-  console.log('App component')
+  /* console.log('App component')
   const { Component, pageProps, user, nowPlaying, savedPlaylist } = ctx;
 
-  pageProps.savedPlaylist = savedPlaylist;
+  pageProps.savedPlaylist = savedPlaylist; */
 
   return (
     <h1>Hello world</h1>
