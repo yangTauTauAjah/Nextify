@@ -35,15 +35,14 @@ const App = (
   pageProps.savedPlaylist = savedPlaylist;
 
   return (
-    <h1>Hello world</h1>
-    /* <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={Theme}>
       <Provider store={store}>
         <Parent global={{ user, nowPlaying }}>
           <Component {...pageProps} savedPlaylist={savedPlaylist} />
           <Widget savedPlaylist={savedPlaylist} />
         </Parent>
       </Provider>
-    </ThemeProvider> */
+    </ThemeProvider>
   );
 };
 
