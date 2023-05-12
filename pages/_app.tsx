@@ -88,76 +88,76 @@ function Parent({ global, children }: { global?: GlobalState; children: any }) {
   );
 }
 
-// function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObject[] }) {
+function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObject[] }) {
 
-//   const router = useRouter();
-//   const [IsPlaying, setIsPlaying] = useState(false);
-//   const [Timestamp, setTimestamp] = useState(360);
-//   const [Id, setId] = useState<NodeJS.Timer>();
+  const router = useRouter();
+  const [IsPlaying, setIsPlaying] = useState(false);
+  const [Timestamp, setTimestamp] = useState(360);
+  const [Id, setId] = useState<NodeJS.Timer>();
 
-//   const state = useSelector((state: RootState) => state.data);
-//   const dispatch = useDispatch();
+  const state = useSelector((state: RootState) => state.data);
+  const dispatch = useDispatch();
 
-//   useEffect(() => {
-//     if (IsPlaying) {
-//       setId(
-//         setInterval(() => {
-//           setTimestamp((prev) => prev + 1);
-//         }, 1000)
-//       );
-//     }
-//   }, [IsPlaying]);
+  useEffect(() => {
+    if (IsPlaying) {
+      setId(
+        setInterval(() => {
+          setTimestamp((prev) => prev + 1);
+        }, 1000)
+      );
+    }
+  }, [IsPlaying]);
 
-//   useEffect(() => {
-//     if (!IsPlaying) clearInterval(Id);
-//   }, [IsPlaying, Id]);
+  useEffect(() => {
+    if (!IsPlaying) clearInterval(Id);
+  }, [IsPlaying, Id]);
 
-//   useEffect(() => {
-//     if (state.nowPlaying && Timestamp > state.nowPlaying.duration_ms / 1000) {
-//       setTimestamp(0);
-//       setIsPlaying(false);
-//       if (state.playingOrder) {
-//         dispatch(playNext());
-//         setIsPlaying(true);
-//       }
-//     }
-//   }, [
-//     dispatch,
-//     state.collection,
-//     state.playingOrder,
-//     state.nowPlaying,
-//     Timestamp,
-//     IsPlaying
-//   ]);
+  useEffect(() => {
+    if (state.nowPlaying && Timestamp > state.nowPlaying.duration_ms / 1000) {
+      setTimestamp(0);
+      setIsPlaying(false);
+      if (state.playingOrder) {
+        dispatch(playNext());
+        setIsPlaying(true);
+      }
+    }
+  }, [
+    dispatch,
+    state.collection,
+    state.playingOrder,
+    state.nowPlaying,
+    Timestamp,
+    IsPlaying
+  ]);
 
-//   useEffect(() => {
-//     if (state.playingOrder) setTimestamp(0);
-//   }, [state.playingOrder]);
+  useEffect(() => {
+    if (state.playingOrder) setTimestamp(0);
+  }, [state.playingOrder]);
 
-//   return (
-//     <>
-//       <MobileWidget
-//         Timestamp={Timestamp}
-//         setTimestamp={setTimestamp}
-//         IsPlaying={IsPlaying}
-//         incrementTimestamp={setIsPlaying}
-//       />
-//       <Sidebar
-//         currentPlaylistId={router.query.id?.toString()}
-//         list={(savedPlaylist || []).map((e) => ({
-//           id: e.id,
-//           text: e.name
-//         }))}
-//       />
-//       <NowPlayingBar
-//         Timestamp={Timestamp}
-//         setTimestamp={setTimestamp}
-//         IsPlaying={IsPlaying}
-//         incrementTimestamp={setIsPlaying}
-//       />
-//     </>
-//   );
-// }
+  return (
+    <>
+      <MobileWidget
+        Timestamp={Timestamp}
+        setTimestamp={setTimestamp}
+        IsPlaying={IsPlaying}
+        incrementTimestamp={setIsPlaying}
+      />
+      <Sidebar
+        currentPlaylistId={router.query.id?.toString()}
+        list={(savedPlaylist || []).map((e) => ({
+          id: e.id,
+          text: e.name
+        }))}
+      />
+      <NowPlayingBar
+        Timestamp={Timestamp}
+        setTimestamp={setTimestamp}
+        IsPlaying={IsPlaying}
+        incrementTimestamp={setIsPlaying}
+      />
+    </>
+  );
+}
 
 const App = (/* 
   ctx: AppProps & {
