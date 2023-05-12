@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import useTheme from "@mui/material/styles/useTheme";
+import {useTheme} from "@mui/material";
 import { useDispatch } from "react-redux";
 import Song from "./Track";
 import {

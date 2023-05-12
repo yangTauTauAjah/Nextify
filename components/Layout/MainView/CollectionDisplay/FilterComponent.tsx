@@ -7,7 +7,7 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Stack from "@mui/material/Stack";
-import { alpha, styled } from "@mui/material/styles";
+import { alpha, styled } from "@mui/material";
 import React, { useState } from "react";
 
 function SimpleDialog({

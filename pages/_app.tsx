@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import type { AppInitialProps, AppProps } from "next/app";
 import { themeSettings } from "@/components/theme";
 import Box from "@mui/material/Box";
-import ThemeProvider from "@mui/material/styles/ThemeProvider";
-import createTheme from "@mui/material/styles/createTheme";
-import useTheme from "@mui/material/styles/useTheme";
+import {ThemeProvider} from "@mui/material";
+import {createTheme} from "@mui/material";
+import {useTheme} from "@mui/material";
 import { RootState, store } from "@/components/store";
 import A, { AppContext } from "next/app";
 import {

@@ -5,7 +5,7 @@ import { GetServerSideProps } from "next";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
-import useTheme from "@mui/material/styles/useTheme";
+import {useTheme} from "@mui/material";
 
 import CollectionThumbnail from "@/components/Layout/MainView/CollectionDisplay/CollectionThumbnail";
 import CollectionMetadata from "@/components/Layout/MainView/CollectionDisplay/CollectionMetadata";

@@ -3,7 +3,7 @@ import React from "react";
 import Recent from "./Recent";
 import Section from "./Section";
 import Item from "./Section/Collection/Item";
-import { Typography } from "@mui/material/styles/createTypography";
+import { Typography } from "@mui/material";
 import TopList from "@/data/categories/toplist.json";
 import Discover from "@/data/featured_6.json";
 import Country from "@/data/categories/Country.json";

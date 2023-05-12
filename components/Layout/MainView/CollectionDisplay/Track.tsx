@@ -4,7 +4,7 @@ import Link from "next/link";
 import MoreVert from "@mui/icons-material/MoreVert";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import { styled } from "@mui/material/styles";
+import { styled } from "@mui/material";
 
 
 const Wrapper = styled(Box)({
