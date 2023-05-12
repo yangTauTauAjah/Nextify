@@ -31,12 +31,12 @@ import NowPlayingBar from "@/components/Layout/NowPlayingBar";
 import Sidebar from "@/components/Layout/Sidebar";
 import { parseCookie, timeToSec } from "@/components/functions";
 
-// interface GlobalState {
-//   user?: UserObject;
-//   nowPlaying?: TrackObject;
-// }
+interface GlobalState {
+  user?: UserObject;
+  nowPlaying?: TrackObject;
+}
 
-// const Theme = createTheme(themeSettings);
+const Theme = createTheme(themeSettings);
 
 // function Parent({ global, children }: { global?: GlobalState; children: any }) {
 //   console.log('Parent Component')
