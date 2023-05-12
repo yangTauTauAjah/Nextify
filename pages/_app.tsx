@@ -36,13 +36,13 @@ const App = (
 
   return (
     <ThemeProvider theme={Theme}>
-    <h1>Hello world</h1>
-      {/* <Provider store={store}>
-        <Parent global={{ user, nowPlaying }}>
+      <Provider store={store}>
+        <h1>Hello world</h1>
+        {/* <Parent global={{ user, nowPlaying }}>
           <Component {...pageProps} savedPlaylist={savedPlaylist} />
           <Widget savedPlaylist={savedPlaylist} />
-        </Parent>
-      </Provider> */}
+        </Parent> */}
+      </Provider>
     </ThemeProvider>
   );
 };
