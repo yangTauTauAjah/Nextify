@@ -156,5 +156,5 @@
 
 
 export default function Index() {
-  return (<h1>Hello world</h1>)
+  return (<h1>Hello world, this is main page</h1>)
 }
