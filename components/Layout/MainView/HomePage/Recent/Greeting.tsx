@@ -1,5 +1,5 @@
+import LoginAlert from "@/components/Layout/LoginAlert";
 import { RootState } from "@/components/store";
-import { LoginAlert } from "@/pages/collection";
 import History from "@mui/icons-material/History";
 import NotificationsNone from "@mui/icons-material/NotificationsNone";
 import Settings from "@mui/icons-material/Settings";
