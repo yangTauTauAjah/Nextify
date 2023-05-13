@@ -38,9 +38,8 @@ const App = (
     <ThemeProvider theme={Theme}>
       <Provider store={store}>
         <Parent global={{ user, nowPlaying }}>
-          <h1>Hello world</h1>
-          {/* <Component {...pageProps} savedPlaylist={savedPlaylist} /> */}
-          <Widget savedPlaylist={savedPlaylist} />
+          <Component {...pageProps} savedPlaylist={savedPlaylist} />
+          {/* <Widget savedPlaylist={savedPlaylist} /> */}
         </Parent>
       </Provider>
     </ThemeProvider>
