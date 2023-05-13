@@ -7,7 +7,7 @@ import {
   TrackObject
 } from "@/components/interfaces";
 
-import {useTheme, Box, InputBase, styled, alpha, Typography, Stack} from "@mui/material";
+import {useTheme, Box, InputBase, styled, alpha, Stack} from "@mui/material";
 
 import { GetServerSideProps } from "next";
 import Image from "next/image";
@@ -20,10 +20,7 @@ import {
 } from "@/components/stateSlice/SpotifyAPI";
 import { KeyboardEvent, useEffect } from "react";
 import Backlight from "@/components/Layout/MainView/Backlight";
-import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
-import Song, {
-  ArtistNameComponent
-} from "@/components/Layout/MainView/CollectionDisplay/Track";
+import Song from "@/components/Layout/MainView/CollectionDisplay/Track";
 import {
   Collection,
   TextComponent
