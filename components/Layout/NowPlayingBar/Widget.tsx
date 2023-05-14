@@ -1,5 +1,6 @@
 import { RootState } from "@/components/store";
-import { FavoriteBorder, PictureInPictureAlt } from "@mui/icons-material";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import PictureInPictureAlt from "@mui/icons-material/PictureInPictureAlt";
 import { Box, Stack, useTheme } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
