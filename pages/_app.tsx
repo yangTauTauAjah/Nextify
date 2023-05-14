@@ -18,7 +18,7 @@ import {
 } from "@/components/interfaces";
 import { parseCookie, timeToSec } from "@/components/functions";
 import Parent from "@/components/Layout/Parent";
-// import Widget from "@/components/Layout/Widget";
+import Widget from "@/components/Layout/Widget";
 
 const Theme = createTheme(themeSettings);
 
@@ -39,7 +39,7 @@ const App = (
       <Provider store={store}>
         <Parent global={{ user, nowPlaying }}>
           <Component {...pageProps} savedPlaylist={savedPlaylist} />
-          {/* <Widget savedPlaylist={savedPlaylist} /> */}
+          <Widget savedPlaylist={savedPlaylist} />
         </Parent>
       </Provider>
     </ThemeProvider>
