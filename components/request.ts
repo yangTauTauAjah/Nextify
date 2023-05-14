@@ -13,7 +13,7 @@ import {
 } from "./interfaces";
 
 const BASE_PATH = "https://api.spotify.com/v1";
-export const REDIRECT_URI = "http://localhost:3000/callback";
+export const REDIRECT_URI = `${process.env.HOST}/callback`;
 
 export async function getAccessToken(): Promise<
   BearerToken | ErrorRequestInterface

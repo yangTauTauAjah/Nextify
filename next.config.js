@@ -1,3 +1,5 @@
+const REDIRECT_URI = `${process.env.HOST}/callback`;
+
 const access_scope = [
   "playlist-read-private",
   "user-modify-playback-state",
@@ -9,7 +11,6 @@ const access_scope = [
   "user-read-recently-played",
   "user-top-read"
 ];
-const REDIRECT_URI = `${process.env.HOST}/callback`;
 
 const AUTH_URL = `
 https://accounts.spotify.com/authorize
