@@ -142,15 +142,15 @@ a:hover::before {
 }
 
 .absolute {
-  position: absolute !important;
+  position: absolute;
 }
 
 .aspect-square {
-  aspect-ratio: 1 !important;
+  aspect-ratio: 1;
 }
 
 .block {
-  display: block !important;
+  display: block;
 }
 
 .bottom-0 {
@@ -158,252 +158,252 @@ a:hover::before {
 }
 
 .cursor-pointer {
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 .cursor-default {
-  cursor: default !important;
+  cursor: default;
 }
 
 .fixed {
-  position: fixed !important;
+  position: fixed;
 }
 
 .flex {
-  display: flex !important;
+  display: flex;
 }
 
 .flex-row {
-  flex-direction: row !important;
+  flex-direction: row;
 }
 
 .flex-col {
-  flex-direction: column !important;
+  flex-direction: column;
 }
 
 .gap-1\/2 {
-  gap: 0.5rem !important;
+  gap: 0.5rem;
 }
 
 .gap-1 {
-  gap: 1rem !important;
+  gap: 1rem;
 }
 
 .gap-2 {
-  gap: 2rem !important;
+  gap: 2rem;
 }
 
 .gap-3 {
-  gap: 3rem !important;
+  gap: 3rem;
 }
 
 .grid {
-  display: grid !important;
+  display: grid;
 }
 
 .grow-0 {
-  flex-grow: 0 !important;
+  flex-grow: 0;
 }
 
 .grow-1 {
-  flex-grow: 1 !important;
+  flex-grow: 1;
 }
 
 .h-full {
-  height: 100% !important;
+  height: 100%;
 }
 
 .h-1 {
-  height: 1rem !important;
+  height: 1rem;
 }
 
 .h-2 {
-  height: 2rem !important;
+  height: 2rem;
 }
 
 .h-3 {
-  height: 3rem !important;
+  height: 3rem;
 }
 
 .h-4 {
-  height: 4rem !important;
+  height: 4rem;
 }
 
 .h-5 {
-  height: 5rem !important;
+  height: 5rem;
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 
 .hover\:pointer:hover {
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 .inline {
-  display: inline !important;
+  display: inline;
 }
 
 .inline-block {
-  display: inline-block !important;
+  display: inline-block;
 }
 
 .items-start {
-  align-items: flex-start !important;
+  align-items: flex-start;
 }
 
 .items-center {
-  align-items: center !important;
+  align-items: center;
 }
 
 .items-end {
-  align-items: flex-end !important;
+  align-items: flex-end;
 }
 
 .justify-center {
-  justify-content: center !important;
+  justify-content: center;
 }
 
 .justify-between {
-  justify-content: space-between !important;
+  justify-content: space-between;
 }
 
 .justify-around {
-  justify-content: space-around !important;
+  justify-content: space-around;
 }
 
 .left-0 {
-  left: 0 !important;
+  left: 0;
 }
 
 .m-1 {
-  margin: 1rem !important;
+  margin: 1rem;
 }
 
 .mx-auto {
-  margin-inline: auto !important;
+  margin-inline: auto;
 }
 
 .mr-auto {
-  margin-right: auto !important;
+  margin-right: auto;
 }
 
 .ml-auto {
-  margin-left: auto !important;
+  margin-left: auto;
 }
 
 .mx-1 {
-  margin-inline: 1rem !important;
+  margin-inline: 1rem;
 }
 
 .my-1 {
-  margin-block: 1rem !important;
+  margin-block: 1rem;
 }
 
 .my-2 {
-  margin-block: 2rem !important;
+  margin-block: 2rem;
 }
 
 .mt-1 {
-  margin-top: 1rem !important;
+  margin-top: 1rem;
 }
 
 .object-contain {
-  object-fit: contain !important;
+  object-fit: contain;
 }
 
 .object-cover {
-  object-fit: cover !important;
+  object-fit: cover;
 }
 
 .object-fill {
-  object-fit: fill !important;
+  object-fit: fill;
 }
 
 .overflow-hidden {
-  overflow: hidden !important;
+  overflow: hidden;
 }
 
 .p-1 {
-  padding: 1rem !important;
+  padding: 1rem;
 }
 
 .pb-1 {
-  padding-bottom: 1rem !important;
+  padding-bottom: 1rem;
 }
 
 .pb-10 {
-  padding-bottom: 10rem !important;
+  padding-bottom: 10rem;
 }
 
 .px-1 {
-  padding-inline: 1rem !important;
+  padding-inline: 1rem;
 }
 
 .px-1\/2 {
-  padding-inline: 0.5rem !important;
+  padding-inline: 0.5rem;
 }
 
 .py-1 {
-  padding-block: 1rem !important;
+  padding-block: 1rem;
 }
 
 .py-1\/2 {
-  padding-block: 0.5rem !important;
+  padding-block: 0.5rem;
 }
 
 .relative {
-  position: relative !important;
+  position: relative;
 }
 
 .rounded-full {
-  border-radius: 100% !important;
+  border-radius: 100%;
 }
 
 .sticky {
-  position: sticky !important;
+  position: sticky;
 }
 
 .shrink-0 {
-  flex-shrink: 0 !important;
+  flex-shrink: 0;
 }
 
 .shrink-1 {
-  flex-shrink: 1 !important;
+  flex-shrink: 1;
 }
 
 .top-0 {
-  top: 0 !important;
+  top: 0;
 }
 
 .w-full {
-  width: 100% !important;
+  width: 100%;
 }
 
 .w-1 {
-  width: 1rem !important;
+  width: 1rem;
 }
 
 .w-2 {
-  width: 2rem !important;
+  width: 2rem;
 }
 
 .w-3 {
-  width: 3rem !important;
+  width: 3rem;
 }
 
 .w-4 {
-  width: 4rem !important;
+  width: 4rem;
 }
 
 .w-5 {
-  width: 5rem !important;
+  width: 5rem;
 }
 
 .white-hover {
   color: #ffffff80 !important;
-  transition: 100ms color ease-in-out !important;
+  transition: 100ms color ease-in-out;
 }
 
 .white-hover:hover {
@@ -411,6 +411,6 @@ a:hover::before {
 }
 
 .scrollbar-hover {
-  width: 10px !important;
+  width: 10px;
   background: rgba(0,0,0,0)
 }

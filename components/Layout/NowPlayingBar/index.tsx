@@ -18,8 +18,9 @@ export default function NowPlayingBar({
 
   return (
     <Box
-    className='hidden relative w-full mx-auto px-1 gap-3 justify-center items-center'
+    className='relative w-full mx-auto px-1 gap-3 justify-center items-center'
       sx={{
+        display: 'none',
         padding: "10px",
         gridArea: "now-playing-bar",
         height: "90px",
