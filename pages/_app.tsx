@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import Head from "next/head";
 import { Provider } from "react-redux";
 import type { AppInitialProps, AppProps } from "next/app";
 import { themeSettings } from "@/components/theme";
@@ -29,7 +30,6 @@ const App = (
     savedPlaylist?: PlaylistObject[];
   }
 ) => {
-
   const { Component, pageProps, user, nowPlaying, savedPlaylist } = ctx;
 
   pageProps.savedPlaylist = savedPlaylist;
@@ -37,6 +37,11 @@ const App = (
   return (
     <ThemeProvider theme={Theme}>
       <Provider store={store}>
+        <Head>
+          <title>Nextify - Spotify Clone</title>
+          <meta name="description" content="A next-js-powered spotify clone" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Parent global={{ user, nowPlaying }}>
           <Component {...pageProps} savedPlaylist={savedPlaylist} />
           <Widget savedPlaylist={savedPlaylist} />

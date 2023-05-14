@@ -1,7 +1,7 @@
 import Home from "@mui/icons-material/Home";
 import LibraryMusic from "@mui/icons-material/LibraryMusic";
 import Search from "@mui/icons-material/Search";
-import SpotifyLogo from "../../SpotifyLogo";
+import NextifyLogo from "../../NextifyLogo";
 import { Box, useTheme } from "@mui/material";
 import NavLink from "./Navlink";
 import PlayLists from "./Playlists";
@@ -129,7 +129,7 @@ const Logo = () => {
           display: "unset"
         }
       }}>
-      <SpotifyLogo fill="#ffffff" />
+      <NextifyLogo fill="#ffffff" />
     </Box>
   );
 };
