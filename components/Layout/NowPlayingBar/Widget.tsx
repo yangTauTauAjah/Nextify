@@ -58,9 +58,9 @@ export default function Widget() {
             return acc;
           }, [])}
         </div>
-      </Box>*/}
+      </Box>
       <FavoriteBorder className="white-hover" />
-      <PictureInPictureAlt className="white-hover" />
+      <PictureInPictureAlt className="white-hover" />*/}
     </Box>
   );
 }
