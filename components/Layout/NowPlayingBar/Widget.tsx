@@ -15,7 +15,7 @@ export default function Widget() {
       sx={{
         width: "33.33%"
       }}>
-      <Box
+      {/*<Box
         sx={{
           borderRadius: "5px",
           overflow: "hidden",
@@ -58,7 +58,7 @@ export default function Widget() {
             return acc;
           }, [])}
         </div>
-      </Box>
+      </Box>*/}
       <FavoriteBorder className="white-hover" />
       <PictureInPictureAlt className="white-hover" />
     </Box>
