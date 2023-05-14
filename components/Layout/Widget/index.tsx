@@ -63,13 +63,13 @@ export default function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObje
         IsPlaying={IsPlaying}
         incrementTimestamp={setIsPlaying}
       /> */}
-      <Sidebar
+      {/* <Sidebar
         currentPlaylistId={router.query.id?.toString()}
         list={(savedPlaylist || []).map((e) => ({
           id: e.id,
           text: e.name
         }))}
-      />
+      /> */}
       {/* <NowPlayingBar
         Timestamp={Timestamp}
         setTimestamp={setTimestamp}
