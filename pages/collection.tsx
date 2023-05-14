@@ -14,7 +14,14 @@ import Add from "@mui/icons-material/Add";
 import LibraryMusic from "@mui/icons-material/LibraryMusic";
 import MoreVert from "@mui/icons-material/MoreVert";
 import Search from "@mui/icons-material/Search";
-import { Button, Fab, Stack, Typography, styled } from "@mui/material";
+import {
+  Button,
+  Fab,
+  Stack,
+  Typography,
+  styled,
+  useTheme
+} from "@mui/material";
 import { GetServerSideProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,6 +70,7 @@ const ExtendedFab = styled(Fab)({
 
 function GoToLoginPrompt() {
   const [open, setOpen] = React.useState(false);
+  const Theme = useTheme();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -75,7 +83,10 @@ function GoToLoginPrompt() {
   return (
     <Stack
       className="gap-2 items-center justify-center"
-      sx={{ height: "100vh" }}>
+      sx={{
+        height: "100%",
+        [Theme.breakpoints.up("sm")]: { height: "100vh" }
+      }}>
       <LoginAlert open={open} handleClose={handleClose} />
       <Typography
         component="h3"
