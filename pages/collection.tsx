@@ -84,8 +84,8 @@ function GoToLoginPrompt() {
     <Stack
       className="gap-2 items-center justify-center"
       sx={{
-        height: "100%",
-        [Theme.breakpoints.up("sm")]: { height: "100vh" }
+        height: "100vh",
+        [Theme.breakpoints.up("sm")]: { height: "100%" }
       }}>
       <LoginAlert open={open} handleClose={handleClose} />
       <Typography
