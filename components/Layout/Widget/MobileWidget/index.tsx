@@ -13,22 +13,22 @@ import { RootState } from "@/components/store";
 const link = [
   {
     href: "/",
-    icon: <HomeRounded sx={{ fontSize: "6vh" }} />,
+    icon: <HomeRounded sx={{ fontSize: "10vw" }} />,
     text: "Home"
   },
   {
     href: "/search",
-    icon: <SearchRounded sx={{ fontSize: "6vh" }} />,
+    icon: <SearchRounded sx={{ fontSize: "10vw" }} />,
     text: "Search"
   },
   {
     href: "/collection",
-    icon: <LibraryMusicRounded sx={{ fontSize: "6vh" }} />,
+    icon: <LibraryMusicRounded sx={{ fontSize: "10vw" }} />,
     text: "Your library"
   },
   {
-    href: "/",
-    icon: <DownloadForOfflineRounded sx={{ fontSize: "6vh" }} />,
+    href: "https://play.google.com/store/apps/details?id=com.spotify.music",
+    icon: <DownloadForOfflineRounded sx={{ fontSize: "10vw" }} />,
     text: "Install App"
   }
 ];
