@@ -18,25 +18,18 @@ export default function NowPlayingBar({
 
   return (
     <Box
+    className='hidden relative w-full mx-auto px-1 gap-3 justify-center items-center'
       sx={{
-        display: 'none',
-        position: "relative",
-        width: "100%",
         padding: "10px",
-        marginInline: "auto",
         gridArea: "now-playing-bar",
-        gap: "3rem",
-        justifyContent: "center",
-        alignItems: "center",
         height: "90px",
         background: "#181818",
         borderTop: "solid 1px #222222",
-        paddingInline: "1rem",
         [Theme.breakpoints.up('sm')]: {
           display: "flex"
         }
       }}>
-      <Widget />
+      {/* <Widget /> */}
       <PlayerControl
         Timestamp={Timestamp}
         setTimestamp={setTimestamp}
