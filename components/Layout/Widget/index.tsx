@@ -14,12 +14,12 @@ export default function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObje
   const router = useRouter();
   const [IsPlaying, setIsPlaying] = useState(false);
   const [Timestamp, setTimestamp] = useState(360);
-  /* const [Id, setId] = useState<NodeJS.Timer>();
+  // const [Id, setId] = useState<NodeJS.Timer>();
 
   const state = useSelector((state: RootState) => state.data);
   const dispatch = useDispatch();
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (IsPlaying) {
       setId(
         setInterval(() => {
@@ -31,7 +31,7 @@ export default function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObje
 
   useEffect(() => {
     if (!IsPlaying) clearInterval(Id);
-  }, [IsPlaying, Id]);
+  }, [IsPlaying, Id]); */
 
   useEffect(() => {
     if (state.nowPlaying && Timestamp > state.nowPlaying.duration_ms / 1000) {
@@ -53,7 +53,7 @@ export default function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObje
 
   useEffect(() => {
     if (state.playingOrder) setTimestamp(0);
-  }, [state.playingOrder]); */
+  }, [state.playingOrder]);
 
   return (
     <>
