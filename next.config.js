@@ -9,7 +9,7 @@ const access_scope = [
   "user-read-recently-played",
   "user-top-read"
 ];
-const REDIRECT_URI = "http://localhost:3000/callback";
+const REDIRECT_URI = `${process.env.HOST}/callback`;
 
 const AUTH_URL = `
 https://accounts.spotify.com/authorize
