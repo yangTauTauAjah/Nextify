@@ -35,8 +35,11 @@ interface IndexPageDataInterface {
 export const getServerSideProps: GetServerSideProps<
   IndexPageDataInterface
 > = async ({ req }) => {
-  const categories = await getSeveralBrowseCategories("US", "en-US", 8);
-  const featuredPlaylist = await getFeaturedPlaylist("US", "en-US");
+  const categories: any[] = /* await getSeveralBrowseCategories("US", "en-US", 8) */[];
+  const featuredPlaylist = /* await getFeaturedPlaylist("US", "en-US") */{
+    message: 'test',
+    playlists: []
+  };
   let artists = null;
   if (req.cookies.refresh_token)
     artists = ((await getUserTopItem(req.cookies.refresh_token, "artists")) ||
