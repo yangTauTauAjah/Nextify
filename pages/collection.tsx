@@ -8,14 +8,20 @@ import {
   ArtistObject,
   PlaylistObject
 } from "@/components/interfaces";
+
+import AccountCircle from "@mui/icons-material/AccountCircle";
+import Add from "@mui/icons-material/Add";
+import LibraryMusic from "@mui/icons-material/LibraryMusic";
+import MoreVert from "@mui/icons-material/MoreVert";
+import Search from "@mui/icons-material/Search";
 import {
-  AccountCircle,
-  Add,
-  LibraryMusic,
-  MoreVert,
-  Search
-} from "@mui/icons-material";
-import { Button, Fab, Stack, Typography, styled } from "@mui/material";
+  Button,
+  Fab,
+  Stack,
+  Typography,
+  styled,
+  useTheme
+} from "@mui/material";
 import { GetServerSideProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,58 +30,11 @@ import { RootState } from "@/components/store";
 import React, { useEffect } from "react";
 import { setActiveLink } from "@/components/stateSlice/SpotifyAPI";
 import { parseCookie } from "@/components/functions";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import { useRouter } from "next/router";
+import LoginAlert from "@/components/Layout/LoginAlert";
 
 interface LibraryDataInterface {
   albums: AlbumObject[];
   artists: ArtistObject[];
-}
-
-export function LoginAlert({
-  open,
-  handleClose
-}: {
-  open: boolean;
-  handleClose?: () => any;
-}) {
-  const router = useRouter();
-  return (
-    <Dialog
-      open={open}
-      onClose={handleClose}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description">
-      <DialogTitle id="alert-dialog-title">{"Warning!"}</DialogTitle>
-      <DialogContent>
-        <DialogContentText id="alert-dialog-description">
-          In order for this application to work properly, we need to collect
-          your Spotify data from the official Spotify API. And to do so, you
-          would later need to accept{" "}
-          <a href="https://developer.spotify.com/terms">
-            Spotify Developer Terms of Service
-          </a>
-          . Are you sure you want to proceed to login?
-        </DialogContentText>
-      </DialogContent>
-      <DialogActions>
-        <Button variant="outlined" onClick={handleClose} autoFocus>
-          Go Back
-        </Button>
-        <Button
-          variant="contained"
-          onClick={() => {
-            router.push("/login");
-          }}>
-          Proceed To Login
-        </Button>
-      </DialogActions>
-    </Dialog>
-  );
 }
 
 export const getServerSideProps: GetServerSideProps<
@@ -111,6 +70,7 @@ const ExtendedFab = styled(Fab)({
 
 function GoToLoginPrompt() {
   const [open, setOpen] = React.useState(false);
+  const Theme = useTheme();
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -123,7 +83,10 @@ function GoToLoginPrompt() {
   return (
     <Stack
       className="gap-2 items-center justify-center"
-      sx={{ height: "100vh" }}>
+      sx={{
+        height: "100%",
+        [Theme.breakpoints.up("sm")]: { height: "100vh" }
+      }}>
       <LoginAlert open={open} handleClose={handleClose} />
       <Typography
         component="h3"

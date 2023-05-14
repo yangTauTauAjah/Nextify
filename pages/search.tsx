@@ -6,19 +6,13 @@ import {
   PlaylistObject,
   TrackObject
 } from "@/components/interfaces";
-import {
-  Box,
-  InputBase,
-  styled,
-  alpha,
-  useTheme,
-  Typography,
-  Stack
-} from "@mui/material";
+
+import {useTheme, Box, InputBase, styled, alpha, Stack} from "@mui/material";
+
 import { GetServerSideProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Search as Icon } from "@mui/icons-material";
+import Icon from "@mui/icons-material/Search";
 import { useDispatch } from "react-redux";
 import {
   setActiveLink,
@@ -26,10 +20,7 @@ import {
 } from "@/components/stateSlice/SpotifyAPI";
 import { KeyboardEvent, useEffect } from "react";
 import Backlight from "@/components/Layout/MainView/Backlight";
-import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
-import Song, {
-  ArtistNameComponent
-} from "@/components/Layout/MainView/CollectionDisplay/Track";
+import Song from "@/components/Layout/MainView/CollectionDisplay/Track";
 import {
   Collection,
   TextComponent

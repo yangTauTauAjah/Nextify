@@ -1,4 +1,6 @@
-import { Box, Stack, useTheme } from "@mui/material";
+import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
+import {useTheme} from "@mui/material";
 import { useDispatch } from "react-redux";
 import Song from "./Track";
 import {
@@ -7,7 +9,8 @@ import {
   setPlayingOrder
 } from "@/components/stateSlice/SpotifyAPI";
 import { AlbumObject, PlaylistObject } from "@/components/interfaces";
-import { MoreHoriz, PlayCircle } from "@mui/icons-material";
+import PlayCircle from "@mui/icons-material/PlayCircle";
+import MoreHoriz from "@mui/icons-material/MoreHoriz";
 
 const Tracks = ({
   collection,

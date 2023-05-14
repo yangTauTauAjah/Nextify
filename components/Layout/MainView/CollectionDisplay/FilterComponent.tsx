@@ -1,16 +1,13 @@
 import { Search } from "@mui/icons-material";
-import {
-  Dialog,
-  DialogTitle,
-  InputBase,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  Stack,
-  alpha,
-  styled
-} from "@mui/material";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import InputBase from "@mui/material/InputBase";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Stack from "@mui/material/Stack";
+import { alpha, styled } from "@mui/material";
 import React, { useState } from "react";
 
 function SimpleDialog({

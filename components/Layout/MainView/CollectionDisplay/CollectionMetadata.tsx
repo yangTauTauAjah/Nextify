@@ -1,4 +1,3 @@
-import { Box, Stack, Typography, styled } from "@mui/material";
 import {
   AccountCircle,
   DownloadRounded,
@@ -16,7 +15,7 @@ import {
   TrackObject,
   UserObject
 } from "@/components/interfaces";
-import { useTheme } from "@mui/material";
+import { Box, Stack, Typography, styled, useTheme } from "@mui/material";
 
 interface CollectionOwnerComponentInterface {
   type: "artist" | "user";

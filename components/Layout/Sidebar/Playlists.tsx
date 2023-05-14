@@ -1,4 +1,4 @@
-import { PlaylistObject } from "@/components/interfaces";
+// import { PlaylistObject } from "@/components/interfaces";
 import { Box, Typography, useTheme } from "@mui/material";
 import Link from "next/link";
 

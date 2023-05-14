@@ -1,13 +1,11 @@
 import React from "react";
-import {
-  Shuffle,
-  SkipPrevious,
-  SkipNext,
-  PlayCircle,
-  Repeat,
-  PauseCircleRounded
-} from "@mui/icons-material";
-import { Box, Slider, Stack, Typography, useTheme } from "@mui/material";
+import Shuffle from "@mui/icons-material/Shuffle";
+import SkipPrevious from "@mui/icons-material/SkipPrevious";
+import SkipNext from "@mui/icons-material/SkipNext";
+import PlayCircle from "@mui/icons-material/PlayCircle";
+import Repeat from "@mui/icons-material/Repeat";
+import PauseCircleRounded from "@mui/icons-material/PauseCircleRounded";
+import { Box, Slider,Typography, useTheme } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/components/store";
 import { playNext, playPrevious } from "@/components/stateSlice/SpotifyAPI";

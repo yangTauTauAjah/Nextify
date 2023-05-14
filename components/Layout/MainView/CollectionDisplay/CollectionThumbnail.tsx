@@ -1,6 +1,7 @@
 import { AlbumObject, PlaylistObject } from "@/components/interfaces";
-import { LibraryMusic } from "@mui/icons-material";
-import { Box, styled } from "@mui/material";
+import LibraryMusic from "@mui/icons-material/LibraryMusic";
+import Box from "@mui/material/Box";
+import {styled} from "@mui/material";
 import Image from "next/image";
 
 const Wrapper = styled(Box)(({ theme }) => ({

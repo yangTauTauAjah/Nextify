@@ -1,7 +1,9 @@
+import LoginAlert from "@/components/Layout/LoginAlert";
 import { RootState } from "@/components/store";
-import { LoginAlert } from "@/pages/collection";
-import { History, NotificationsNone, Settings } from "@mui/icons-material";
-import { Button } from "@mui/material";
+import History from "@mui/icons-material/History";
+import NotificationsNone from "@mui/icons-material/NotificationsNone";
+import Settings from "@mui/icons-material/Settings";
+import Button from "@mui/material/Button";
 import React from "react";
 import { useSelector } from "react-redux";
 

@@ -1,10 +1,11 @@
+import { GetServerSideProps } from "next";
+import { useEffect } from "react";
 import {
   Collection,
   TextComponent
 } from "@/components/Layout/MainView/HomePage";
 import { forceResize } from "@/components/stateSlice/screenWidth";
 import { Stack, useTheme } from "@mui/material";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { setActiveLink } from "@/components/stateSlice/SpotifyAPI";
 import { ArtistObject, PlaylistObject } from "@/components/interfaces";
@@ -14,7 +15,6 @@ import {
   getSeveralBrowseCategories,
   getUserTopItem
 } from "@/components/request";
-import { GetServerSideProps } from "next";
 import Greeting from "@/components/Layout/MainView/HomePage/Recent/Greeting";
 import Header from "@/components/Layout/MainView/HomePage/Recent/Header";
 import SongList from "@/components/Layout/MainView/HomePage/Recent/SongList";

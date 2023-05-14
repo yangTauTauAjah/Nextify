@@ -40,7 +40,9 @@ export async function getAccessToken(
         },
         body: `code=${code}&grant_type=authorization_code&redirect_uri=${REDIRECT_URI}`
       }
-    ).then((data) => data.json());
+    )
+      .then((data) => data.json())
+      .catch((err) => console.log(err));
 
     return data;
   } else {
@@ -53,7 +55,9 @@ export async function getAccessToken(
         },
         body: `grant_type=client_credentials&client_id=${process.env.CLIENT_ID}&client_secret=${process.env.CLIENT_SECRET}`
       }
-    ).then((data) => data.json());
+    )
+      .then((data) => data.json())
+      .catch((err) => console.log(err));
     return data;
   }
 }
@@ -75,7 +79,9 @@ async function refreshToken(
       },
       body: `grant_type=refresh_token&refresh_token=${refresh_token}&client_secret=${process.env.CLIENT_SECRET}`
     }
-  ).then((data) => data.json());
+  )
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
 
   return data;
 }
@@ -86,7 +92,9 @@ export async function getUser(id: string): Promise<UserObject | void> {
     let path = `${BASE_PATH}/users/${id}`;
     const data = await fetch(path, {
       headers: { Authorization: `Bearer ${token.access_token}` }
-    }).then((data) => data.json());
+    })
+      .then((data) => data.json())
+      .catch((e) => console.log(e));
     return data;
   }
 }
@@ -103,7 +111,9 @@ export async function getUserTopItem(
         headers: {
           Authorization: `Bearer ${access_token.access_token}`
         }
-      }).then((data) => data.json());
+      })
+        .then((data) => data.json())
+        .catch((e) => console.log(e));
 
       if (data && "items" in data) return data.items;
     } else {
@@ -111,7 +121,9 @@ export async function getUserTopItem(
         headers: {
           Authorization: `Bearer ${access_token.access_token}`
         }
-      }).then((data) => data.json());
+      })
+        .then((data) => data.json())
+        .catch((e) => console.log(e));
 
       if (data && "items" in data) return data.items;
     }
@@ -128,7 +140,10 @@ export async function getCurrentUserProfile(
       headers: {
         Authorization: `Bearer ${access_token.access_token}`
       }
-    }).then((data) => data.json());
+    })
+      .then((data) => data.json())
+      .catch((e) => console.log(e));
+
     return data;
   }
 }
@@ -141,7 +156,9 @@ export async function getCurrentUserSavedAlbum(
     let path = `${BASE_PATH}/me/albums`;
     const data: { items: { album: AlbumObject }[] } = await fetch(path, {
       headers: { Authorization: `Bearer ${access_token.access_token}` }
-    }).then((data) => data.json());
+    })
+      .then((data) => data.json())
+      .catch((e) => console.log(e));
 
     return data.items.map((e) => e.album);
   }
@@ -155,7 +172,9 @@ export async function getCurrentUserFollowedArtist(
     let path = `${BASE_PATH}/me/following?type=artist`;
     const data: { artists: { items: ArtistObject[] } } = await fetch(path, {
       headers: { Authorization: `Bearer ${access_token.access_token}` }
-    }).then((data) => data.json());
+    })
+      .then((data) => data.json())
+      .catch((e) => console.log(e));
 
     return data.artists.items;
   }
@@ -205,7 +224,9 @@ export async function getCurrentUserPlaylist(
     let path = `${BASE_PATH}/me/playlists`;
     const data = await fetch(path, {
       headers: { Authorization: `Bearer ${access_token.access_token}` }
-    }).then((data) => data.json());
+    })
+      .then((data) => data.json())
+      .catch((e) => console.log(e));
 
     return data.items;
   }
@@ -258,7 +279,9 @@ export async function getArtist(ids: string[]): Promise<ArtistObject[] | void> {
     let path = `${BASE_PATH}/artists?ids=${ids.join(",")}`;
     const data = await fetch(path, {
       headers: { Authorization: `Bearer ${token.access_token}` }
-    }).then((data) => data.json());
+    })
+      .then((data) => data.json())
+      .catch((e) => console.log(e));
     return data.artists;
   }
 }
@@ -289,7 +312,9 @@ export async function getArtistAlbum(
 
   const data = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
-  }).then((data) => data.json());
+  })
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
   return data.items;
 }
 
@@ -303,7 +328,9 @@ export async function getArtistTopTrack(
   let path = `${BASE_PATH}/artists/${id}/top-tracks?market=${market}`;
   const data = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
-  }).then((data) => data.json());
+  })
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
 
   return data.tracks;
 }
@@ -317,7 +344,9 @@ export async function getRelatedArtist(
   let path = `${BASE_PATH}/artists/${id}/related-artists`;
   const data = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
-  }).then((data) => data.json());
+  })
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
 
   return data.artists;
 }
@@ -338,7 +367,9 @@ export async function getPlaylist(
 
   const data = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
-  }).then((data) => data.json());
+  })
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
 
   const owner = await getUser(data.owner.id);
   if (!owner) return;
@@ -353,7 +384,9 @@ export async function getAlbum(id: string): Promise<AlbumObject | void> {
   let path = `${BASE_PATH}/albums/${id}`;
   const data: AlbumObject = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
-  }).then((data) => data.json());
+  })
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
 
   const artists = await getArtist(data.artists.map((e) => e.id));
   if (!artists) return;
@@ -368,7 +401,9 @@ export async function getTrack(id: string): Promise<TrackObject | void> {
   let path = `${BASE_PATH}/tracks/${id}`;
   const data: TrackObject = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
-  }).then((data) => data.json());
+  })
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
 
   const artists = await getArtist(data.artists.map((e) => e.id));
   if (!artists) return;
@@ -387,13 +422,15 @@ export async function getSingleBrowseCategories(
   let path = `${BASE_PATH}/browse/categories/${id}`;
 
   let query = new URLSearchParams();
-  query.append("country", country || 'US');
+  query.append("country", country || "US");
   if (locale) query.append("locale", locale);
   path += `?${query.toString()}`;
 
   const data: CategoryObject = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
-  }).then((data) => data.json());
+  })
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
 
   return data;
 }
@@ -418,7 +455,9 @@ export async function getSeveralBrowseCategories(
 
   const data: { categories: { items: CategoryObject[] } } = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
-  }).then((data) => data.json());
+  })
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
 
   // console.log("getSeveralBrowseCategories");
   // console.log(data);
@@ -445,7 +484,9 @@ export async function getCategoryPlaylists(
 
   const data: { playlists: { items: PlaylistObject[] } } = await fetch(path, {
     headers: { Authorization: `Bearer ${token.access_token}` }
-  }).then((data) => data.json());
+  })
+    .then((data) => data.json())
+    .catch((e) => console.log(e));
 
   // console.log("getCategoryPlaylists");
   // console.log(data);
@@ -455,7 +496,7 @@ export async function getCategoryPlaylists(
 
 export async function search(
   q: string,
-  type: ('album' | 'artist' | 'playlist' | 'track')[],
+  type: ("album" | "artist" | "playlist" | "track")[],
   market?: string,
   limit?: number,
   offset?: number

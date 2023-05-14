@@ -1,8 +1,11 @@
-import { MoreVert } from "@mui/icons-material";
 import Image from "next/image";
 import { AlbumObject, ArtistObject } from "../../../interfaces";
 import Link from "next/link";
-import { Box, Typography, styled } from "@mui/material";
+import MoreVert from "@mui/icons-material/MoreVert";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material";
+
 
 const Wrapper = styled(Box)({
   display: "flex",

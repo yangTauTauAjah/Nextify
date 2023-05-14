@@ -194,7 +194,7 @@ a:hover::before {
 }
 
 .gap-3 {
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .grid {
@@ -231,6 +231,10 @@ a:hover::before {
 
 .h-5 {
   height: 5rem;
+}
+
+.hidden {
+  display: none;
 }
 
 .hover\:pointer:hover {

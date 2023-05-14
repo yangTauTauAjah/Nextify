@@ -11,13 +11,19 @@ import {
   TrackObject
 } from "@/components/interfaces";
 import { GetServerSideProps } from "next";
-import { Box, Stack, Typography, styled } from "@mui/material";
+
+import {styled, Box, Button, Stack, Typography, useTheme} from '@mui/material';
+
 import { useSelector } from "react-redux";
 import Tracks from "@/components/Layout/MainView/CollectionDisplay/CollectionTracks";
 import Image from "next/image";
 import Section from "@/components/Layout/MainView/HomePage/Section";
 import Item from "@/components/Layout/MainView/HomePage/Section/Collection/Item";
-import { MoreVert, PlayCircle, Shuffle } from "@mui/icons-material";
+
+import MoreVert from "@mui/icons-material/MoreVert";
+import PlayCircle from "@mui/icons-material/PlayCircle";
+import Shuffle from "@mui/icons-material/Shuffle";
+
 import { RootState } from "@/components/store";
 
 export const getServerSideProps: GetServerSideProps<
