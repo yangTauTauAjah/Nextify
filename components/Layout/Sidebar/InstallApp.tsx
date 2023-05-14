@@ -1,4 +1,4 @@
-import { DownloadForOfflineOutlined } from "@mui/icons-material";
+import DownloadForOfflineOutlined from "@mui/icons-material/DownloadForOfflineOutlined";
 import { Box, useTheme } from "@mui/material";
 import Link from "next/link";
 import React from "react";

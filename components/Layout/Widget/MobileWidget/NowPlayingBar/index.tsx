@@ -1,14 +1,12 @@
 import { TrackObject } from "@/components/interfaces";
 import { playNext, playPrevious } from "@/components/stateSlice/SpotifyAPI";
 import { RootState } from "@/components/store";
-import {
-  DevicesOther,
-  FavoriteBorder,
-  PlayArrowRounded,
-  SkipNextRounded,
-  SkipPreviousRounded,
-  StopRounded
-} from "@mui/icons-material";
+import DevicesOther from "@mui/icons-material/DevicesOther";
+import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
+import PlayArrowRounded from "@mui/icons-material/PlayArrowRounded";
+import SkipNextRounded from "@mui/icons-material/SkipNextRounded";
+import SkipPreviousRounded from "@mui/icons-material/SkipPreviousRounded";
+import StopRounded from "@mui/icons-material/StopRounded";
 import { Box } from "@mui/material";
 import Image from "next/image";
 import React from "react";

@@ -1,9 +1,7 @@
-import {
-  DownloadForOfflineRounded,
-  HomeRounded,
-  LibraryMusicRounded,
-  SearchRounded
-} from "@mui/icons-material";
+import DownloadForOfflineRounded from "@mui/icons-material/DownloadForOfflineRounded";
+import HomeRounded from "@mui/icons-material/HomeRounded";
+import LibraryMusicRounded from "@mui/icons-material/LibraryMusicRounded";
+import SearchRounded from "@mui/icons-material/SearchRounded";
 import { Stack, useTheme } from "@mui/material";
 import React from "react";
 import NavLink from "./Navlink";
