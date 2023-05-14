@@ -29,7 +29,7 @@ export default function NowPlayingBar({
           display: "flex"
         }
       }}>
-      {/* <Widget /> */}
+      <Widget />
       {/* <PlayerControl
         Timestamp={Timestamp}
         setTimestamp={setTimestamp}
