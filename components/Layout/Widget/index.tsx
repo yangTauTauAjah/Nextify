@@ -57,12 +57,12 @@ export default function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObje
 
   return (
     <>
-      <MobileWidget
+      {/* <MobileWidget
         Timestamp={Timestamp}
         setTimestamp={setTimestamp}
         IsPlaying={IsPlaying}
         incrementTimestamp={setIsPlaying}
-      />
+      /> */}
       {/* <Sidebar
         currentPlaylistId={router.query.id?.toString()}
         list={(savedPlaylist || []).map((e) => ({
@@ -70,12 +70,12 @@ export default function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObje
           text: e.name
         }))}
       /> */}
-      {/* <NowPlayingBar
+      <NowPlayingBar
         Timestamp={Timestamp}
         setTimestamp={setTimestamp}
         IsPlaying={IsPlaying}
         incrementTimestamp={setIsPlaying}
-      /> */}
+      />
     </>
   );
 }
