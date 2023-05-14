@@ -134,22 +134,24 @@ export default function Main(data: IndexPageDataInterface) {
           />
         );
       })}
-      <Collection
-        title="Artists"
-        collection={
-          data.artists
-            ?.filter((e) => !!e)
-            .map((e) => {
-              return {
-                id: e.id,
-                description: <TextComponent>Artist</TextComponent>,
-                name: e.name,
-                image: e.images[0].url,
-                type: e.type
-              };
-            }) || []
-        }
-      />
+      {data.artists && data.artists.length > 0 && (
+        <Collection
+          title="Artists"
+          collection={
+            data.artists
+              .filter((e) => !!e)
+              .map((e) => {
+                return {
+                  id: e.id,
+                  description: <TextComponent>Artist</TextComponent>,
+                  name: e.name,
+                  image: e.images[0].url,
+                  type: e.type
+                };
+              }) || []
+          }
+        />
+      )}
     </Stack>
   );
 }
