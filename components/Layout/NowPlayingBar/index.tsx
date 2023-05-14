@@ -30,12 +30,12 @@ export default function NowPlayingBar({
         }
       }}>
       {/* <Widget /> */}
-      <PlayerControl
+      {/* <PlayerControl
         Timestamp={Timestamp}
         setTimestamp={setTimestamp}
         IsPlaying={IsPlaying}
         incrementTimestamp={incrementTimestamp}
-      />
+      /> */}
       <VolumeControl />
     </Box>
   );

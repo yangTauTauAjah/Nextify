@@ -1,11 +1,11 @@
 import React from "react";
-import {
-  QueueMusic,
-  DevicesOther,
-  VolumeUp,
-  VolumeOff
-} from "@mui/icons-material";
-import { Box, Slider, Stack } from "@mui/material";
+import QueueMusic from "@mui/icons-material/QueueMusic";
+import DevicesOther from "@mui/icons-material/DevicesOther";
+import VolumeUp from "@mui/icons-material/VolumeUp";
+// import VolumeOff from "@mui/icons-material/VolumeOff";
+import Slider from "@mui/material/Slider";
+// import Box from "@mui/material/Box";
+import Stack from "@mui/material/Stack";
 
 function CustomSlider({ style }: { style?: any }) {
   return (
