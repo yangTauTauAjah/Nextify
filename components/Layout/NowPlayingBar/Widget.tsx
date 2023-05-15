@@ -1,3 +1,4 @@
+import { ArtistObject } from "@/components/interfaces";
 import { RootState } from "@/components/store";
 import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
 import PictureInPictureAlt from "@mui/icons-material/PictureInPictureAlt";
@@ -6,9 +7,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 
-export default function Widget() {
+export default function Widget({
+  image,
+  id,
+  title,
+  artists
+}: {
+  image: string;
+  id: string;
+  title: string;
+  artists: ArtistObject[];
+}) {
   const Theme = useTheme();
-  const state = useSelector((state: RootState) => state.data.nowPlaying);
 
   return (
     <Box
@@ -27,7 +37,7 @@ export default function Widget() {
           fill
           className="object-contain h-full"
           sizes="10vw"
-          src={state?.album.images[0]?.url || ""}
+          src={image}
           alt="music"
         />
       </Box>
@@ -35,11 +45,11 @@ export default function Widget() {
         <Box
           component={Link}
           sx={{ "&::before": { background: "white" } }}
-          href={`/track/${state?.id}`}>
-          {state?.name}
+          href={`/track/${id}`}>
+          {title}
         </Box>
         <div>
-          {state?.artists.reduce((acc: JSX.Element[], curr, index, array) => {
+          {artists.reduce((acc: JSX.Element[], curr, index, array) => {
             acc.push(
               <Box
                 className="white-hover"

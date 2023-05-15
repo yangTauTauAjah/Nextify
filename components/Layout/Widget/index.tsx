@@ -70,12 +70,16 @@ export default function Widget({ savedPlaylist }: { savedPlaylist?: PlaylistObje
           text: e.name
         }))}
       />
-      <NowPlayingBar
+      {state.nowPlaying && <NowPlayingBar
+        id={state.nowPlaying.id}
+        image={state.nowPlaying.album.images[0].url || ''}
+        title={state.nowPlaying.name}
+        artists={state.nowPlaying.artists}
         Timestamp={Timestamp}
         setTimestamp={setTimestamp}
         IsPlaying={IsPlaying}
         incrementTimestamp={setIsPlaying}
-      />
+      />}
     </>
   );
 }
